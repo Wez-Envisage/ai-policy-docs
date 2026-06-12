@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Usage Policy — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Internal Policy &middot; All Staff</div>
+    <h1>AI Best Practices for ENVISAGE Research Teams</h1>
+    <p class="lede">How we use Claude, Claude Cowork, and other AI tools across Sapphire and SAM research projects — getting maximum value from every token while protecting the people and clients our work depends on.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>Why This Policy Exists</h2>
+  <p>ENVISAGE handles some of the most sensitive research in the regions we serve: person-of-interest and network mapping, supply chain and forced-labor investigations, work for UN agencies and development partners, and fund management data through SAM. AI tools make our pipeline dramatically faster — but they also create two risks this policy manages:</p>
+  <ul>
+    <li><strong>Data exposure.</strong> Anything pasted into an AI tool leaves our control. For our work, a leaked name or source can endanger a person, a partner, or an engagement.</li>
+    <li><strong>Token waste.</strong> Paid AI usage is metered. Sloppy habits — re-pasting documents, endless regeneration, using premium tools for trivial tasks — multiply costs across the team.</li>
+  </ul>
+  <p>The same discipline solves both: <strong>send the right content, to the right tool, once.</strong></p>
+</section>
+
+<section>
+  <h2>The Data Sensitivity Tiers</h2>
+  <p class="sub">Every AI decision starts here. Classify what you're about to share before choosing a tool.</p>
+  <div class="grid cols-3">
+    <div class="card">
+      <span class="badge green">Tier 1 — Public</span>
+      <p>Information already in the public domain or with no ENVISAGE fingerprint.</p>
+      <ul>
+        <li>Published news articles and reports</li>
+        <li>Public-domain harvested data</li>
+        <li>Generic code, SQL, and formatting questions</li>
+        <li>General research methods questions</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge amber">Tier 2 — Internal</span>
+      <p>Our work product, with no names, clients, or identifying detail.</p>
+      <ul>
+        <li>Anonymized draft analysis</li>
+        <li>Internal methodology and process docs</li>
+        <li>Database schemas (structure only, no rows)</li>
+        <li>Website and marketing copy</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge red">Tier 3 — Restricted</span>
+      <p>Never enters any external AI tool except Claude under the rules on the <a href="data-security.html">Data Security</a> page.</p>
+      <ul>
+        <li>Client deliverables (UNOPS, LIFT, OCHA, SoCha and all others)</li>
+        <li>Person-of-interest and network mapping data</li>
+        <li>Field staff, source, and partner identities</li>
+        <li>SAM client fund data and decision records</li>
+        <li>Anything from conflict-affected regions naming people or organizations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Which Tool for Which Job</h2>
+  <table>
+    <tr><th>Tool</th><th>Approved Use</th><th>Max Tier</th><th>Never</th></tr>
+    <tr>
+      <td><strong>Claude Chat</strong></td>
+      <td>Analysis, drafting, summarizing, translation review, research reasoning</td>
+      <td>Tier 3 — anonymized where possible, under Data Security rules</td>
+      <td>Connected to email; raw client deliverable files without need</td>
+    </tr>
+    <tr>
+      <td><strong>Claude Cowork</strong></td>
+      <td>File work: building reports, processing data files, multi-step research tasks</td>
+      <td>Tier 3 — within approved project folders only</td>
+      <td>Broad Google Drive access; folders containing client deliverables</td>
+    </tr>
+    <tr>
+      <td><strong>Gemini / ChatGPT</strong></td>
+      <td>Cross-verification of facts, figures, translations, and code (see <a href="verification.html">Verification</a>)</td>
+      <td>Tier 2, sanitized excerpts only</td>
+      <td>Tier 3 content in any form; full documents</td>
+    </tr>
+    <tr>
+      <td><strong>DeepSeek / Kimi (free)</strong></td>
+      <td>Generic drafting, public-source summarizing, brainstorming, code snippets</td>
+      <td>Tier 1 only</td>
+      <td>Anything internal or client-related — these are hosted outside our control</td>
+    </tr>
+    <tr>
+      <td><strong>Coding agents (NL-to-SQL etc.)</strong></td>
+      <td>Generating SQL/Python from plain language against schema descriptions</td>
+      <td>Tier 2 — schema structure only</td>
+      <td>Real data rows; production credentials</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>The Five Golden Rules</h2>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>Classify before you paste</h4><p>Tier 1, 2, or 3? If you can't decide in five seconds, treat it as Tier 3 and ask your project lead.</p></div>
+    <div class="card"><span class="num">2</span><h4>Never connect email</h4><p>No AI tool — including Claude — gets connected to ENVISAGE email accounts. Email contains client correspondence, source contacts, and contract details. No exceptions.</p></div>
+    <div class="card"><span class="num">3</span><h4>Minimum necessary access</h4><p>Cowork gets one project folder, not your Drive. Prompts get the relevant excerpt, not the whole document. Verification tools get the claim, not the report.</p></div>
+    <div class="card"><span class="num">4</span><h4>Client deliverables stay home</h4><p>Confidential documents and worksheets we create for clients are never uploaded to, shared with, or stored in any external AI service beyond the approved Claude workflow.</p></div>
+    <div class="card"><span class="num">5</span><h4>Route work to the cheapest safe tool</h4><p>Save Claude tokens for high-value contextual work. Generic Tier 1 tasks go to free tools. See <a href="token-efficiency.html">Token Efficiency</a>.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Policy Sections</h2>
+  <div class="grid cols-2">
+    <a class="card pagecard" href="claude.html"><h4>Claude &amp; Cowork Best Practices</h4><p>When to use Chat vs Cowork, setting up Projects per research stream, and connector rules.</p><span class="arrow">Read →</span></a>
+    <a class="card pagecard" href="token-efficiency.html"><h4>Token Efficiency</h4><p>Practical habits that cut token spend: excerpts not documents, one task per chat, no regeneration loops.</p><span class="arrow">Read →</span></a>
+    <a class="card pagecard" href="data-security.html"><h4>Data Security &amp; Safety</h4><p>The hard rules: email, Google Drive, client deliverables, and protecting people in our data.</p><span class="arrow">Read →</span></a>
+    <a class="card pagecard" href="verification.html"><h4>Cross-Verification</h4><p>When and how to check Claude's output against Gemini and ChatGPT — with worked examples.</p><span class="arrow">Read →</span></a>
+    <a class="card pagecard" href="ai-toolkit.html"><h4>The Wider AI Toolkit</h4><p>Free public LLMs (DeepSeek, Kimi), NL-to-SQL coding agents, and how to use each safely.</p><span class="arrow">Read →</span></a>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">นโยบายภายใน &middot; พนักงานทุกคน</div>
+    <h1>แนวปฏิบัติที่ดีด้าน AI สำหรับทีมวิจัยของ ENVISAGE</h1>
+    <p class="lede">แนวทางการใช้ Claude, Claude Cowork และเครื่องมือ AI อื่น ๆ ในโครงการวิจัย Sapphire และ SAM — เพื่อให้ได้คุณค่าสูงสุดจากทุกโทเคน พร้อมปกป้องบุคคลและลูกค้าที่งานของเราต้องพึ่งพา</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>เหตุผลของนโยบายนี้</h2>
+  <p>ENVISAGE ดูแลงานวิจัยที่อ่อนไหวที่สุดในภูมิภาคที่เราทำงาน ไม่ว่าจะเป็นการทำแผนผังบุคคลเป้าหมายและเครือข่ายความสัมพันธ์ การสืบสวนห่วงโซ่อุปทานและแรงงานบังคับ งานให้หน่วยงาน UN และพันธมิตรด้านการพัฒนา รวมถึงข้อมูลการบริหารกองทุนผ่าน SAM เครื่องมือ AI ช่วยให้งานของเราเร็วขึ้นมาก แต่ก็สร้างความเสี่ยงสองด้านที่นโยบายนี้จัดการ:</p>
+  <ul>
+    <li><strong>การรั่วไหลของข้อมูล</strong> สิ่งใดที่วางลงในเครื่องมือ AI จะหลุดออกจากการควบคุมของเรา ชื่อหรือแหล่งข่าวที่รั่วไหลอาจทำให้บุคคล พันธมิตร หรือสัญญางานตกอยู่ในอันตราย</li>
+    <li><strong>การสิ้นเปลืองโทเคน</strong> การใช้ AI แบบเสียเงินคิดตามปริมาณ พฤติกรรมที่ไม่รอบคอบ เช่น วางเอกสารซ้ำ สั่งสร้างใหม่ไม่รู้จบ หรือใช้เครื่องมือพรีเมียมกับงานง่าย ๆ จะทวีค่าใช้จ่ายทั้งทีม</li>
+  </ul>
+  <p>วินัยเดียวกันแก้ได้ทั้งสองปัญหา: <strong>ส่งเนื้อหาที่ถูกต้อง ไปยังเครื่องมือที่ถูกต้อง เพียงครั้งเดียว</strong></p>
+</section>
+
+<section>
+  <h2>ระดับชั้นความอ่อนไหวของข้อมูล</h2>
+  <p class="sub">ทุกการตัดสินใจเรื่อง AI เริ่มที่นี่ — จัดประเภทสิ่งที่จะแชร์ก่อนเลือกเครื่องมือ</p>
+  <div class="grid cols-3">
+    <div class="card">
+      <span class="badge green">Tier 1 — สาธารณะ</span>
+      <p>ข้อมูลที่เผยแพร่ต่อสาธารณะอยู่แล้ว หรือไม่มีร่องรอยของ ENVISAGE</p>
+      <ul>
+        <li>ข่าวและรายงานที่ตีพิมพ์แล้ว</li>
+        <li>ข้อมูลที่เก็บรวบรวมจากแหล่งสาธารณะ</li>
+        <li>คำถามทั่วไปเรื่องโค้ด SQL และการจัดรูปแบบ</li>
+        <li>คำถามทั่วไปเรื่องระเบียบวิธีวิจัย</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge amber">Tier 2 — ภายใน</span>
+      <p>ผลงานของเรา โดยไม่มีชื่อบุคคล ลูกค้า หรือรายละเอียดที่ระบุตัวตนได้</p>
+      <ul>
+        <li>ร่างบทวิเคราะห์ที่ปกปิดตัวตนแล้ว</li>
+        <li>เอกสารระเบียบวิธีและกระบวนการภายใน</li>
+        <li>โครงสร้างฐานข้อมูล (เฉพาะโครงสร้าง ไม่มีข้อมูลจริง)</li>
+        <li>เนื้อหาเว็บไซต์และการตลาด</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge red">Tier 3 — หวงห้าม</span>
+      <p>ห้ามเข้าเครื่องมือ AI ภายนอกใด ๆ ยกเว้น Claude ภายใต้กฎในหน้า <a href="data-security.html">ความปลอดภัยข้อมูล</a></p>
+      <ul>
+        <li>งานส่งมอบของลูกค้า (UNOPS, LIFT, OCHA, SoCha และทั้งหมด)</li>
+        <li>ข้อมูลบุคคลเป้าหมายและแผนผังเครือข่าย</li>
+        <li>ตัวตนของเจ้าหน้าที่ภาคสนาม แหล่งข่าว และพันธมิตร</li>
+        <li>ข้อมูลกองทุนลูกค้า SAM และบันทึกการตัดสินใจ</li>
+        <li>ข้อมูลจากพื้นที่ขัดแย้งที่ระบุชื่อบุคคลหรือองค์กร</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>เครื่องมือไหนสำหรับงานไหน</h2>
+  <table>
+    <tr><th>เครื่องมือ</th><th>การใช้ที่อนุมัติ</th><th>Tier สูงสุด</th><th>ห้ามเด็ดขาด</th></tr>
+    <tr>
+      <td><strong>Claude Chat</strong></td>
+      <td>วิเคราะห์ ร่างเอกสาร สรุป ตรวจคำแปล และการใช้เหตุผลในงานวิจัย</td>
+      <td>Tier 3 — ปกปิดตัวตนเท่าที่ทำได้ ตามกฎความปลอดภัยข้อมูล</td>
+      <td>เชื่อมต่อกับอีเมล; ไฟล์งานส่งมอบลูกค้าโดยไม่จำเป็น</td>
+    </tr>
+    <tr>
+      <td><strong>Claude Cowork</strong></td>
+      <td>งานไฟล์: สร้างรายงาน ประมวลผลไฟล์ข้อมูล งานวิจัยหลายขั้นตอน</td>
+      <td>Tier 3 — เฉพาะในโฟลเดอร์โครงการที่อนุมัติ</td>
+      <td>เข้าถึง Google Drive แบบกว้าง; โฟลเดอร์งานส่งมอบลูกค้า</td>
+    </tr>
+    <tr>
+      <td><strong>Gemini / ChatGPT</strong></td>
+      <td>ตรวจสอบไขว้ข้อเท็จจริง ตัวเลข คำแปล และโค้ด (ดู <a href="verification.html">การตรวจสอบยืนยัน</a>)</td>
+      <td>Tier 2 เฉพาะข้อความที่คัดกรองแล้ว</td>
+      <td>เนื้อหา Tier 3 ทุกรูปแบบ; เอกสารฉบับเต็ม</td>
+    </tr>
+    <tr>
+      <td><strong>DeepSeek / Kimi (ฟรี)</strong></td>
+      <td>ร่างเนื้อหาทั่วไป สรุปแหล่งข้อมูลสาธารณะ ระดมความคิด โค้ดสั้น ๆ</td>
+      <td>Tier 1 เท่านั้น</td>
+      <td>ข้อมูลภายในหรือเกี่ยวกับลูกค้าใด ๆ — โฮสต์อยู่นอกการควบคุมของเรา</td>
+    </tr>
+    <tr>
+      <td><strong>Coding agents (แปลงภาษาเป็น SQL ฯลฯ)</strong></td>
+      <td>สร้าง SQL/Python จากภาษาธรรมดา โดยใช้คำอธิบายโครงสร้างฐานข้อมูล</td>
+      <td>Tier 2 — เฉพาะโครงสร้าง schema</td>
+      <td>ข้อมูลจริง; รหัสผ่านระบบ production</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>กฎทอง 5 ข้อ</h2>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>จัดประเภทก่อนวาง</h4><p>Tier 1, 2 หรือ 3? ถ้าตัดสินใจไม่ได้ภายในห้าวินาที ให้ถือเป็น Tier 3 และถามหัวหน้าโครงการ</p></div>
+    <div class="card"><span class="num">2</span><h4>ห้ามเชื่อมต่ออีเมลเด็ดขาด</h4><p>ห้ามเครื่องมือ AI ใด ๆ รวมถึง Claude เชื่อมต่อกับบัญชีอีเมลของ ENVISAGE อีเมลมีจดหมายโต้ตอบลูกค้า ผู้ติดต่อแหล่งข่าว และรายละเอียดสัญญา ไม่มีข้อยกเว้น</p></div>
+    <div class="card"><span class="num">3</span><h4>เข้าถึงเท่าที่จำเป็นขั้นต่ำ</h4><p>Cowork ได้โฟลเดอร์โครงการเดียว ไม่ใช่ทั้ง Drive พรอมต์ได้เฉพาะส่วนที่เกี่ยวข้อง ไม่ใช่เอกสารทั้งฉบับ เครื่องมือตรวจสอบได้เฉพาะข้อความที่ต้องตรวจ ไม่ใช่ทั้งรายงาน</p></div>
+    <div class="card"><span class="num">4</span><h4>งานส่งมอบลูกค้าอยู่กับเรา</h4><p>เอกสารและเวิร์กชีตลับที่เราสร้างให้ลูกค้า ห้ามอัปโหลด แชร์ หรือเก็บในบริการ AI ภายนอกใด ๆ นอกเหนือจากขั้นตอน Claude ที่อนุมัติ</p></div>
+    <div class="card"><span class="num">5</span><h4>ส่งงานไปยังเครื่องมือที่ถูกที่สุดที่ปลอดภัย</h4><p>เก็บโทเคน Claude ไว้สำหรับงานเชิงบริบทที่มีมูลค่าสูง งาน Tier 1 ทั่วไปใช้เครื่องมือฟรี ดู <a href="token-efficiency.html">ประหยัดโทเคน</a></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>หมวดนโยบาย</h2>
+  <div class="grid cols-2">
+    <a class="card pagecard" href="claude.html"><h4>แนวปฏิบัติ Claude และ Cowork</h4><p>เมื่อไรใช้ Chat หรือ Cowork การตั้ง Project ต่อสายงานวิจัย และกฎการเชื่อมต่อ</p><span class="arrow">อ่าน →</span></a>
+    <a class="card pagecard" href="token-efficiency.html"><h4>ประหยัดโทเคน</h4><p>นิสัยที่ลดค่าโทเคน: ใช้ข้อความบางส่วนไม่ใช่ทั้งเอกสาร หนึ่งงานต่อหนึ่งแชต ไม่วนสั่งสร้างใหม่</p><span class="arrow">อ่าน →</span></a>
+    <a class="card pagecard" href="data-security.html"><h4>ความปลอดภัยข้อมูล</h4><p>กฎเหล็ก: อีเมล Google Drive งานส่งมอบลูกค้า และการปกป้องบุคคลในข้อมูลของเรา</p><span class="arrow">อ่าน →</span></a>
+    <a class="card pagecard" href="verification.html"><h4>การตรวจสอบไขว้</h4><p>เมื่อไรและอย่างไรจึงตรวจผลลัพธ์ของ Claude กับ Gemini และ ChatGPT พร้อมตัวอย่าง</p><span class="arrow">อ่าน →</span></a>
+    <a class="card pagecard" href="ai-toolkit.html"><h4>ชุดเครื่องมือ AI</h4><p>LLM สาธารณะฟรี (DeepSeek, Kimi) เอเจนต์แปลงภาษาเป็น SQL และวิธีใช้อย่างปลอดภัย</p><span class="arrow">อ่าน →</span></a>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အတွင်းပိုင်းမူဝါဒ &middot; ဝန်ထမ်းအားလုံး</div>
+    <h1>ENVISAGE သုတေသနအဖွဲ့များအတွက် AI အကောင်းဆုံးအလေ့အကျင့်များ</h1>
+    <p class="lede">Sapphire နှင့် SAM သုတေသနပရောဂျက်များတွင် Claude၊ Claude Cowork နှင့် အခြား AI ကိရိယာများကို အသုံးပြုပုံ — တိုကင်တိုင်းမှ အကျိုးအမြတ်အများဆုံးရယူပြီး ကျွန်ုပ်တို့၏အလုပ်မှီခိုနေသော လူများနှင့် ဖောက်သည်များကို ကာကွယ်ရန်။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>ဤမူဝါဒ ရှိရသည့်အကြောင်းရင်း</h2>
+  <p>ENVISAGE သည် ကျွန်ုပ်တို့လုပ်ကိုင်သောဒေသများတွင် အလွန်အထိခိုက်မခံသော သုတေသနများကို ကိုင်တွယ်သည် — စိတ်ဝင်စားရသူပုဂ္ဂိုလ်နှင့် ကွန်ရက်မြေပုံရေးဆွဲခြင်း၊ ထောက်ပံ့ရေးကွင်းဆက်နှင့် အတင်းအကျပ်လုပ်အားခိုင်းစေမှု စုံစမ်းစစ်ဆေးခြင်း၊ ကုလသမဂ္ဂအေဂျင်စီများနှင့် ဖွံ့ဖြိုးရေးမိတ်ဖက်များအတွက် အလုပ်များ၊ SAM မှတစ်ဆင့် ရန်ပုံငွေစီမံခန့်ခွဲမှုဒေတာများ။ AI ကိရိယာများက ကျွန်ုပ်တို့၏လုပ်ငန်းစဉ်ကို သိသိသာသာ မြန်ဆန်စေသော်လည်း ဤမူဝါဒက စီမံသည့် အန္တရာယ်နှစ်ခုကိုလည်း ဖြစ်ပေါ်စေသည် —</p>
+  <ul>
+    <li><strong>ဒေတာပေါက်ကြားမှု။</strong> AI ကိရိယာထဲသို့ ထည့်လိုက်သမျှသည် ကျွန်ုပ်တို့၏ထိန်းချုပ်မှုမှ ထွက်သွားသည်။ ပေါက်ကြားသွားသော နာမည်တစ်ခု သို့မဟုတ် သတင်းရင်းမြစ်တစ်ခုသည် လူတစ်ဦး၊ မိတ်ဖက်တစ်ဦး သို့မဟုတ် စာချုပ်တစ်ခုကို အန္တရာယ်ဖြစ်စေနိုင်သည်။</li>
+    <li><strong>တိုကင်ဖြုန်းတီးမှု။</strong> အခကြေးငွေပေး AI အသုံးပြုမှုကို ပမာဏအလိုက် တွက်ချက်သည်။ စာရွက်စာတမ်းများ ထပ်ခါထပ်ခါကူးထည့်ခြင်း၊ အဆုံးမရှိ ပြန်ထုတ်ခိုင်းခြင်း၊ ရိုးရှင်းသောအလုပ်များအတွက် ပရီမီယံကိရိယာသုံးခြင်း — ဤအကျင့်များက အဖွဲ့တစ်ခုလုံး၏ ကုန်ကျစရိတ်ကို ဆတိုးစေသည်။</li>
+  </ul>
+  <p>စည်းကမ်းတစ်ခုတည်းက နှစ်ခုလုံးကို ဖြေရှင်းသည် — <strong>မှန်ကန်သောအကြောင်းအရာကို မှန်ကန်သောကိရိယာသို့ တစ်ကြိမ်တည်း ပို့ပါ။</strong></p>
+</section>
+
+<section>
+  <h2>ဒေတာ အထိခိုက်မခံမှု အဆင့်များ</h2>
+  <p class="sub">AI ဆုံးဖြတ်ချက်တိုင်း ဤနေရာမှ စတင်သည် — ကိရိယာမရွေးခင် မျှဝေမည့်အရာကို အမျိုးအစားခွဲပါ။</p>
+  <div class="grid cols-3">
+    <div class="card">
+      <span class="badge green">Tier 1 — အများပြည်သူ</span>
+      <p>အများပြည်သူသိရှိပြီးသား သို့မဟုတ် ENVISAGE နှင့် ဆက်စပ်မှုမရှိသော အချက်အလက်များ</p>
+      <ul>
+        <li>ထုတ်ဝေပြီး သတင်းဆောင်းပါးနှင့် အစီရင်ခံစာများ</li>
+        <li>အများပြည်သူရင်းမြစ်မှ စုဆောင်းထားသော ဒေတာများ</li>
+        <li>ယေဘုယျ ကုဒ်၊ SQL နှင့် ပုံစံချမေးခွန်းများ</li>
+        <li>ယေဘုယျ သုတေသနနည်းလမ်း မေးခွန်းများ</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge amber">Tier 2 — အတွင်းပိုင်း</span>
+      <p>နာမည်၊ ဖောက်သည် သို့မဟုတ် ဖော်ထုတ်နိုင်သော အသေးစိတ်မပါသည့် ကျွန်ုပ်တို့၏ လုပ်ငန်းရလဒ်များ</p>
+      <ul>
+        <li>အမည်ဖျောက်ထားသော မူကြမ်းခွဲခြမ်းစိတ်ဖြာချက်များ</li>
+        <li>အတွင်းပိုင်း နည်းစနစ်နှင့် လုပ်ငန်းစဉ် စာရွက်စာတမ်းများ</li>
+        <li>ဒေတာဘေ့စ် schema (ဖွဲ့စည်းပုံသာ၊ ဒေတာအတန်းမပါ)</li>
+        <li>ဝက်ဘ်ဆိုက်နှင့် စျေးကွက်ရှာဖွေရေး စာသားများ</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge red">Tier 3 — ကန့်သတ်</span>
+      <p><a href="data-security.html">ဒေတာလုံခြုံရေး</a> စာမျက်နှာရှိ စည်းမျဉ်းများအောက်တွင် Claude မှလွဲ၍ မည်သည့်ပြင်ပ AI ကိရိယာထဲသို့မျှ ဘယ်တော့မှ မထည့်ရ</p>
+      <ul>
+        <li>ဖောက်သည်ပေးအပ်စာတမ်းများ (UNOPS, LIFT, OCHA, SoCha နှင့် အားလုံး)</li>
+        <li>စိတ်ဝင်စားရသူပုဂ္ဂိုလ်နှင့် ကွန်ရက်မြေပုံ ဒေတာများ</li>
+        <li>ကွင်းဆင်းဝန်ထမ်း၊ သတင်းရင်းမြစ်နှင့် မိတ်ဖက်များ၏ အထောက်အထားများ</li>
+        <li>SAM ဖောက်သည် ရန်ပုံငွေဒေတာနှင့် ဆုံးဖြတ်ချက်မှတ်တမ်းများ</li>
+        <li>ပဋိပက္ခဒေသများမှ လူ သို့မဟုတ် အဖွဲ့အစည်းနာမည်ပါသော မည်သည့်အရာမဆို</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>မည်သည့်အလုပ်အတွက် မည်သည့်ကိရိယာ</h2>
+  <table>
+    <tr><th>ကိရိယာ</th><th>ခွင့်ပြုထားသော အသုံးပြုမှု</th><th>အမြင့်ဆုံး Tier</th><th>ဘယ်တော့မှ မလုပ်ရ</th></tr>
+    <tr>
+      <td><strong>Claude Chat</strong></td>
+      <td>ခွဲခြမ်းစိတ်ဖြာခြင်း၊ မူကြမ်းရေးခြင်း၊ အကျဉ်းချုပ်ခြင်း၊ ဘာသာပြန်စစ်ဆေးခြင်း၊ သုတေသနဆင်ခြင်ခြင်း</td>
+      <td>Tier 3 — ဖြစ်နိုင်သမျှ အမည်ဖျောက်၍ ဒေတာလုံခြုံရေးစည်းမျဉ်းအတိုင်း</td>
+      <td>အီးမေးလ်နှင့် ချိတ်ဆက်ခြင်း; မလိုအပ်ဘဲ ဖောက်သည်ပေးအပ်စာတမ်းဖိုင်များ</td>
+    </tr>
+    <tr>
+      <td><strong>Claude Cowork</strong></td>
+      <td>ဖိုင်အလုပ် — အစီရင်ခံစာတည်ဆောက်ခြင်း၊ ဒေတာဖိုင်စီမံခြင်း၊ အဆင့်များစွာပါ သုတေသနအလုပ်များ</td>
+      <td>Tier 3 — ခွင့်ပြုထားသော ပရောဂျက်ဖိုင်တွဲများအတွင်းသာ</td>
+      <td>Google Drive ကို ကျယ်ပြန့်စွာ ခွင့်ပြုခြင်း; ဖောက်သည်ပေးအပ်စာတမ်းပါ ဖိုင်တွဲများ</td>
+    </tr>
+    <tr>
+      <td><strong>Gemini / ChatGPT</strong></td>
+      <td>အချက်အလက်၊ ကိန်းဂဏန်း၊ ဘာသာပြန်နှင့် ကုဒ်များကို ပြန်လှန်စစ်ဆေးခြင်း (<a href="verification.html">အတည်ပြုစစ်ဆေးရေး</a> ကြည့်ပါ)</td>
+      <td>Tier 2၊ သန့်စင်ထားသော ကောက်နုတ်ချက်များသာ</td>
+      <td>Tier 3 အကြောင်းအရာ မည်သည့်ပုံစံမဆို; စာတမ်းအပြည့်အစုံများ</td>
+    </tr>
+    <tr>
+      <td><strong>DeepSeek / Kimi (အခမဲ့)</strong></td>
+      <td>ယေဘုယျမူကြမ်းရေးခြင်း၊ အများပြည်သူရင်းမြစ် အကျဉ်းချုပ်ခြင်း၊ စိတ်ကူးထုတ်ခြင်း၊ ကုဒ်အပိုင်းအစများ</td>
+      <td>Tier 1 သာ</td>
+      <td>အတွင်းပိုင်း သို့မဟုတ် ဖောက်သည်ဆိုင်ရာ မည်သည့်အရာမဆို — ကျွန်ုပ်တို့ မထိန်းချုပ်နိုင်သော နေရာတွင် လည်ပတ်နေသည်</td>
+    </tr>
+    <tr>
+      <td><strong>Coding agents (သာမန်စကားမှ SQL သို့)</strong></td>
+      <td>Schema ဖော်ပြချက်များအပေါ် အခြေခံ၍ သာမန်စကားမှ SQL/Python ထုတ်ပေးခြင်း</td>
+      <td>Tier 2 — schema ဖွဲ့စည်းပုံသာ</td>
+      <td>ဒေတာအတန်းအစစ်များ; production စကားဝှက်များ</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>ရွှေစည်းမျဉ်း ၅ ချက်</h2>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>မထည့်ခင် အမျိုးအစားခွဲပါ</h4><p>Tier 1, 2 သို့မဟုတ် 3 လား? ငါးစက္ကန့်အတွင်း မဆုံးဖြတ်နိုင်ပါက Tier 3 အဖြစ်သတ်မှတ်ပြီး ပရောဂျက်ခေါင်းဆောင်ကို မေးပါ။</p></div>
+    <div class="card"><span class="num">2</span><h4>အီးမေးလ် ဘယ်တော့မှ မချိတ်ရ</h4><p>Claude အပါအဝင် မည်သည့် AI ကိရိယာမျှ ENVISAGE အီးမေးလ်အကောင့်များနှင့် မချိတ်ဆက်ရ။ အီးမေးလ်တွင် ဖောက်သည်စာပေးစာယူ၊ သတင်းရင်းမြစ်အဆက်အသွယ်နှင့် စာချုပ်အသေးစိတ်များ ပါရှိသည်။ ခြွင်းချက်မရှိ။</p></div>
+    <div class="card"><span class="num">3</span><h4>အနည်းဆုံးလိုအပ်သလောက်သာ ခွင့်ပြုပါ</h4><p>Cowork ကို ပရောဂျက်ဖိုင်တွဲတစ်ခုသာပေးပါ၊ Drive တစ်ခုလုံးမဟုတ်ပါ။ Prompt တွင် သက်ဆိုင်သောကောက်နုတ်ချက်သာထည့်ပါ၊ စာတမ်းတစ်ခုလုံးမဟုတ်ပါ။ စစ်ဆေးရေးကိရိယာများကို စစ်ဆေးမည့်အချက်သာပေးပါ၊ အစီရင်ခံစာတစ်ခုလုံးမဟုတ်ပါ။</p></div>
+    <div class="card"><span class="num">4</span><h4>ဖောက်သည်ပေးအပ်စာတမ်းများ အိမ်မှာပဲထားပါ</h4><p>ဖောက်သည်များအတွက် ကျွန်ုပ်တို့ဖန်တီးသော လျှို့ဝှက်စာတမ်းနှင့် worksheet များကို ခွင့်ပြုထားသော Claude လုပ်ငန်းစဉ်မှလွဲ၍ မည်သည့်ပြင်ပ AI ဝန်ဆောင်မှုသို့မျှ တင်ခြင်း၊ မျှဝေခြင်း၊ သိမ်းဆည်းခြင်း မပြုရ။</p></div>
+    <div class="card"><span class="num">5</span><h4>လုံခြုံပြီး အသက်သာဆုံးကိရိယာသို့ အလုပ်လမ်းကြောင်းချပါ</h4><p>Claude တိုကင်များကို တန်ဖိုးမြင့် ဆက်စပ်အကြောင်းအရာအလုပ်များအတွက် ချန်ထားပါ။ ယေဘုယျ Tier 1 အလုပ်များကို အခမဲ့ကိရိယာများသို့ ပို့ပါ။ <a href="token-efficiency.html">တိုကင်ချွေတာရေး</a> ကြည့်ပါ။</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>မူဝါဒ အပိုင်းများ</h2>
+  <div class="grid cols-2">
+    <a class="card pagecard" href="claude.html"><h4>Claude နှင့် Cowork အလေ့အကျင့်များ</h4><p>Chat နှင့် Cowork ဘယ်အချိန်သုံးမည်၊ သုတေသနလိုင်းတစ်ခုစီအတွက် Project တည်ဆောက်ခြင်းနှင့် ချိတ်ဆက်မှုစည်းမျဉ်းများ</p><span class="arrow">ဖတ်ရန် →</span></a>
+    <a class="card pagecard" href="token-efficiency.html"><h4>တိုကင်ချွေတာရေး</h4><p>တိုကင်ကုန်ကျစရိတ်လျှော့ချသော အလေ့အကျင့်များ — စာတမ်းတစ်ခုလုံးမဟုတ်ဘဲ ကောက်နုတ်ချက်၊ စကားပြောတစ်ခုလျှင် အလုပ်တစ်ခု</p><span class="arrow">ဖတ်ရန် →</span></a>
+    <a class="card pagecard" href="data-security.html"><h4>ဒေတာလုံခြုံရေး</h4><p>တင်းကြပ်သောစည်းမျဉ်းများ — အီးမေးလ်၊ Google Drive၊ ဖောက်သည်ပေးအပ်စာတမ်းများနှင့် ဒေတာထဲရှိလူများကို ကာကွယ်ခြင်း</p><span class="arrow">ဖတ်ရန် →</span></a>
+    <a class="card pagecard" href="verification.html"><h4>ပြန်လှန်စစ်ဆေးခြင်း</h4><p>Claude ၏ရလဒ်များကို Gemini နှင့် ChatGPT ဖြင့် ဘယ်အချိန် ဘယ်လိုစစ်ဆေးမည် — နမူနာများပါ</p><span class="arrow">ဖတ်ရန် →</span></a>
+    <a class="card pagecard" href="ai-toolkit.html"><h4>AI ကိရိယာစုံ</h4><p>အခမဲ့ LLM များ (DeepSeek, Kimi)၊ SQL ထုတ်ပေးသော coding agent များနှင့် လုံခြုံစွာအသုံးပြုနည်း</p><span class="arrow">ဖတ်ရန် →</span></a>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ENVISAGE WORLDWIDE</strong>
+      <span class="lang-section" data-lang="en"> — Internal AI Usage Policy</span>
+      <span class="lang-section" data-lang="th"> — นโยบายการใช้ AI ภายในองค์กร</span>
+      <span class="lang-section" data-lang="my"> — အတွင်းပိုင်း AI အသုံးပြုမှုမူဝါဒ</span>
+    </div>
+    <div>Version 1.0 &middot; June 2026 &middot; Innovative Technology</div>
+  </div>
+</footer>
+
+</body>
+</html>

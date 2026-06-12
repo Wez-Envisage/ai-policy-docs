@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Token Efficiency — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html" class="active">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Section 2</div>
+    <h1>Minimizing Token Waste</h1>
+    <p class="lede">Tokens are the metered unit of everything we send to and receive from AI tools. Most waste comes from a handful of habits — fix these and team-wide spend drops sharply with no loss of quality.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>Where Tokens Actually Go</h2>
+  <p>Every conversation re-sends its entire history with each new message. That means a long chat with three pasted documents re-transmits all of it every single turn. The three biggest sources of waste in research work:</p>
+  <div class="grid cols-3">
+    <div class="card"><span class="num">1</span><h4>Oversized input</h4><p>Pasting whole documents when one section is relevant; re-uploading files already provided; long conversations that drag history behind every message.</p></div>
+    <div class="card"><span class="num">2</span><h4>Regeneration loops</h4><p>Vague prompts that need 5 attempts; "try again" instead of a precise correction; regenerating full documents to fix one paragraph.</p></div>
+    <div class="card"><span class="num">3</span><h4>Premium tools on trivial work</h4><p>Using Claude tokens for tasks a free tool handles identically — generic formatting, simple lookups, boilerplate text.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>The Efficiency Habits</h2>
+
+  <h3>1. One task, one chat</h3>
+  <p>Start a fresh conversation for each distinct task. When a chat exceeds roughly a dozen exchanges, ask Claude to summarize the state of work in a short paragraph, copy it, and continue in a new chat with that summary. You carry forward 150 tokens instead of 15,000.</p>
+
+  <h3>2. Excerpts, not documents</h3>
+  <div class="example bad"><div class="label">Wasteful</div><p>Pasting a 40-page assessment and asking, "What does this say about labor conditions in the northern provinces?"</p></div>
+  <div class="example good"><div class="label">Efficient</div><p>Finding the two relevant sections yourself (Ctrl+F) and pasting only those: ~600 tokens instead of ~30,000 — and a more focused answer.</p></div>
+
+  <h3>3. Let Cowork read files locally</h3>
+  <p>In Cowork, Claude reads files from the task folder directly and reads only what it needs. For any file-based work, connecting a folder beats pasting contents into Chat.</p>
+
+  <h3>4. Put stable context in Projects, not prompts</h3>
+  <p>Templates, methodology, terminology — written once into Project knowledge — stop costing you tokens in every conversation. See <a href="claude.html">Claude &amp; Cowork</a>.</p>
+
+  <h3>5. Specify the output before generating</h3>
+  <p>State length, format, and audience in the first prompt: <em>"500 words, three sections, for a donor audience, no jargon."</em> The most expensive output is a long, beautiful draft in the wrong shape.</p>
+
+  <h3>6. Correct precisely, never "try again"</h3>
+  <p>"Try again" regenerates everything and usually repeats the misunderstanding. Instead: <em>"Keep the structure and tone. Fix only: (1) the date range should be 2023–2025, (2) shorten the intro to two sentences."</em></p>
+
+  <h3>7. Batch related questions</h3>
+  <p>Five small questions in one message cost less than five separate exchanges, because each separate exchange re-sends the conversation history.</p>
+
+  <h3>8. Route Tier 1 work to free tools</h3>
+  <p>Generic public-domain tasks — summarizing a news article, drafting boilerplate, explaining a Python error — go to DeepSeek, Kimi, or other free tools. Save Claude capacity for work that needs our context, judgment, and confidentiality. See the <a href="ai-toolkit.html">AI Toolkit</a>.</p>
+
+  <h3>9. Don't use AI for what software does better</h3>
+  <p>Sorting a spreadsheet, counting rows, exact find-and-replace — Excel and your editor do these instantly and for free. Use AI to decide <em>what</em> to do, not as a calculator.</p>
+</section>
+
+<section>
+  <h2>Quick Reference: Cost of Common Habits</h2>
+  <table>
+    <tr><th>Habit</th><th>Approximate Token Effect</th></tr>
+    <tr><td>Pasting a full 40-page report vs the 2 relevant pages</td><td>~30,000 vs ~1,500 input tokens — then re-sent with every following message in that chat</td></tr>
+    <tr><td>Continuing a 30-turn chat vs starting fresh with a summary</td><td>Each new message carries the full history; a fresh chat with a 150-token summary cuts per-message cost by 90%+</td></tr>
+    <tr><td>"Try again" ×4 on a 2,000-token draft</td><td>~8,000 wasted output tokens vs ~400 for one precise correction</td></tr>
+    <tr><td>Outline-first on long deliverables</td><td>~150-token outline catches structural problems before the 3,000-token draft</td></tr>
+  </table>
+  <div class="callout ok">
+    <p><strong>The compounding rule:</strong> input waste compounds. A bloated first message is re-billed on every turn for the life of that conversation. Trim at the start, not the end.</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="claude.html">← Claude &amp; Cowork</a>
+  <a href="data-security.html">Next: Data Security →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">หมวดที่ 2</div>
+    <h1>ลดการสิ้นเปลืองโทเคนให้น้อยที่สุด</h1>
+    <p class="lede">โทเคนคือหน่วยวัดของทุกสิ่งที่เราส่งและรับจากเครื่องมือ AI ความสิ้นเปลืองส่วนใหญ่มาจากนิสัยไม่กี่อย่าง — แก้สิ่งเหล่านี้แล้วค่าใช้จ่ายทั้งทีมจะลดลงมากโดยคุณภาพไม่ตก</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>โทเคนหายไปไหน</h2>
+  <p>ทุกบทสนทนาจะส่งประวัติทั้งหมดซ้ำพร้อมข้อความใหม่ทุกครั้ง แชตยาวที่มีเอกสารวางไว้สามฉบับจึงส่งข้อมูลทั้งหมดซ้ำทุกรอบ แหล่งสิ้นเปลืองใหญ่สุดสามอย่างในงานวิจัย:</p>
+  <div class="grid cols-3">
+    <div class="card"><span class="num">1</span><h4>อินพุตใหญ่เกินจำเป็น</h4><p>วางเอกสารทั้งฉบับทั้งที่เกี่ยวข้องแค่ส่วนเดียว อัปโหลดไฟล์ซ้ำ บทสนทนายาวที่ลากประวัติตามทุกข้อความ</p></div>
+    <div class="card"><span class="num">2</span><h4>วนสั่งสร้างใหม่</h4><p>พรอมต์คลุมเครือที่ต้องลอง 5 รอบ สั่ง "ลองใหม่" แทนการแก้แบบเจาะจง สร้างเอกสารใหม่ทั้งฉบับเพื่อแก้ย่อหน้าเดียว</p></div>
+    <div class="card"><span class="num">3</span><h4>เครื่องมือพรีเมียมกับงานจิ๊บจ๊อย</h4><p>ใช้โทเคน Claude กับงานที่เครื่องมือฟรีทำได้เหมือนกัน — จัดรูปแบบทั่วไป ค้นหาง่าย ๆ ข้อความสำเร็จรูป</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>นิสัยประหยัดโทเคน</h2>
+
+  <h3>1. หนึ่งงาน หนึ่งแชต</h3>
+  <p>เริ่มบทสนทนาใหม่สำหรับแต่ละงาน เมื่อแชตเกินราวสิบกว่ารอบ ให้ Claude สรุปสถานะงานเป็นย่อหน้าสั้น คัดลอกไว้ แล้วต่อในแชตใหม่ด้วยบทสรุปนั้น — พกไป 150 โทเคนแทน 15,000</p>
+
+  <h3>2. ข้อความบางส่วน ไม่ใช่ทั้งเอกสาร</h3>
+  <div class="example bad"><div class="label">สิ้นเปลือง</div><p>วางรายงานประเมิน 40 หน้าแล้วถามว่า "รายงานนี้พูดถึงสภาพแรงงานในจังหวัดภาคเหนือว่าอย่างไร"</p></div>
+  <div class="example good"><div class="label">ประหยัด</div><p>หาสองส่วนที่เกี่ยวข้องเอง (Ctrl+F) แล้ววางเฉพาะส่วนนั้น: ~600 โทเคนแทน ~30,000 — และได้คำตอบที่ตรงประเด็นกว่า</p></div>
+
+  <h3>3. ให้ Cowork อ่านไฟล์ในเครื่อง</h3>
+  <p>ใน Cowork Claude อ่านไฟล์จากโฟลเดอร์งานโดยตรง และอ่านเฉพาะที่จำเป็น งานที่เกี่ยวกับไฟล์ทุกชนิด การเชื่อมต่อโฟลเดอร์ดีกว่าการวางเนื้อหาลงแชต</p>
+
+  <h3>4. เก็บบริบทคงที่ใน Projects ไม่ใช่ในพรอมต์</h3>
+  <p>แม่แบบ ระเบียบวิธี คำศัพท์ — เขียนครั้งเดียวในความรู้ของ Project — จะไม่กินโทเคนในทุกบทสนทนาอีก ดู <a href="claude.html">Claude และ Cowork</a></p>
+
+  <h3>5. ระบุรูปแบบผลลัพธ์ก่อนสร้าง</h3>
+  <p>บอกความยาว รูปแบบ และกลุ่มผู้อ่านในพรอมต์แรก: <em>"500 คำ สามส่วน สำหรับผู้บริจาค ไม่ใช้ศัพท์เทคนิค"</em> ผลลัพธ์ที่แพงที่สุดคือร่างยาวสวยงามที่ผิดรูปแบบ</p>
+
+  <h3>6. แก้แบบเจาะจง อย่าสั่ง "ลองใหม่"</h3>
+  <p>"ลองใหม่" สร้างทุกอย่างใหม่และมักทำผิดซ้ำเดิม ให้สั่งแทนว่า: <em>"คงโครงสร้างและน้ำเสียง แก้เฉพาะ (1) ช่วงปีควรเป็น 2023–2025 (2) ย่อบทนำเหลือสองประโยค"</em></p>
+
+  <h3>7. รวมคำถามที่เกี่ยวข้องกัน</h3>
+  <p>คำถามเล็กห้าข้อในข้อความเดียวถูกกว่าห้ารอบแยกกัน เพราะแต่ละรอบส่งประวัติบทสนทนาซ้ำ</p>
+
+  <h3>8. ส่งงาน Tier 1 ให้เครื่องมือฟรี</h3>
+  <p>งานสาธารณะทั่วไป — สรุปข่าว ร่างข้อความสำเร็จรูป อธิบายข้อผิดพลาด Python — ใช้ DeepSeek, Kimi หรือเครื่องมือฟรีอื่น เก็บ Claude ไว้สำหรับงานที่ต้องใช้บริบท วิจารณญาณ และความลับของเรา ดู <a href="ai-toolkit.html">ชุดเครื่องมือ AI</a></p>
+
+  <h3>9. อย่าใช้ AI กับสิ่งที่ซอฟต์แวร์ทำได้ดีกว่า</h3>
+  <p>เรียงสเปรดชีต นับแถว ค้นหา-แทนที่แบบตรงตัว — Excel และโปรแกรมแก้ไขทำได้ทันทีและฟรี ใช้ AI ตัดสินใจว่า<em>จะทำอะไร</em> ไม่ใช่เป็นเครื่องคิดเลข</p>
+</section>
+
+<section>
+  <h2>อ้างอิงด่วน: ต้นทุนของนิสัยที่พบบ่อย</h2>
+  <table>
+    <tr><th>นิสัย</th><th>ผลต่อโทเคนโดยประมาณ</th></tr>
+    <tr><td>วางรายงาน 40 หน้าเต็ม เทียบกับ 2 หน้าที่เกี่ยวข้อง</td><td>~30,000 เทียบ ~1,500 โทเคนอินพุต — และถูกส่งซ้ำกับทุกข้อความถัดไปในแชตนั้น</td></tr>
+    <tr><td>ต่อแชต 30 รอบ เทียบกับเริ่มใหม่พร้อมบทสรุป</td><td>ทุกข้อความใหม่แบกประวัติทั้งหมด แชตใหม่พร้อมบทสรุป 150 โทเคนลดต้นทุนต่อข้อความกว่า 90%</td></tr>
+    <tr><td>"ลองใหม่" ×4 กับร่าง 2,000 โทเคน</td><td>เสียเปล่า ~8,000 โทเคน เทียบ ~400 สำหรับการแก้เจาะจงครั้งเดียว</td></tr>
+    <tr><td>ทำโครงร่างก่อนสำหรับงานยาว</td><td>โครงร่าง ~150 โทเคนจับปัญหาโครงสร้างก่อนร่าง 3,000 โทเคน</td></tr>
+  </table>
+  <div class="callout ok">
+    <p><strong>กฎทบต้น:</strong> ความสิ้นเปลืองด้านอินพุตทบต้น ข้อความแรกที่บวมจะถูกคิดเงินซ้ำทุกรอบตลอดอายุบทสนทนานั้น ตัดให้สั้นตั้งแต่ต้น ไม่ใช่ตอนจบ</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="claude.html">← Claude และ Cowork</a>
+  <a href="data-security.html">ถัดไป: ความปลอดภัยข้อมูล →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အပိုင်း ၂</div>
+    <h1>တိုကင်ဖြုန်းတီးမှု အနည်းဆုံးဖြစ်အောင် လုပ်ခြင်း</h1>
+    <p class="lede">တိုကင်သည် AI ကိရိယာများသို့ ပို့သမျှ၊ ပြန်ရသမျှအားလုံး၏ တွက်ချက်ယူနစ်ဖြစ်သည်။ ဖြုန်းတီးမှုအများစုသည် အကျင့်အနည်းငယ်ကြောင့်ဖြစ်သည် — ဤအကျင့်များကိုပြင်လျှင် အရည်အသွေးမကျဘဲ အဖွဲ့တစ်ခုလုံး၏ကုန်ကျစရိတ် သိသိသာသာ ကျဆင်းသည်။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>တိုကင်များ အမှန်တကယ် ဘယ်ရောက်သွားသလဲ</h2>
+  <p>စကားပြောတိုင်းသည် မက်ဆေ့ချ်အသစ်တိုင်းနှင့်အတူ ၎င်း၏မှတ်တမ်းတစ်ခုလုံးကို ပြန်ပို့သည်။ စာတမ်းသုံးခုကူးထည့်ထားသော စကားပြောရှည်တစ်ခုသည် အလှည့်တိုင်း အားလုံးကို ပြန်ပို့နေသည်ဟု ဆိုလိုသည်။ သုတေသနအလုပ်တွင် အကြီးဆုံးဖြုန်းတီးမှု သုံးခု —</p>
+  <div class="grid cols-3">
+    <div class="card"><span class="num">1</span><h4>ကြီးလွန်းသော အဝင်ဒေတာ</h4><p>အပိုင်းတစ်ခုသာ သက်ဆိုင်သော်လည်း စာတမ်းတစ်ခုလုံးကူးထည့်ခြင်း၊ ပေးပြီးသားဖိုင်များ ထပ်တင်ခြင်း၊ မက်ဆေ့ချ်တိုင်းနောက်က မှတ်တမ်းဆွဲနေသော စကားပြောရှည်များ။</p></div>
+    <div class="card"><span class="num">2</span><h4>ပြန်ထုတ်ခိုင်းသံသရာ</h4><p>၅ ကြိမ်လောက်ကြိုးစားရသော မရှင်းလင်းသည့် prompt များ၊ တိကျသောပြင်ဆင်ချက်အစား "ထပ်စမ်းပါ" ဟုခိုင်းခြင်း၊ စာပိုဒ်တစ်ခုပြင်ရန် စာတမ်းတစ်ခုလုံး ပြန်ထုတ်ခိုင်းခြင်း။</p></div>
+    <div class="card"><span class="num">3</span><h4>ရိုးရှင်းသောအလုပ်အတွက် ပရီမီယံကိရိယာ</h4><p>အခမဲ့ကိရိယာက အတူတူလုပ်နိုင်သောအလုပ်များ — ယေဘုယျပုံစံချခြင်း၊ ရိုးရှင်းသောရှာဖွေမှု၊ ပုံသေစာသား — အတွက် Claude တိုကင်သုံးခြင်း။</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>ချွေတာရေး အလေ့အကျင့်များ</h2>
+
+  <h3>၁။ အလုပ်တစ်ခု၊ စကားပြောတစ်ခု</h3>
+  <p>သီးခြားအလုပ်တစ်ခုစီအတွက် စကားပြောအသစ်စတင်ပါ။ စကားပြောက အလှည့် ဆယ်ခုကျော်လာလျှင် Claude ကို အလုပ်အခြေအနေကို စာပိုဒ်တိုဖြင့်အကျဉ်းချုပ်ခိုင်းပြီး ကူးယူကာ ထိုအကျဉ်းချုပ်ဖြင့် စကားပြောအသစ်တွင် ဆက်ပါ။ ၁၅,၀၀၀ အစား တိုကင် ၁၅၀ သာ သယ်သွားရသည်။</p>
+
+  <h3>၂။ စာတမ်းမဟုတ်၊ ကောက်နုတ်ချက်</h3>
+  <div class="example bad"><div class="label">ဖြုန်းတီး</div><p>စာမျက်နှာ ၄၀ ပါအကဲဖြတ်ချက်ကို ကူးထည့်ပြီး "မြောက်ပိုင်းဒေသများရှိ လုပ်သားအခြေအနေအကြောင်း ဘာပြောထားလဲ" ဟုမေးခြင်း။</p></div>
+  <div class="example good"><div class="label">ချွေတာ</div><p>သက်ဆိုင်သောအပိုင်းနှစ်ခုကို ကိုယ်တိုင်ရှာ (Ctrl+F) ပြီး ၎င်းတို့ကိုသာ ကူးထည့်ခြင်း — ~၃၀,၀၀၀ အစား တိုကင် ~၆၀၀ သာ၊ အဖြေလည်း ပိုတိကျသည်။</p></div>
+
+  <h3>၃။ Cowork ကို ဖိုင်များ စက်တွင်းဖတ်ခိုင်းပါ</h3>
+  <p>Cowork တွင် Claude သည် အလုပ်ဖိုင်တွဲမှဖိုင်များကို တိုက်ရိုက်ဖတ်ပြီး လိုအပ်သလောက်သာဖတ်သည်။ ဖိုင်အခြေခံအလုပ်မှန်သမျှ ဖိုင်တွဲချိတ်ဆက်ခြင်းသည် Chat ထဲကူးထည့်ခြင်းထက် ကောင်းသည်။</p>
+
+  <h3>၄။ တည်ငြိမ်သောအကြောင်းအရာကို prompt ထဲမဟုတ်ဘဲ Projects ထဲထားပါ</h3>
+  <p>ပုံစံများ၊ နည်းစနစ်၊ ဝေါဟာရ — Project knowledge ထဲ တစ်ကြိမ်ရေးထားလျှင် — စကားပြောတိုင်းတွင် တိုကင်မကုန်တော့ပါ။ <a href="claude.html">Claude နှင့် Cowork</a> ကြည့်ပါ။</p>
+
+  <h3>၅။ မထုတ်ခင် ထုတ်ကုန်ပုံစံကို သတ်မှတ်ပါ</h3>
+  <p>ပထမ prompt တွင် အရှည်၊ ပုံစံ၊ ပရိသတ်ကို ဖော်ပြပါ — <em>"စာလုံး ၅၀၀၊ အပိုင်းသုံးပိုင်း၊ အလှူရှင်ပရိသတ်အတွက်၊ ပညာရပ်ဝေါဟာရမသုံးပါနှင့်"</em>။ အကုန်ကျဆုံးထုတ်ကုန်မှာ ပုံစံမှားနေသော လှပရှည်လျားသည့် မူကြမ်းဖြစ်သည်။</p>
+
+  <h3>၆။ တိကျစွာပြင်ပါ၊ "ထပ်စမ်းပါ" ဘယ်တော့မှ မပြောပါနှင့်</h3>
+  <p>"ထပ်စမ်းပါ" သည် အားလုံးကိုပြန်ထုတ်ပြီး နားလည်မှုလွဲချက်ကို များသောအားဖြင့် ထပ်လုပ်သည်။ ယင်းအစား — <em>"ဖွဲ့စည်းပုံနှင့် လေသံထားပါ။ (၁) ရက်စွဲအပိုင်းအခြားကို ၂၀၂၃–၂၀၂၅ ပြင်ပါ၊ (၂) နိဒါန်းကို စာကြောင်းနှစ်ကြောင်းအထိ တိုချုံ့ပါ — ဤနှစ်ချက်သာ ပြင်ပါ။"</em></p>
+
+  <h3>၇။ ဆက်စပ်မေးခွန်းများကို စုပေါင်းမေးပါ</h3>
+  <p>မက်ဆေ့ချ်တစ်ခုတည်းတွင် မေးခွန်းငယ်ငါးခုသည် သီးခြားအလှည့်ငါးခုထက် သက်သာသည် — အလှည့်တစ်ခုစီက စကားပြောမှတ်တမ်းကို ပြန်ပို့ရသောကြောင့်ဖြစ်သည်။</p>
+
+  <h3>၈။ Tier 1 အလုပ်များကို အခမဲ့ကိရိယာများသို့ ပို့ပါ</h3>
+  <p>ယေဘုယျအများပြည်သူအလုပ်များ — သတင်းဆောင်းပါးအကျဉ်းချုပ်ခြင်း၊ ပုံသေစာသားရေးခြင်း၊ Python error ရှင်းပြခြင်း — ကို DeepSeek၊ Kimi သို့မဟုတ် အခြားအခမဲ့ကိရိယာများသို့ ပို့ပါ။ Claude ကို ကျွန်ုပ်တို့၏ အကြောင်းအရာ၊ ဆင်ခြင်ဉာဏ်နှင့် လျှို့ဝှက်မှုလိုအပ်သော အလုပ်များအတွက် ချန်ထားပါ။ <a href="ai-toolkit.html">AI ကိရိယာစုံ</a> ကြည့်ပါ။</p>
+
+  <h3>၉။ ဆော့ဖ်ဝဲက ပိုကောင်းအောင်လုပ်နိုင်သည့်အရာအတွက် AI မသုံးပါနှင့်</h3>
+  <p>Spreadsheet စီခြင်း၊ အတန်းရေတွက်ခြင်း၊ တိကျသော ရှာဖွေ-အစားထိုးခြင်း — Excel နှင့် editor တို့က ချက်ချင်း အခမဲ့လုပ်ပေးသည်။ AI ကို <em>ဘာလုပ်မည်</em>ကို ဆုံးဖြတ်ရန်သုံးပါ၊ ဂဏန်းတွက်စက်အဖြစ် မသုံးပါနှင့်။</p>
+</section>
+
+<section>
+  <h2>အမြန်ကိုးကား — ဖြစ်လေ့ရှိသောအကျင့်များ၏ ကုန်ကျစရိတ်</h2>
+  <table>
+    <tr><th>အကျင့်</th><th>ခန့်မှန်း တိုကင်သက်ရောက်မှု</th></tr>
+    <tr><td>စာမျက်နှာ ၄၀ အစီရင်ခံစာအပြည့် နှင့် သက်ဆိုင်သော ၂ မျက်နှာ</td><td>အဝင်တိုကင် ~၃၀,၀၀၀ နှင့် ~၁,၅၀၀ — ထို့နောက် ထိုစကားပြောရှိ နောက်မက်ဆေ့ချ်တိုင်းနှင့် ပြန်ပို့ရသည်</td></tr>
+    <tr><td>အလှည့် ၃၀ စကားပြောဆက်ခြင်း နှင့် အကျဉ်းချုပ်ဖြင့် အသစ်စခြင်း</td><td>မက်ဆေ့ချ်အသစ်တိုင်း မှတ်တမ်းအပြည့်သယ်ရသည်; တိုကင် ၁၅၀ အကျဉ်းချုပ်ပါ စကားပြောအသစ်က တစ်ကြိမ်လျှင်ကုန်ကျစရိတ်ကို ၉၀%+ လျှော့သည်</td></tr>
+    <tr><td>တိုကင် ၂,၀၀၀ မူကြမ်းအပေါ် "ထပ်စမ်း" ×၄</td><td>~၈,၀၀၀ ဖြုန်းတီး နှင့် တိကျပြင်ဆင်မှုတစ်ကြိမ် ~၄၀၀</td></tr>
+    <tr><td>ရှည်လျားသောစာတမ်းအတွက် အကြမ်းဖျင်းအရင်လုပ်ခြင်း</td><td>တိုကင် ~၁၅၀ အကြမ်းဖျင်းက တိုကင် ၃,၀၀၀ မူကြမ်းမတိုင်မီ ဖွဲ့စည်းပုံပြဿနာများကို ဖမ်းမိသည်</td></tr>
+  </table>
+  <div class="callout ok">
+    <p><strong>ဆတိုးစည်းမျဉ်း —</strong> အဝင်ဖြုန်းတီးမှုသည် ဆတိုးသည်။ ဖောင်းပွနေသော ပထမမက်ဆေ့ချ်ကို ထိုစကားပြောသက်တမ်းတစ်လျှောက် အလှည့်တိုင်း ထပ်တွက်ခံရသည်။ အဆုံးမှာမဟုတ်ဘဲ အစမှာ ဖြတ်တောက်ပါ။</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="claude.html">← Claude နှင့် Cowork</a>
+  <a href="data-security.html">နောက်တစ်ခု — ဒေတာလုံခြုံရေး →</a>
+</div>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ENVISAGE WORLDWIDE</strong>
+      <span class="lang-section" data-lang="en"> — Internal AI Usage Policy</span>
+      <span class="lang-section" data-lang="th"> — นโยบายการใช้ AI ภายในองค์กร</span>
+      <span class="lang-section" data-lang="my"> — အတွင်းပိုင်း AI အသုံးပြုမှုမူဝါဒ</span>
+    </div>
+    <div>Version 1.0 &middot; June 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

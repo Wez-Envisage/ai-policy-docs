@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross-Verification — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html" class="active">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Section 4</div>
+    <h1>Cross-Verifying with Gemini &amp; ChatGPT</h1>
+    <p class="lede">Every model has blind spots, and our deliverables carry our name to UN agencies, funds, and corporate clients. A second model is a cheap independent check — when used on the right things, the right way.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>The Principle</h2>
+  <p>Cross-verification means taking a <strong>specific claim or output</strong> produced with one model and independently checking it with another (Gemini or ChatGPT). It is not re-doing the whole task twice. Two rules govern every verification:</p>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>Verify the claim, not the conversation</h4><p>Paste only the sentence, figure, or code block being checked — never the source document, the chat history, or surrounding analysis. This protects confidentiality and costs a fraction of the tokens.</p></div>
+    <div class="card"><span class="num">2</span><h4>Tier 2 maximum, sanitized</h4><p>Verification tools never receive Tier 3 content. Anonymize first (see <a href="data-security.html">Data Security</a>). If a claim can't be checked without revealing restricted detail, verify it against primary sources by hand instead.</p></div>
+  </div>
+  <div class="callout warn">
+    <p><strong>Agreement is not truth.</strong> Two models can share the same wrong answer, especially on recent events or thin-data regions like those we cover. Model agreement raises confidence; only a primary source settles a fact destined for a client deliverable.</p>
+  </div>
+</section>
+
+<section>
+  <h2>When to Verify — and With What</h2>
+  <table>
+    <tr><th>Situation</th><th>Verify?</th><th>How</th></tr>
+    <tr><td>Statistic or factual claim going into a client deliverable</td><td><span class="badge red">Always</span></td><td>Ask Gemini or ChatGPT to confirm/refute with sources; then check the primary source yourself.</td></tr>
+    <tr><td>Translation of source material (Burmese, Thai, Shan, etc.) affecting a finding</td><td><span class="badge red">Always</span></td><td>Second model translates the same sanitized passage blind; compare meanings. Disagreement → human translator.</td></tr>
+    <tr><td>Legal, regulatory, or sanctions-related statements</td><td><span class="badge red">Always</span></td><td>Cross-check, then confirm against the official text. Never deliver on model output alone.</td></tr>
+    <tr><td>SQL or Python destined for the Sapphire pipeline</td><td><span class="badge amber">Usually</span></td><td>Paste the code (schema names only, no data) into a second model: "Find bugs and edge cases." Then test on dev data.</td></tr>
+    <tr><td>Summary of a public document</td><td><span class="badge amber">Spot-check</span></td><td>Verify the 2–3 claims you'd be most embarrassed to get wrong.</td></tr>
+    <tr><td>Internal brainstorm, draft wording, formatting</td><td><span class="badge green">No</span></td><td>Editing judgment, not facts. Verification here is token waste.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Worked Examples</h2>
+
+  <h3>Example 1 — Statistic in a deliverable</h3>
+  <div class="example">
+    <div class="label">Scenario</div>
+    <p>Claude drafts: "The top ten industrialized nations spend a combined ~$200 billion annually on development and foreign aid." This is headed for a client report.</p>
+    <p><strong>To Gemini:</strong> "What is the most recent combined ODA spending of the top ten donor nations? Cite the source." If Gemini's figure differs materially, pull the OECD data directly and use the primary number with a citation. Cost: ~100 tokens. Value: our credibility.</p>
+  </div>
+
+  <h3>Example 2 — Translation check</h3>
+  <div class="example">
+    <div class="label">Scenario</div>
+    <p>A harvested Burmese-language article appears to say a company "acquired" a concession; the finding hinges on whether it means acquired or applied for.</p>
+    <p><strong>To ChatGPT (sanitized passage, names replaced):</strong> "Translate this passage precisely. Does the verb indicate completed acquisition or a pending application?" If the models disagree, the passage goes to a human translator on the team before the finding is written.</p>
+  </div>
+
+  <h3>Example 3 — SQL for the pipeline</h3>
+  <div class="example">
+    <div class="label">Scenario</div>
+    <p>Claude wrote a Snowflake query joining three tables to flag entities appearing across datasets.</p>
+    <p><strong>To Gemini:</strong> paste the query plus a one-line schema description: "Review for logic errors, join fan-out, and NULL handling." Models are excellent at catching each other's off-by-one logic. Then run on dev data before production.</p>
+  </div>
+
+  <h3>Example 4 — When NOT to verify</h3>
+  <div class="example">
+    <div class="label">Scenario</div>
+    <p>Claude restructured your interview notes into themes. There is no external fact to check — review it yourself. Sending it to a second model adds token cost and a second exposure point for zero gain.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Verification Etiquette (Token-Efficient)</h2>
+  <ul>
+    <li><strong>Blind the second model.</strong> Don't say "Claude said X — is that right?" Ask the question fresh. Models anchor on suggested answers.</li>
+    <li><strong>Batch your checks.</strong> Collect the deliverable's 5 key claims and verify them in one message.</li>
+    <li><strong>Use free tiers for verification.</strong> Verification prompts are short and need no context — ideal for free-tier Gemini/ChatGPT, preserving paid capacity.</li>
+    <li><strong>Record what you verified.</strong> One line in the project log: claim, tools used, primary source. This is our audit trail — the same discipline SAM sells to fund managers.</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="data-security.html">← Data Security</a>
+  <a href="ai-toolkit.html">Next: AI Toolkit →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">หมวดที่ 4</div>
+    <h1>การตรวจสอบไขว้ด้วย Gemini และ ChatGPT</h1>
+    <p class="lede">ทุกโมเดลมีจุดบอด และงานส่งมอบของเราถือชื่อเราไปสู่หน่วยงาน UN กองทุน และลูกค้าองค์กร โมเดลที่สองคือการตรวจสอบอิสระราคาถูก — เมื่อใช้กับสิ่งที่ถูกต้อง ด้วยวิธีที่ถูกต้อง</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>หลักการ</h2>
+  <p>การตรวจสอบไขว้คือการนำ<strong>ข้อความหรือผลลัพธ์เฉพาะ</strong>ที่สร้างด้วยโมเดลหนึ่ง ไปตรวจสอบอย่างอิสระกับอีกโมเดล (Gemini หรือ ChatGPT) ไม่ใช่การทำงานทั้งหมดซ้ำสองรอบ กฎสองข้อกำกับทุกการตรวจสอบ:</p>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>ตรวจข้อความ ไม่ใช่บทสนทนา</h4><p>วางเฉพาะประโยค ตัวเลข หรือโค้ดที่ต้องตรวจ — ห้ามวางเอกสารต้นทาง ประวัติแชต หรือบทวิเคราะห์รอบข้าง ปกป้องความลับและประหยัดโทเคนมหาศาล</p></div>
+    <div class="card"><span class="num">2</span><h4>สูงสุด Tier 2 และคัดกรองแล้ว</h4><p>เครื่องมือตรวจสอบห้ามรับเนื้อหา Tier 3 ปกปิดตัวตนก่อน (ดู <a href="data-security.html">ความปลอดภัยข้อมูล</a>) ถ้าตรวจไม่ได้โดยไม่เปิดเผยรายละเอียดหวงห้าม ให้ตรวจกับแหล่งข้อมูลปฐมภูมิด้วยตนเองแทน</p></div>
+  </div>
+  <div class="callout warn">
+    <p><strong>การเห็นพ้องไม่ใช่ความจริง</strong> สองโมเดลอาจให้คำตอบผิดเหมือนกัน โดยเฉพาะเหตุการณ์ล่าสุดหรือภูมิภาคที่ข้อมูลเบาบางอย่างพื้นที่ที่เราดูแล การเห็นพ้องของโมเดลเพิ่มความเชื่อมั่น แต่เฉพาะแหล่งข้อมูลปฐมภูมิเท่านั้นที่ชี้ขาดข้อเท็จจริงที่จะเข้างานส่งมอบลูกค้า</p>
+  </div>
+</section>
+
+<section>
+  <h2>เมื่อไรต้องตรวจ — และด้วยอะไร</h2>
+  <table>
+    <tr><th>สถานการณ์</th><th>ตรวจไหม</th><th>วิธี</th></tr>
+    <tr><td>สถิติหรือข้อเท็จจริงที่จะเข้างานส่งมอบลูกค้า</td><td><span class="badge red">เสมอ</span></td><td>ให้ Gemini หรือ ChatGPT ยืนยัน/หักล้างพร้อมแหล่งอ้างอิง แล้วตรวจแหล่งปฐมภูมิเอง</td></tr>
+    <tr><td>คำแปลของเอกสารต้นทาง (พม่า ไทย ไทใหญ่ ฯลฯ) ที่กระทบข้อค้นพบ</td><td><span class="badge red">เสมอ</span></td><td>ให้โมเดลที่สองแปลข้อความเดียวกัน (คัดกรองแล้ว) แบบไม่เห็นคำแปลแรก แล้วเทียบความหมาย ถ้าขัดแย้ง → นักแปลมนุษย์</td></tr>
+    <tr><td>ข้อความด้านกฎหมาย กฎระเบียบ หรือมาตรการคว่ำบาตร</td><td><span class="badge red">เสมอ</span></td><td>ตรวจไขว้ แล้วยืนยันกับเอกสารทางการ ห้ามส่งมอบโดยอาศัยผลลัพธ์โมเดลอย่างเดียว</td></tr>
+    <tr><td>SQL หรือ Python สำหรับไปป์ไลน์ Sapphire</td><td><span class="badge amber">มักจะตรวจ</span></td><td>วางโค้ด (เฉพาะชื่อ schema ไม่มีข้อมูล) ในโมเดลที่สอง: "หาบั๊กและกรณีขอบ" แล้วทดสอบกับข้อมูล dev</td></tr>
+    <tr><td>บทสรุปของเอกสารสาธารณะ</td><td><span class="badge amber">สุ่มตรวจ</span></td><td>ตรวจ 2–3 ข้อความที่จะอายที่สุดถ้าผิด</td></tr>
+    <tr><td>ระดมความคิดภายใน ร่างถ้อยคำ จัดรูปแบบ</td><td><span class="badge green">ไม่</span></td><td>เป็นวิจารณญาณการแก้ไข ไม่ใช่ข้อเท็จจริง การตรวจตรงนี้คือเปลืองโทเคน</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>ตัวอย่างประกอบ</h2>
+
+  <h3>ตัวอย่าง 1 — สถิติในงานส่งมอบ</h3>
+  <div class="example">
+    <div class="label">สถานการณ์</div>
+    <p>Claude ร่างว่า: "สิบประเทศอุตสาหกรรมชั้นนำใช้จ่ายรวมราว 2 แสนล้านดอลลาร์ต่อปีกับการพัฒนาและความช่วยเหลือต่างประเทศ" ข้อความนี้กำลังเข้ารายงานลูกค้า</p>
+    <p><strong>ถาม Gemini:</strong> "ยอด ODA รวมล่าสุดของสิบประเทศผู้บริจาคชั้นนำคือเท่าไร อ้างอิงแหล่งที่มา" ถ้าตัวเลขต่างกันมาก ให้ดึงข้อมูล OECD โดยตรงและใช้ตัวเลขปฐมภูมิพร้อมการอ้างอิง ต้นทุน: ~100 โทเคน มูลค่า: ความน่าเชื่อถือของเรา</p>
+  </div>
+
+  <h3>ตัวอย่าง 2 — ตรวจคำแปล</h3>
+  <div class="example">
+    <div class="label">สถานการณ์</div>
+    <p>บทความภาษาพม่าที่เก็บมาดูเหมือนบอกว่าบริษัท "ได้รับ" สัมปทาน ข้อค้นพบขึ้นอยู่กับว่าหมายถึงได้รับแล้วหรือแค่ยื่นขอ</p>
+    <p><strong>ถาม ChatGPT (ข้อความคัดกรองแล้ว เปลี่ยนชื่อ):</strong> "แปลข้อความนี้อย่างแม่นยำ คำกริยาบ่งบอกการได้รับเสร็จสิ้นหรือคำขอที่รออนุมัติ" ถ้าโมเดลขัดแย้งกัน ส่งให้นักแปลมนุษย์ในทีมก่อนเขียนข้อค้นพบ</p>
+  </div>
+
+  <h3>ตัวอย่าง 3 — SQL สำหรับไปป์ไลน์</h3>
+  <div class="example">
+    <div class="label">สถานการณ์</div>
+    <p>Claude เขียนคิวรี Snowflake เชื่อมสามตารางเพื่อหาเอนทิตีที่ปรากฏข้ามชุดข้อมูล</p>
+    <p><strong>ถาม Gemini:</strong> วางคิวรีพร้อมคำอธิบาย schema หนึ่งบรรทัด: "ตรวจหาข้อผิดพลาดเชิงตรรกะ join fan-out และการจัดการ NULL" โมเดลเก่งมากในการจับตรรกะพลาดของกันและกัน แล้วรันกับข้อมูล dev ก่อน production</p>
+  </div>
+
+  <h3>ตัวอย่าง 4 — เมื่อไรไม่ต้องตรวจ</h3>
+  <div class="example">
+    <div class="label">สถานการณ์</div>
+    <p>Claude จัดบันทึกสัมภาษณ์ของคุณเป็นธีม ไม่มีข้อเท็จจริงภายนอกให้ตรวจ — ตรวจเองได้เลย การส่งให้โมเดลที่สองเพิ่มต้นทุนโทเคนและจุดเสี่ยงข้อมูลโดยไม่ได้อะไร</p>
+  </div>
+</section>
+
+<section>
+  <h2>มารยาทการตรวจสอบ (แบบประหยัดโทเคน)</h2>
+  <ul>
+    <li><strong>ไม่บอกใบ้โมเดลที่สอง</strong> อย่าถามว่า "Claude บอกว่า X ถูกไหม" ให้ถามคำถามใหม่ตั้งแต่ต้น โมเดลมักคล้อยตามคำตอบที่ถูกชี้นำ</li>
+    <li><strong>รวมการตรวจเป็นชุด</strong> รวบรวม 5 ข้อความสำคัญของงานส่งมอบ แล้วตรวจในข้อความเดียว</li>
+    <li><strong>ใช้รุ่นฟรีสำหรับการตรวจสอบ</strong> พรอมต์ตรวจสอบสั้นและไม่ต้องใช้บริบท — เหมาะกับ Gemini/ChatGPT รุ่นฟรี เก็บความจุแบบเสียเงินไว้</li>
+    <li><strong>บันทึกสิ่งที่ตรวจแล้ว</strong> หนึ่งบรรทัดในบันทึกโครงการ: ข้อความ เครื่องมือที่ใช้ แหล่งปฐมภูมิ นี่คือหลักฐานการตรวจสอบของเรา — วินัยเดียวกับที่ SAM ขายให้ผู้จัดการกองทุน</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="data-security.html">← ความปลอดภัยข้อมูล</a>
+  <a href="ai-toolkit.html">ถัดไป: ชุดเครื่องมือ AI →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အပိုင်း ၄</div>
+    <h1>Gemini နှင့် ChatGPT ဖြင့် ပြန်လှန်စစ်ဆေးခြင်း</h1>
+    <p class="lede">မော်ဒယ်တိုင်းတွင် မမြင်နိုင်သောအားနည်းချက်များရှိပြီး ကျွန်ုပ်တို့၏ပေးအပ်စာတမ်းများသည် ကုလသမဂ္ဂအေဂျင်စီများ၊ ရန်ပုံငွေများနှင့် ကော်ပိုရိတ်ဖောက်သည်များထံ ကျွန်ုပ်တို့၏နာမည်ဖြင့် ရောက်သွားသည်။ ဒုတိယမော်ဒယ်တစ်ခုသည် စျေးသက်သာသော လွတ်လပ်သည့်စစ်ဆေးမှုဖြစ်သည် — မှန်ကန်သောအရာများအပေါ် မှန်ကန်သောနည်းဖြင့် သုံးလျှင်။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>အခြေခံမူ</h2>
+  <p>ပြန်လှန်စစ်ဆေးခြင်းဆိုသည်မှာ မော်ဒယ်တစ်ခုဖြင့်ထုတ်လုပ်ထားသော <strong>သီးခြားအချက် သို့မဟုတ် ရလဒ်</strong> ကို အခြားမော်ဒယ် (Gemini သို့မဟုတ် ChatGPT) ဖြင့် လွတ်လပ်စွာစစ်ဆေးခြင်းဖြစ်သည်။ အလုပ်တစ်ခုလုံးကို နှစ်ကြိမ်ပြန်လုပ်ခြင်း မဟုတ်ပါ။ စစ်ဆေးမှုတိုင်းကို စည်းမျဉ်းနှစ်ခုက အုပ်ချုပ်သည် —</p>
+  <div class="grid cols-2">
+    <div class="card"><span class="num">1</span><h4>စကားပြောမဟုတ်၊ အချက်ကိုသာ စစ်ပါ</h4><p>စစ်ဆေးမည့် စာကြောင်း၊ ကိန်းဂဏန်း သို့မဟုတ် ကုဒ်အပိုင်းကိုသာ ကူးထည့်ပါ — မူရင်းစာတမ်း၊ စကားပြောမှတ်တမ်း သို့မဟုတ် ပတ်ဝန်းကျင်ခွဲခြမ်းစိတ်ဖြာချက်များ ဘယ်တော့မှ မထည့်ရ။ ဤနည်းက လျှို့ဝှက်မှုကိုကာကွယ်ပြီး တိုကင်အနည်းငယ်သာ ကုန်သည်။</p></div>
+    <div class="card"><span class="num">2</span><h4>အများဆုံး Tier 2၊ သန့်စင်ပြီး</h4><p>စစ်ဆေးရေးကိရိယာများသည် Tier 3 အကြောင်းအရာကို ဘယ်တော့မှ မရရှိရ။ အရင်အမည်ဖျောက်ပါ (<a href="data-security.html">ဒေတာလုံခြုံရေး</a> ကြည့်ပါ)။ ကန့်သတ်အသေးစိတ်မဖော်ဘဲ မစစ်နိုင်လျှင် မူရင်းရင်းမြစ်များဖြင့် ကိုယ်တိုင်စစ်ပါ။</p></div>
+  </div>
+  <div class="callout warn">
+    <p><strong>သဘောတူညီမှုသည် အမှန်တရားမဟုတ်ပါ။</strong> မော်ဒယ်နှစ်ခုသည် တူညီသောအဖြေမှားကို မျှဝေနိုင်သည် — အထူးသဖြင့် မကြာသေးမီဖြစ်ရပ်များ သို့မဟုတ် ကျွန်ုပ်တို့လုပ်ကိုင်သော ဒေတာနည်းပါးသည့်ဒေသများတွင်။ မော်ဒယ်သဘောတူညီမှုက ယုံကြည်မှုမြှင့်သည်; ဖောက်သည်ပေးအပ်စာတမ်းအတွက် အချက်တစ်ခုကိုမူ မူရင်းရင်းမြစ်ကသာ အဆုံးအဖြတ်ပေးသည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>ဘယ်အချိန်စစ်မည် — ဘာနဲ့စစ်မည်</h2>
+  <table>
+    <tr><th>အခြေအနေ</th><th>စစ်မလား</th><th>နည်းလမ်း</th></tr>
+    <tr><td>ဖောက်သည်ပေးအပ်စာတမ်းထဲဝင်မည့် စာရင်းအင်း သို့မဟုတ် အချက်အလက်</td><td><span class="badge red">အမြဲ</span></td><td>Gemini သို့မဟုတ် ChatGPT ကို ရင်းမြစ်နှင့်တကွ အတည်ပြု/ငြင်းဆိုခိုင်းပါ; ထို့နောက် မူရင်းရင်းမြစ်ကို ကိုယ်တိုင်စစ်ပါ။</td></tr>
+    <tr><td>တွေ့ရှိချက်ကို သက်ရောက်သော မူရင်းဘာသာပြန် (မြန်မာ၊ ထိုင်း၊ ရှမ်း စသည်)</td><td><span class="badge red">အမြဲ</span></td><td>ဒုတိယမော်ဒယ်ကို သန့်စင်ထားသောစာပိုဒ်တူကို သီးခြားဘာသာပြန်ခိုင်းပြီး အဓိပ္ပာယ်နှိုင်းယှဉ်ပါ။ ကွဲလွဲလျှင် → လူဘာသာပြန်။</td></tr>
+    <tr><td>ဥပဒေ၊ စည်းမျဉ်း သို့မဟုတ် ပိတ်ဆို့မှုဆိုင်ရာ ဖော်ပြချက်များ</td><td><span class="badge red">အမြဲ</span></td><td>ပြန်လှန်စစ်ပြီး တရားဝင်စာသားနှင့် အတည်ပြုပါ။ မော်ဒယ်ရလဒ်တစ်ခုတည်းဖြင့် ဘယ်တော့မှ မပေးအပ်ရ။</td></tr>
+    <tr><td>Sapphire pipeline အတွက် SQL သို့မဟုတ် Python</td><td><span class="badge amber">များသောအားဖြင့်</span></td><td>ကုဒ်ကို (schema နာမည်များသာ၊ ဒေတာမပါ) ဒုတိယမော်ဒယ်ထဲထည့်ပါ — "bug နှင့် edge case များရှာပါ"။ ထို့နောက် dev ဒေတာဖြင့် စမ်းပါ။</td></tr>
+    <tr><td>အများပြည်သူစာတမ်း အကျဉ်းချုပ်</td><td><span class="badge amber">နမူနာစစ်</span></td><td>မှားလျှင် အရှက်ရဆုံးဖြစ်မည့် အချက် ၂–၃ ခုကို စစ်ပါ။</td></tr>
+    <tr><td>အတွင်းပိုင်းစိတ်ကူးထုတ်ခြင်း၊ စကားလုံးမူကြမ်း၊ ပုံစံချခြင်း</td><td><span class="badge green">မစစ်ပါ</span></td><td>အချက်အလက်မဟုတ်၊ တည်းဖြတ်ဆင်ခြင်မှုသာ။ ဤနေရာတွင်စစ်ခြင်းသည် တိုကင်ဖြုန်းတီးမှုဖြစ်သည်။</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>လက်တွေ့နမူနာများ</h2>
+
+  <h3>နမူနာ ၁ — ပေးအပ်စာတမ်းထဲက စာရင်းအင်း</h3>
+  <div class="example">
+    <div class="label">အခြေအနေ</div>
+    <p>Claude က ရေးသည် — "ထိပ်တန်းစက်မှုနိုင်ငံဆယ်ခုသည် ဖွံ့ဖြိုးရေးနှင့် နိုင်ငံခြားအကူအညီအတွက် နှစ်စဉ်စုစုပေါင်း ~ဒေါ်လာ ဘီလီယံ ၂၀၀ သုံးစွဲသည်"။ ၎င်းသည် ဖောက်သည်အစီရင်ခံစာထဲ ဝင်တော့မည်။</p>
+    <p><strong>Gemini ကိုမေးပါ —</strong> "ထိပ်တန်းအလှူရှင်နိုင်ငံဆယ်ခု၏ နောက်ဆုံးစုစုပေါင်း ODA သုံးစွဲမှုက ဘယ်လောက်လဲ? ရင်းမြစ်ကိုးကားပါ။" Gemini ၏ကိန်းဂဏန်း သိသိသာသာကွဲလျှင် OECD ဒေတာကို တိုက်ရိုက်ဆွဲပြီး မူရင်းကိန်းဂဏန်းကို ကိုးကားချက်နှင့်တကွ သုံးပါ။ ကုန်ကျမှု — တိုကင် ~၁၀၀။ တန်ဖိုး — ကျွန်ုပ်တို့၏ ယုံကြည်စိတ်ချရမှု။</p>
+  </div>
+
+  <h3>နမူနာ ၂ — ဘာသာပြန် စစ်ဆေးခြင်း</h3>
+  <div class="example">
+    <div class="label">အခြေအနေ</div>
+    <p>စုဆောင်းထားသော မြန်မာဘာသာဆောင်းပါးတစ်ပုဒ်က ကုမ္ပဏီတစ်ခုသည် လုပ်ပိုင်ခွင့်ကို "ရရှိခဲ့သည်" ဟုဆိုပုံရသည်; ရရှိပြီးပြီလား လျှောက်ထားဆဲလားဆိုသည်အပေါ် တွေ့ရှိချက် မူတည်နေသည်။</p>
+    <p><strong>ChatGPT ကို (သန့်စင်ထားသောစာပိုဒ်၊ နာမည်များအစားထိုးပြီး) —</strong> "ဤစာပိုဒ်ကို တိကျစွာဘာသာပြန်ပါ။ ကြိယာက ပြီးမြောက်သောရယူမှုလား ဆိုင်းငံ့ဆဲလျှောက်လွှာလား?" မော်ဒယ်များကွဲလွဲလျှင် တွေ့ရှိချက်မရေးခင် အဖွဲ့ထဲက လူဘာသာပြန်ထံ ပို့ပါ။</p>
+  </div>
+
+  <h3>နမူနာ ၃ — Pipeline အတွက် SQL</h3>
+  <div class="example">
+    <div class="label">အခြေအနေ</div>
+    <p>ဒေတာအစုများတစ်လျှောက် ပေါ်လာသော entity များကို သတ်မှတ်ရန် Claude က ဇယားသုံးခုပေါင်းသော Snowflake query ရေးခဲ့သည်။</p>
+    <p><strong>Gemini ကို —</strong> query နှင့် schema ဖော်ပြချက်တစ်ကြောင်း ကူးထည့်ပါ — "Logic အမှားများ၊ join fan-out နှင့် NULL ကိုင်တွယ်မှုကို စစ်ပါ"။ မော်ဒယ်များသည် တစ်ခုနှင့်တစ်ခု၏ logic အမှားများကို ဖမ်းရာတွင် အလွန်တော်သည်။ ထို့နောက် production မတိုင်မီ dev ဒေတာဖြင့် run ပါ။</p>
+  </div>
+
+  <h3>နမူနာ ၄ — ဘယ်အချိန် မစစ်သင့်လဲ</h3>
+  <div class="example">
+    <div class="label">အခြေအနေ</div>
+    <p>Claude က သင်၏အင်တာဗျူးမှတ်စုများကို အကြောင်းအရာအလိုက် ပြန်ဖွဲ့စည်းပေးခဲ့သည်။ စစ်ရန်ပြင်ပအချက်အလက် မရှိပါ — ကိုယ်တိုင်ပြန်ကြည့်ပါ။ ဒုတိယမော်ဒယ်ထံပို့ခြင်းသည် ဘာအကျိုးမှမရဘဲ တိုကင်ကုန်ကျမှုနှင့် ဒုတိယပေါက်ကြားနိုင်သည့်နေရာကို ထပ်ထည့်ခြင်းသာဖြစ်သည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>စစ်ဆေးရေး ကျင့်ဝတ် (တိုကင်ချွေတာသော)</h2>
+  <ul>
+    <li><strong>ဒုတိယမော်ဒယ်ကို အမြင်မပေးပါနှင့်။</strong> "Claude က X လို့ပြောတယ် — မှန်လား?" ဟု မမေးပါနှင့်။ မေးခွန်းကို အသစ်ကမေးပါ။ မော်ဒယ်များသည် အကြံပြုထားသောအဖြေများပေါ် မှီတတ်သည်။</li>
+    <li><strong>စစ်ဆေးမှုများကို စုပေါင်းလုပ်ပါ။</strong> ပေးအပ်စာတမ်း၏ အဓိကအချက် ၅ ခုကိုစုပြီး မက်ဆေ့ချ်တစ်ခုတည်းတွင် စစ်ပါ။</li>
+    <li><strong>စစ်ဆေးရေးအတွက် အခမဲ့အဆင့်များသုံးပါ။</strong> စစ်ဆေးရေး prompt များသည် တိုပြီး နောက်ခံအကြောင်းအရာမလိုပါ — အခမဲ့ Gemini/ChatGPT အတွက် အကောင်းဆုံးဖြစ်ပြီး အခပေးစွမ်းရည်ကို ထိန်းသိမ်းသည်။</li>
+    <li><strong>စစ်ပြီးသမျှကို မှတ်တမ်းတင်ပါ။</strong> ပရောဂျက်မှတ်တမ်းတွင် တစ်ကြောင်း — အချက်၊ သုံးသောကိရိယာများ၊ မူရင်းရင်းမြစ်။ ဤသည်မှာ ကျွန်ုပ်တို့၏ audit trail ဖြစ်သည် — SAM က ရန်ပုံငွေမန်နေဂျာများကို ရောင်းချသော စည်းကမ်းမျိုးပင်ဖြစ်သည်။</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="data-security.html">← ဒေတာလုံခြုံရေး</a>
+  <a href="ai-toolkit.html">နောက်တစ်ခု — AI ကိရိယာစုံ →</a>
+</div>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ENVISAGE WORLDWIDE</strong>
+      <span class="lang-section" data-lang="en"> — Internal AI Usage Policy</span>
+      <span class="lang-section" data-lang="th"> — นโยบายการใช้ AI ภายในองค์กร</span>
+      <span class="lang-section" data-lang="my"> — အတွင်းပိုင်း AI အသုံးပြုမှုမူဝါဒ</span>
+    </div>
+    <div>Version 1.0 &middot; June 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

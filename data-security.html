@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Security &amp; Safety — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html" class="active">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Section 3</div>
+    <h1>Data Security &amp; Safety</h1>
+    <p class="lede">Our research touches conflict-affected regions, vulnerable people, and confidential client decisions. These rules are not bureaucracy — in our line of work, a data leak can put a person at physical risk and end a client relationship in the same hour.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>The Hard Rules</h2>
+  <p class="sub">These are non-negotiable across every AI tool, including Claude.</p>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge red">Prohibited</span>
+      <h4>Email connection or sharing</h4>
+      <p>No AI tool is ever connected to an ENVISAGE email account, and email contents are never pasted into AI tools. Email carries client correspondence, contract terms, source contacts, and staff personal data — all Tier 3 by default.</p>
+    </div>
+    <div class="card">
+      <span class="badge red">Prohibited</span>
+      <h4>Sharing client deliverables</h4>
+      <p>Confidential documents and worksheets we create for clients — assessments, maps, dashboard exports, SAM reports — are never uploaded to, linked into, or pasted into any external AI service. Draft inside the approved Claude workflow; finals move to protected storage and stay there.</p>
+    </div>
+    <div class="card">
+      <span class="badge red">Prohibited</span>
+      <h4>Sharing live documents and worksheets</h4>
+      <p>No sharing of Google Docs/Sheets links, Office 365 links, or live collaborative documents with AI tools. A live link exposes the full document, its history, and sometimes the whole folder.</p>
+    </div>
+    <div class="card">
+      <span class="badge amber">Restricted</span>
+      <h4>Google Drive access</h4>
+      <p>Drive connections are limited to specific, pre-approved working folders, approved by your project lead. Never root or broad access. Client deliverable folders, HR, and finance folders are permanently excluded.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Protecting People in Our Data</h2>
+  <p>Much of our value comes from person-relationship mapping and in-country networks. That is exactly the data that must be handled with the most care:</p>
+  <ul>
+    <li><strong>Persons of interest:</strong> network-mapping subjects, their relationships, and position data stay inside Sapphire and approved Claude workflows only — never in verification tools or free LLMs.</li>
+    <li><strong>Field staff and sources:</strong> names, locations, photos, travel patterns, and anything that could identify in-country researchers or community sources never enter any AI tool. Refer to them by role codes ("Researcher CR-2") if a prompt must mention them at all.</li>
+    <li><strong>Partners in sensitive regions:</strong> orphanage, education, and legal-advocacy project details from Myanmar, Thailand, and elsewhere are Tier 3 when they name people, sites, or routes.</li>
+    <li><strong>SAM clients:</strong> fund holdings, analyst scores, and decision records are client property. They are processed only inside SAM and approved Claude workflows under the engagement's terms.</li>
+  </ul>
+  <div class="callout danger">
+    <p><strong>The test:</strong> before sending a prompt, ask — "If this exact text appeared on a public website tomorrow, could it harm a person, a partner, or an engagement?" If yes, it does not leave our approved tools, and ideally it gets anonymized even there.</p>
+  </div>
+</section>
+
+<section>
+  <h2>How to Anonymize a Prompt</h2>
+  <div class="example bad">
+    <div class="label">Never send this</div>
+    <p>"[Real name], a procurement officer in [real ministry], approved licenses for [real company] owned by his brother-in-law [real name]. Summarize the conflict-of-interest pattern."</p>
+  </div>
+  <div class="example good">
+    <div class="label">Send this instead</div>
+    <p>"A procurement official approved licenses for a company owned by a close relative. Draft a paragraph describing this conflict-of-interest pattern for an assessment report."</p>
+  </div>
+  <ul>
+    <li>Replace names with consistent placeholders (Person A, Company X, Ministry M) so relationships stay analyzable.</li>
+    <li>Generalize locations to the least specific level the task allows (province, not village).</li>
+    <li>Strip dates, amounts, and identifiers unless the analysis depends on them.</li>
+    <li>Re-insert real details only in our own systems, after the AI step.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Account &amp; Settings Hygiene</h2>
+  <ul>
+    <li><strong>Work accounts only.</strong> All AI tools are used under ENVISAGE-managed accounts — never personal accounts — so access can be controlled and revoked.</li>
+    <li><strong>Check training settings.</strong> On every tool, locate the data/privacy settings and disable use of our inputs for model training where the option exists. On tools without such controls (most free LLMs), Tier 1 only.</li>
+    <li><strong>Don't store conversation links.</strong> Public "share chat" links are publication. Never create them for anything above Tier 1.</li>
+    <li><strong>Report mistakes immediately.</strong> If Tier 3 content reaches the wrong tool, tell your project lead the same day. Fast disclosure lets us notify clients if needed; concealment turns an accident into a breach of trust.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Output Is Also a Risk</h2>
+  <p>AI-generated content can leak inward too. Before any AI-assisted text reaches a client deliverable:</p>
+  <ul>
+    <li>Verify every factual claim against our own sources — see <a href="verification.html">Cross-Verification</a>. AI tools state wrong facts with full confidence.</li>
+    <li>Check that no placeholder names, invented citations, or fabricated statistics survived editing.</li>
+    <li>Confirm the text doesn't echo another client's context from an over-loaded Project or chat history.</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="token-efficiency.html">← Token Efficiency</a>
+  <a href="verification.html">Next: Verification →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">หมวดที่ 3</div>
+    <h1>ความปลอดภัยของข้อมูล</h1>
+    <p class="lede">งานวิจัยของเราเกี่ยวข้องกับพื้นที่ขัดแย้ง กลุ่มคนเปราะบาง และการตัดสินใจลับของลูกค้า กฎเหล่านี้ไม่ใช่ระเบียบราชการ — ในสายงานของเรา ข้อมูลรั่วหนึ่งครั้งอาจทำให้คนตกอยู่ในอันตรายทางกายภาพ และจบความสัมพันธ์กับลูกค้าภายในชั่วโมงเดียวกัน</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>กฎเหล็ก</h2>
+  <p class="sub">ข้อกำหนดเหล่านี้ต่อรองไม่ได้ กับเครื่องมือ AI ทุกตัว รวมถึง Claude</p>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge red">ห้าม</span>
+      <h4>เชื่อมต่อหรือแชร์อีเมล</h4>
+      <p>ห้ามเครื่องมือ AI ใดเชื่อมต่อกับบัญชีอีเมลของ ENVISAGE และห้ามวางเนื้อหาอีเมลลงในเครื่องมือ AI อีเมลมีจดหมายลูกค้า เงื่อนไขสัญญา ผู้ติดต่อแหล่งข่าว และข้อมูลส่วนตัวพนักงาน — ทั้งหมดเป็น Tier 3 โดยปริยาย</p>
+    </div>
+    <div class="card">
+      <span class="badge red">ห้าม</span>
+      <h4>แชร์งานส่งมอบลูกค้า</h4>
+      <p>เอกสารและเวิร์กชีตลับที่เราสร้างให้ลูกค้า — รายงานประเมิน แผนที่ ไฟล์ส่งออกแดชบอร์ด รายงาน SAM — ห้ามอัปโหลด ลิงก์ หรือวางลงในบริการ AI ภายนอกใด ๆ ร่างในขั้นตอน Claude ที่อนุมัติ ฉบับสมบูรณ์ย้ายไปที่จัดเก็บที่ปลอดภัยและอยู่ที่นั่น</p>
+    </div>
+    <div class="card">
+      <span class="badge red">ห้าม</span>
+      <h4>แชร์เอกสารและเวิร์กชีตแบบสด</h4>
+      <p>ห้ามแชร์ลิงก์ Google Docs/Sheets, Office 365 หรือเอกสารทำงานร่วมแบบสดกับเครื่องมือ AI ลิงก์สดเปิดเผยเอกสารทั้งฉบับ ประวัติ และบางครั้งทั้งโฟลเดอร์</p>
+    </div>
+    <div class="card">
+      <span class="badge amber">จำกัด</span>
+      <h4>การเข้าถึง Google Drive</h4>
+      <p>การเชื่อมต่อ Drive จำกัดเฉพาะโฟลเดอร์ทำงานที่อนุมัติล่วงหน้าโดยหัวหน้าโครงการ ห้ามเข้าถึงระดับรากหรือแบบกว้าง โฟลเดอร์งานส่งมอบลูกค้า ฝ่ายบุคคล และการเงิน ถูกยกเว้นถาวร</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>ปกป้องบุคคลในข้อมูลของเรา</h2>
+  <p>คุณค่าของเราส่วนใหญ่มาจากการทำแผนผังความสัมพันธ์บุคคลและเครือข่ายในประเทศ นั่นคือข้อมูลที่ต้องดูแลอย่างระมัดระวังที่สุด:</p>
+  <ul>
+    <li><strong>บุคคลเป้าหมาย:</strong> บุคคลในแผนผังเครือข่าย ความสัมพันธ์ และข้อมูลตำแหน่ง อยู่เฉพาะใน Sapphire และขั้นตอน Claude ที่อนุมัติ — ห้ามเข้าเครื่องมือตรวจสอบหรือ LLM ฟรีเด็ดขาด</li>
+    <li><strong>เจ้าหน้าที่ภาคสนามและแหล่งข่าว:</strong> ชื่อ สถานที่ รูปถ่าย รูปแบบการเดินทาง และสิ่งใดที่ระบุตัวนักวิจัยในประเทศหรือแหล่งข่าวชุมชนได้ ห้ามเข้าเครื่องมือ AI ใด ๆ หากต้องอ้างถึง ให้ใช้รหัสบทบาท ("นักวิจัย CR-2")</li>
+    <li><strong>พันธมิตรในพื้นที่อ่อนไหว:</strong> รายละเอียดโครงการสถานเลี้ยงเด็กกำพร้า การศึกษา และการช่วยเหลือทางกฎหมายจากเมียนมา ไทย และที่อื่น เป็น Tier 3 เมื่อระบุชื่อบุคคล สถานที่ หรือเส้นทาง</li>
+    <li><strong>ลูกค้า SAM:</strong> การถือครองกองทุน คะแนนนักวิเคราะห์ และบันทึกการตัดสินใจเป็นทรัพย์สินของลูกค้า ประมวลผลเฉพาะใน SAM และขั้นตอน Claude ที่อนุมัติตามเงื่อนไขสัญญา</li>
+  </ul>
+  <div class="callout danger">
+    <p><strong>บททดสอบ:</strong> ก่อนส่งพรอมต์ ถามตัวเองว่า "ถ้าข้อความนี้ปรากฏบนเว็บไซต์สาธารณะพรุ่งนี้ จะเป็นอันตรายต่อบุคคล พันธมิตร หรือสัญญางานหรือไม่" ถ้าใช่ ห้ามออกจากเครื่องมือที่อนุมัติ และควรปกปิดตัวตนแม้ในนั้นด้วย</p>
+  </div>
+</section>
+
+<section>
+  <h2>วิธีปกปิดตัวตนในพรอมต์</h2>
+  <div class="example bad">
+    <div class="label">ห้ามส่งแบบนี้</div>
+    <p>"[ชื่อจริง] เจ้าหน้าที่จัดซื้อใน[กระทรวงจริง] อนุมัติใบอนุญาตให้[บริษัทจริง]ที่มีพี่เขย[ชื่อจริง]เป็นเจ้าของ สรุปรูปแบบผลประโยชน์ทับซ้อน"</p>
+  </div>
+  <div class="example good">
+    <div class="label">ส่งแบบนี้แทน</div>
+    <p>"เจ้าหน้าที่จัดซื้อรายหนึ่งอนุมัติใบอนุญาตให้บริษัทที่ญาติใกล้ชิดเป็นเจ้าของ ร่างย่อหน้าอธิบายรูปแบบผลประโยชน์ทับซ้อนนี้สำหรับรายงานประเมิน"</p>
+  </div>
+  <ul>
+    <li>แทนชื่อด้วยตัวแทนที่สม่ำเสมอ (บุคคล ก, บริษัท X, กระทรวง M) เพื่อให้ความสัมพันธ์ยังวิเคราะห์ได้</li>
+    <li>ทำให้สถานที่กว้างขึ้นเท่าที่งานอนุญาต (จังหวัด ไม่ใช่หมู่บ้าน)</li>
+    <li>ตัดวันที่ จำนวนเงิน และตัวระบุ เว้นแต่การวิเคราะห์ต้องใช้</li>
+    <li>ใส่รายละเอียดจริงกลับเฉพาะในระบบของเราเอง หลังขั้นตอน AI</li>
+  </ul>
+</section>
+
+<section>
+  <h2>สุขอนามัยบัญชีและการตั้งค่า</h2>
+  <ul>
+    <li><strong>บัญชีงานเท่านั้น</strong> เครื่องมือ AI ทุกตัวใช้ภายใต้บัญชีที่ ENVISAGE จัดการ — ห้ามใช้บัญชีส่วนตัว — เพื่อควบคุมและเพิกถอนการเข้าถึงได้</li>
+    <li><strong>ตรวจการตั้งค่าการเทรนโมเดล</strong> ในทุกเครื่องมือ หาการตั้งค่าข้อมูล/ความเป็นส่วนตัว แล้วปิดการใช้ข้อมูลของเราเทรนโมเดลถ้ามีตัวเลือก เครื่องมือที่ไม่มีตัวเลือกนี้ (LLM ฟรีส่วนใหญ่) ใช้ได้เฉพาะ Tier 1</li>
+    <li><strong>อย่าสร้างลิงก์แชร์บทสนทนา</strong> ลิงก์ "แชร์แชต" สาธารณะคือการตีพิมพ์ ห้ามสร้างสำหรับสิ่งใดเหนือ Tier 1</li>
+    <li><strong>รายงานข้อผิดพลาดทันที</strong> ถ้าเนื้อหา Tier 3 หลุดเข้าเครื่องมือผิด แจ้งหัวหน้าโครงการภายในวันเดียวกัน การเปิดเผยเร็วช่วยให้เราแจ้งลูกค้าได้ทันถ้าจำเป็น การปกปิดเปลี่ยนอุบัติเหตุเป็นการทำลายความไว้วางใจ</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ผลลัพธ์ก็มีความเสี่ยง</h2>
+  <p>เนื้อหาที่ AI สร้างอาจรั่วเข้ามาในงานได้เช่นกัน ก่อนข้อความจาก AI เข้าสู่งานส่งมอบลูกค้า:</p>
+  <ul>
+    <li>ตรวจทุกข้อเท็จจริงกับแหล่งข้อมูลของเราเอง — ดู <a href="verification.html">การตรวจสอบไขว้</a> เครื่องมือ AI พูดข้อมูลผิดด้วยความมั่นใจเต็มที่</li>
+    <li>ตรวจว่าไม่มีชื่อตัวแทน การอ้างอิงที่แต่งขึ้น หรือสถิติปลอมหลงเหลือจากการแก้ไข</li>
+    <li>ยืนยันว่าข้อความไม่สะท้อนบริบทของลูกค้ารายอื่นจาก Project หรือประวัติแชตที่ใส่ข้อมูลมากเกิน</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="token-efficiency.html">← ประหยัดโทเคน</a>
+  <a href="verification.html">ถัดไป: การตรวจสอบยืนยัน →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အပိုင်း ၃</div>
+    <h1>ဒေတာလုံခြုံရေး</h1>
+    <p class="lede">ကျွန်ုပ်တို့၏သုတေသနသည် ပဋိပက္ခဒေသများ၊ ထိခိုက်လွယ်သောလူများနှင့် ဖောက်သည်များ၏ လျှို့ဝှက်ဆုံးဖြတ်ချက်များကို ထိတွေ့သည်။ ဤစည်းမျဉ်းများသည် ဗျူရိုကရေစီမဟုတ်ပါ — ကျွန်ုပ်တို့၏လုပ်ငန်းတွင် ဒေတာပေါက်ကြားမှုတစ်ခုက လူတစ်ဦးကို ရုပ်ပိုင်းဆိုင်ရာအန္တရာယ်ဖြစ်စေနိုင်ပြီး ထိုနာရီအတွင်းမှာပင် ဖောက်သည်ဆက်ဆံရေးကို အဆုံးသတ်စေနိုင်သည်။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>တင်းကြပ်သော စည်းမျဉ်းများ</h2>
+  <p class="sub">ဤအချက်များသည် Claude အပါအဝင် AI ကိရိယာတိုင်းတွင် ညှိနှိုင်း၍မရပါ။</p>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge red">တားမြစ်</span>
+      <h4>အီးမေးလ် ချိတ်ဆက်ခြင်း သို့မဟုတ် မျှဝေခြင်း</h4>
+      <p>မည်သည့် AI ကိရိယာမျှ ENVISAGE အီးမေးလ်အကောင့်နှင့် ဘယ်တော့မှမချိတ်ရ၊ အီးမေးလ်အကြောင်းအရာများကို AI ကိရိယာများထဲ ဘယ်တော့မှမကူးထည့်ရ။ အီးမေးလ်တွင် ဖောက်သည်စာပေးစာယူ၊ စာချုပ်စည်းကမ်းချက်များ၊ သတင်းရင်းမြစ်အဆက်အသွယ်နှင့် ဝန်ထမ်းကိုယ်ရေးဒေတာများ ပါသည် — အားလုံး မူရင်းအတိုင်း Tier 3 ဖြစ်သည်။</p>
+    </div>
+    <div class="card">
+      <span class="badge red">တားမြစ်</span>
+      <h4>ဖောက်သည်ပေးအပ်စာတမ်းများ မျှဝေခြင်း</h4>
+      <p>ဖောက်သည်များအတွက် ကျွန်ုပ်တို့ဖန်တီးသော လျှို့ဝှက်စာတမ်းနှင့် worksheet များ — အကဲဖြတ်ချက်များ၊ မြေပုံများ၊ dashboard ထုတ်ယူချက်များ၊ SAM အစီရင်ခံစာများ — ကို မည်သည့်ပြင်ပ AI ဝန်ဆောင်မှုသို့မျှ တင်ခြင်း၊ လင့်ခ်ချိတ်ခြင်း၊ ကူးထည့်ခြင်း မပြုရ။ ခွင့်ပြုထားသော Claude လုပ်ငန်းစဉ်အတွင်း မူကြမ်းရေးပါ; နောက်ဆုံးမူများကို ကာကွယ်ထားသောသိုလှောင်မှုသို့ ရွှေ့ပြီး ထိုနေရာတွင်သာထားပါ။</p>
+    </div>
+    <div class="card">
+      <span class="badge red">တားမြစ်</span>
+      <h4>တိုက်ရိုက်စာတမ်းနှင့် worksheet များ မျှဝေခြင်း</h4>
+      <p>Google Docs/Sheets လင့်ခ်များ၊ Office 365 လင့်ခ်များ သို့မဟုတ် တိုက်ရိုက်ပူးပေါင်းစာတမ်းများကို AI ကိရိယာများနှင့် မမျှဝေရ။ တိုက်ရိုက်လင့်ခ်တစ်ခုက စာတမ်းအပြည့်၊ ၎င်း၏မှတ်တမ်းနှင့် တစ်ခါတစ်ရံ ဖိုင်တွဲတစ်ခုလုံးကိုပါ ဖော်ထုတ်ပေးသည်။</p>
+    </div>
+    <div class="card">
+      <span class="badge amber">ကန့်သတ်</span>
+      <h4>Google Drive အသုံးပြုခွင့်</h4>
+      <p>Drive ချိတ်ဆက်မှုများကို ပရောဂျက်ခေါင်းဆောင် ကြိုတင်ခွင့်ပြုထားသော သီးသန့်အလုပ်ဖိုင်တွဲများသာ ကန့်သတ်သည်။ Root သို့မဟုတ် ကျယ်ပြန့်သောအသုံးပြုခွင့် ဘယ်တော့မှမပေးရ။ ဖောက်သည်ပေးအပ်စာတမ်း၊ HR နှင့် ငွေကြေးဖိုင်တွဲများကို အမြဲတမ်းချန်လှပ်ထားသည်။</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>ကျွန်ုပ်တို့ဒေတာထဲရှိ လူများကို ကာကွယ်ခြင်း</h2>
+  <p>ကျွန်ုပ်တို့၏တန်ဖိုးအများစုသည် ပုဂ္ဂိုလ်ဆက်နွယ်မှုမြေပုံရေးဆွဲခြင်းနှင့် ပြည်တွင်းကွန်ရက်များမှ လာသည်။ ထိုဒေတာများသည် အသေချာဆုံးကိုင်တွယ်ရမည့် ဒေတာများပင်ဖြစ်သည် —</p>
+  <ul>
+    <li><strong>စိတ်ဝင်စားရသူပုဂ္ဂိုလ်များ —</strong> ကွန်ရက်မြေပုံပါပုဂ္ဂိုလ်များ၊ ၎င်းတို့၏ဆက်နွယ်မှုနှင့် ရာထူးဒေတာများသည် Sapphire နှင့် ခွင့်ပြုထားသော Claude လုပ်ငန်းစဉ်များအတွင်းသာ ရှိရမည် — စစ်ဆေးရေးကိရိယာများ သို့မဟုတ် အခမဲ့ LLM များထဲ ဘယ်တော့မှ မရောက်ရ။</li>
+    <li><strong>ကွင်းဆင်းဝန်ထမ်းနှင့် သတင်းရင်းမြစ်များ —</strong> နာမည်၊ တည်နေရာ၊ ဓာတ်ပုံ၊ ခရီးသွားပုံစံနှင့် ပြည်တွင်းသုတေသီများ သို့မဟုတ် ရပ်ရွာသတင်းရင်းမြစ်များကို ဖော်ထုတ်နိုင်သည့်အရာများ မည်သည့် AI ကိရိယာထဲမျှ မဝင်ရ။ Prompt တွင် ဖော်ပြရန်လိုလျှင် အခန်းကဏ္ဍကုဒ် ("သုတေသီ CR-2") ဖြင့်သာ ရည်ညွှန်းပါ။</li>
+    <li><strong>အထိခိုက်မခံဒေသများရှိ မိတ်ဖက်များ —</strong> မြန်မာ၊ ထိုင်းနှင့် အခြားနေရာများမှ မိဘမဲ့ဂေဟာ၊ ပညာရေးနှင့် ဥပဒေအကူအညီပရောဂျက်အသေးစိတ်များသည် လူ၊ နေရာ သို့မဟုတ် လမ်းကြောင်းနာမည်ပါလျှင် Tier 3 ဖြစ်သည်။</li>
+    <li><strong>SAM ဖောက်သည်များ —</strong> ရန်ပုံငွေပိုင်ဆိုင်မှု၊ သုံးသပ်သူအမှတ်များနှင့် ဆုံးဖြတ်ချက်မှတ်တမ်းများသည် ဖောက်သည်ပိုင်ပစ္စည်းဖြစ်သည်။ စာချုပ်စည်းကမ်းအတိုင်း SAM နှင့် ခွင့်ပြုထားသော Claude လုပ်ငန်းစဉ်အတွင်းသာ စီမံရမည်။</li>
+  </ul>
+  <div class="callout danger">
+    <p><strong>စမ်းသပ်ချက် —</strong> prompt မပို့ခင် မေးပါ — "ဤစာသားအတိအကျ မနက်ဖြန် အများပြည်သူဝက်ဘ်ဆိုက်ပေါ်ရောက်လျှင် လူတစ်ဦး၊ မိတ်ဖက်တစ်ဦး သို့မဟုတ် စာချုပ်တစ်ခုကို ထိခိုက်နိုင်သလား?" ထိခိုက်နိုင်လျှင် ခွင့်ပြုထားသောကိရိယာများမှ မထွက်ရ၊ ထိုကိရိယာများထဲမှာပင် အမည်ဖျောက်သင့်သည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>Prompt ကို အမည်ဖျောက်နည်း</h2>
+  <div class="example bad">
+    <div class="label">ဤသို့ ဘယ်တော့မှ မပို့ရ</div>
+    <p>"[နာမည်အစစ်]၊ [ဝန်ကြီးဌာနအစစ်] မှ ဝယ်ယူရေးအရာရှိသည် သူ၏ယောက်ဖ [နာမည်အစစ်] ပိုင်သော [ကုမ္ပဏီအစစ်] အတွက် လိုင်စင်များ ခွင့်ပြုခဲ့သည်။ အကျိုးစီးပွားပဋိပက္ခပုံစံကို အကျဉ်းချုပ်ပါ။"</p>
+  </div>
+  <div class="example good">
+    <div class="label">ဤသို့ ပို့ပါ</div>
+    <p>"ဝယ်ယူရေးအရာရှိတစ်ဦးသည် နီးစပ်သောဆွေမျိုးပိုင်ကုမ္ပဏီအတွက် လိုင်စင်များခွင့်ပြုခဲ့သည်။ အကဲဖြတ်အစီရင်ခံစာအတွက် ဤအကျိုးစီးပွားပဋိပက္ခပုံစံကို ဖော်ပြသောစာပိုဒ် မူကြမ်းရေးပါ။"</p>
+  </div>
+  <ul>
+    <li>နာမည်များကို တသမတ်တည်း ကိုယ်စားပြုစာလုံးများ (ပုဂ္ဂိုလ် A၊ ကုမ္ပဏီ X၊ ဝန်ကြီးဌာန M) ဖြင့် အစားထိုးပါ — ဆက်နွယ်မှုများ ဆက်ခွဲခြမ်းစိတ်ဖြာနိုင်စေရန်။</li>
+    <li>တည်နေရာများကို အလုပ်ခွင့်ပြုသည့် အနည်းဆုံးတိကျမှုအဆင့်အထိ ယေဘုယျပြုပါ (ရွာမဟုတ်ဘဲ တိုင်းဒေသကြီး)။</li>
+    <li>ခွဲခြမ်းစိတ်ဖြာမှုက မလိုအပ်လျှင် ရက်စွဲ၊ ပမာဏနှင့် သတ်မှတ်ချက်များကို ဖယ်ရှားပါ။</li>
+    <li>အချက်အလက်အစစ်များကို AI အဆင့်ပြီးမှ ကျွန်ုပ်တို့၏ကိုယ်ပိုင်စနစ်များတွင်သာ ပြန်ထည့်ပါ။</li>
+  </ul>
+</section>
+
+<section>
+  <h2>အကောင့်နှင့် ဆက်တင် သန့်ရှင်းရေး</h2>
+  <ul>
+    <li><strong>အလုပ်အကောင့်များသာ။</strong> AI ကိရိယာအားလုံးကို ENVISAGE စီမံသောအကောင့်များဖြင့်သာ သုံးရမည် — ကိုယ်ပိုင်အကောင့် ဘယ်တော့မှမသုံးရ — အသုံးပြုခွင့်ကို ထိန်းချုပ်နိုင်၊ ရုပ်သိမ်းနိုင်စေရန်။</li>
+    <li><strong>Training ဆက်တင်များ စစ်ပါ။</strong> ကိရိယာတိုင်းတွင် ဒေတာ/privacy ဆက်တင်ကိုရှာပြီး ရွေးချယ်ခွင့်ရှိလျှင် ကျွန်ုပ်တို့၏ထည့်သွင်းမှုများကို model training အတွက်သုံးခြင်းကို ပိတ်ပါ။ ထိုထိန်းချုပ်မှုမရှိသောကိရိယာများ (အခမဲ့ LLM အများစု) တွင် Tier 1 သာ။</li>
+    <li><strong>စကားပြောလင့်ခ်များ မသိမ်းပါနှင့်။</strong> အများပြည်သူ "share chat" လင့်ခ်များသည် ထုတ်ဝေခြင်းဖြစ်သည်။ Tier 1 အထက် မည်သည့်အရာအတွက်မျှ ဘယ်တော့မှ မဖန်တီးရ။</li>
+    <li><strong>အမှားများကို ချက်ချင်းအစီရင်ခံပါ။</strong> Tier 3 အကြောင်းအရာ ကိရိယာအမှားထဲရောက်သွားလျှင် ထိုနေ့မှာပင် ပရောဂျက်ခေါင်းဆောင်ကို ပြောပါ။ မြန်ဆန်သောထုတ်ဖော်မှုက လိုအပ်လျှင် ဖောက်သည်များကို အကြောင်းကြားနိုင်စေသည်; ဖုံးကွယ်ခြင်းက မတော်တဆမှုကို ယုံကြည်မှုချိုးဖောက်မှုအဖြစ် ပြောင်းလဲစေသည်။</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ထုတ်ကုန်သည်လည်း အန္တရာယ်ဖြစ်သည်</h2>
+  <p>AI ထုတ်လုပ်သောအကြောင်းအရာသည် အတွင်းသို့လည်း ပေါက်ကြားနိုင်သည်။ AI အကူအညီဖြင့်ရေးသောစာသား ဖောက်သည်ပေးအပ်စာတမ်းထဲ မရောက်ခင် —</p>
+  <ul>
+    <li>အချက်အလက်တိုင်းကို ကျွန်ုပ်တို့၏ကိုယ်ပိုင်ရင်းမြစ်များနှင့် တိုက်ဆိုင်စစ်ဆေးပါ — <a href="verification.html">ပြန်လှန်စစ်ဆေးခြင်း</a> ကြည့်ပါ။ AI ကိရိယာများသည် မှားသောအချက်များကို ယုံကြည်မှုအပြည့်ဖြင့် ပြောတတ်သည်။</li>
+    <li>ကိုယ်စားပြုနာမည်များ၊ လုပ်ကြံကိုးကားချက်များ သို့မဟုတ် လုပ်ကြံစာရင်းအင်းများ ပြင်ဆင်မှုကိုကျော်၍ ကျန်မနေကြောင်း စစ်ပါ။</li>
+    <li>ဒေတာများလွန်းသော Project သို့မဟုတ် စကားပြောမှတ်တမ်းမှ အခြားဖောက်သည်တစ်ဦး၏အကြောင်းအရာကို စာသားက ထင်ဟပ်မနေကြောင်း အတည်ပြုပါ။</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="token-efficiency.html">← တိုကင်ချွေတာရေး</a>
+  <a href="verification.html">နောက်တစ်ခု — အတည်ပြုစစ်ဆေးရေး →</a>
+</div>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ENVISAGE WORLDWIDE</strong>
+      <span class="lang-section" data-lang="en"> — Internal AI Usage Policy</span>
+      <span class="lang-section" data-lang="th"> — นโยบายการใช้ AI ภายในองค์กร</span>
+      <span class="lang-section" data-lang="my"> — အတွင်းပိုင်း AI အသုံးပြုမှုမူဝါဒ</span>
+    </div>
+    <div>Version 1.0 &middot; June 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

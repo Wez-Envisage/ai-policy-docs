@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude &amp; Cowork Best Practices — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html" class="active">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Section 1</div>
+    <h1>Claude &amp; Claude Cowork Best Practices</h1>
+    <p class="lede">Claude is our primary AI workhorse. Use Chat for thinking and Cowork for doing — and set up each research stream once so you never pay to re-explain context.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>Chat vs Cowork: Pick the Right Mode</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge blue">Claude Chat</span>
+      <h4>For thinking, drafting, and analysis</h4>
+      <ul>
+        <li>Reasoning through a research question or analytical framework</li>
+        <li>Drafting and editing report sections, summaries, briefings</li>
+        <li>Reviewing translations from Burmese, Thai, Shan, and other languages</li>
+        <li>Interpreting patterns in data you describe or paste as excerpts</li>
+        <li>Structuring interview notes or field observations (anonymized)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge blue">Claude Cowork</span>
+      <h4>For working directly on files</h4>
+      <ul>
+        <li>Building deliverables: Word reports, Excel workbooks, slide decks</li>
+        <li>Cleaning, restructuring, and converting data files</li>
+        <li>Multi-step tasks: "process these 12 CSVs and produce a summary table"</li>
+        <li>Repetitive document work across many files in a project folder</li>
+        <li>Writing and testing scripts (Python, SQL) against sample files</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <p><strong>Rule of thumb:</strong> if the answer belongs in a file, start in Cowork. If the answer belongs in your head, start in Chat. Pasting file contents into Chat wastes tokens twice — once to paste, once when Claude repeats it back.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Set Up One Project per Research Stream</h2>
+  <p class="sub">Claude Projects hold persistent context so you stop paying to re-explain it in every conversation.</p>
+  <p>Create a Project for each long-running engagement or workstream — for example: a monitoring-and-analysis engagement, a supply-chain risk study, SAM product development, or a mapping project. In each Project's knowledge/instructions, store the stable context once:</p>
+  <ul>
+    <li>The engagement's purpose, scope, and client-approved terminology (anonymized to the level the tier rules allow)</li>
+    <li>Our methodology notes — e.g., how we verify sources, our scoring rubric, our visualization standards</li>
+    <li>Output templates: report structure, citation style, standard caveats</li>
+    <li>Schema descriptions for relevant datasets (structure only, no data rows)</li>
+  </ul>
+  <div class="example good">
+    <div class="label">Good — context lives in the Project</div>
+    <p>Project instructions contain the report template and methodology. Each new chat: <em>"Draft the Q2 trend section using the attached excerpt."</em> ~200 tokens of prompt.</p>
+  </div>
+  <div class="example bad">
+    <div class="label">Wasteful — context re-pasted every time</div>
+    <p>Every chat opens with 3,000 words of background, the full template, and last quarter's report pasted in before the actual request.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Cowork Folder Discipline</h2>
+  <p>Cowork works on folders you explicitly connect. Treat that connection like handing over a filing cabinet:</p>
+  <ul>
+    <li><strong>One task folder per engagement.</strong> Create a dedicated working folder containing only the files the task needs. Connect that — never a parent folder, your Desktop, or your whole Drive sync folder.</li>
+    <li><strong>No client deliverable folders.</strong> Final confidential deliverables live in their own protected location that is never connected to Cowork. Work on drafts in the task folder; move finals out when done.</li>
+    <li><strong>Strip before you connect.</strong> Before connecting a folder, scan it: any file naming sources, field staff, or persons of interest that the task doesn't require gets moved out first.</li>
+    <li><strong>Review what Cowork produced</strong> before moving files onward. You are the quality gate, exactly as with a junior analyst's work.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Connector Rules</h2>
+  <table>
+    <tr><th>Connector</th><th>Status</th><th>Why</th></tr>
+    <tr><td>Email (Gmail / Outlook)</td><td><span class="badge red">Prohibited</span></td><td>Email holds client correspondence, contracts, and source contacts. No AI tool connects to ENVISAGE email, ever.</td></tr>
+    <tr><td>Google Drive</td><td><span class="badge amber">Restricted</span></td><td>Only specific, pre-approved working folders — never root access. Client deliverable and HR/finance folders are always excluded. Approval from your project lead required.</td></tr>
+    <tr><td>Document / spreadsheet sharing</td><td><span class="badge red">Prohibited</span></td><td>Do not share live links to internal Docs/Sheets with any AI tool, and do not paste full confidential documents. Use sanitized excerpts or Cowork task folders.</td></tr>
+    <tr><td>Local task folders (Cowork)</td><td><span class="badge green">Approved</span></td><td>Purpose-built folders with only task-relevant files, per the discipline above.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Prompting Patterns for Research Work</h2>
+  <h3>Give the role, the source, the output shape — once</h3>
+  <pre><code>You are assisting an ENVISAGE analyst on a supply-chain study.
+Source: the excerpt below (public news reporting, translated).
+Task: extract company names, locations, and alleged practice
+into a 3-column table. Flag low-confidence extractions.</code></pre>
+  <h3>Make Claude ask before generating long output</h3>
+  <p>For big deliverables, add: <em>"Before drafting, list your assumptions and an outline in under 150 words and wait for my confirmation."</em> A 100-token outline correction is far cheaper than regenerating a 3,000-token draft.</p>
+  <h3>Iterate on sections, not documents</h3>
+  <p>Ask for revisions to the specific section that needs work ("revise paragraph 2 only — keep everything else"), not a full regeneration.</p>
+</section>
+
+<div class="pager">
+  <a href="index.html">← Home</a>
+  <a href="token-efficiency.html">Next: Token Efficiency →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">หมวดที่ 1</div>
+    <h1>แนวปฏิบัติที่ดีสำหรับ Claude และ Claude Cowork</h1>
+    <p class="lede">Claude คือเครื่องมือ AI หลักของเรา ใช้ Chat สำหรับการคิด และ Cowork สำหรับการลงมือทำ — ตั้งค่าแต่ละสายงานวิจัยเพียงครั้งเดียว เพื่อไม่ต้องเสียค่าอธิบายบริบทซ้ำ</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>Chat กับ Cowork: เลือกโหมดให้ถูก</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge blue">Claude Chat</span>
+      <h4>สำหรับการคิด ร่าง และวิเคราะห์</h4>
+      <ul>
+        <li>คิดวิเคราะห์โจทย์วิจัยหรือกรอบการวิเคราะห์</li>
+        <li>ร่างและแก้ไขส่วนต่าง ๆ ของรายงาน บทสรุป เอกสารบรรยายสรุป</li>
+        <li>ตรวจคำแปลจากภาษาพม่า ไทย ไทใหญ่ และภาษาอื่น</li>
+        <li>ตีความรูปแบบในข้อมูลที่คุณอธิบายหรือวางเป็นข้อความบางส่วน</li>
+        <li>จัดโครงสร้างบันทึกสัมภาษณ์หรือข้อสังเกตภาคสนาม (ปกปิดตัวตนแล้ว)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge blue">Claude Cowork</span>
+      <h4>สำหรับทำงานกับไฟล์โดยตรง</h4>
+      <ul>
+        <li>สร้างงานส่งมอบ: รายงาน Word, ไฟล์ Excel, สไลด์นำเสนอ</li>
+        <li>ทำความสะอาด ปรับโครงสร้าง และแปลงไฟล์ข้อมูล</li>
+        <li>งานหลายขั้นตอน: "ประมวลผล CSV 12 ไฟล์นี้แล้วสร้างตารางสรุป"</li>
+        <li>งานเอกสารซ้ำ ๆ กับหลายไฟล์ในโฟลเดอร์โครงการ</li>
+        <li>เขียนและทดสอบสคริปต์ (Python, SQL) กับไฟล์ตัวอย่าง</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <p><strong>หลักง่าย ๆ:</strong> ถ้าคำตอบควรอยู่ในไฟล์ เริ่มที่ Cowork ถ้าคำตอบควรอยู่ในหัวคุณ เริ่มที่ Chat การวางเนื้อหาไฟล์ลงใน Chat เปลืองโทเคนสองต่อ — ตอนวาง และตอนที่ Claude พิมพ์ซ้ำกลับมา</p>
+  </div>
+</section>
+
+<section>
+  <h2>ตั้งหนึ่ง Project ต่อหนึ่งสายงานวิจัย</h2>
+  <p class="sub">Claude Projects เก็บบริบทถาวร คุณจึงไม่ต้องเสียโทเคนอธิบายซ้ำทุกบทสนทนา</p>
+  <p>สร้าง Project สำหรับแต่ละสัญญางานหรือสายงานระยะยาว เช่น งานติดตามและวิเคราะห์ การศึกษาความเสี่ยงห่วงโซ่อุปทาน การพัฒนาผลิตภัณฑ์ SAM หรือโครงการทำแผนผัง โดยเก็บบริบทคงที่ไว้ในความรู้/คำสั่งของ Project เพียงครั้งเดียว:</p>
+  <ul>
+    <li>วัตถุประสงค์ ขอบเขต และคำศัพท์ที่ลูกค้าอนุมัติ (ปกปิดตัวตนตามระดับที่กฎ Tier อนุญาต)</li>
+    <li>บันทึกระเบียบวิธีของเรา เช่น วิธีตรวจสอบแหล่งข้อมูล เกณฑ์ให้คะแนน มาตรฐานการแสดงผลข้อมูล</li>
+    <li>แม่แบบผลงาน: โครงสร้างรายงาน รูปแบบการอ้างอิง ข้อจำกัดมาตรฐาน</li>
+    <li>คำอธิบาย schema ของชุดข้อมูลที่เกี่ยวข้อง (เฉพาะโครงสร้าง ไม่มีข้อมูลจริง)</li>
+  </ul>
+  <div class="example good">
+    <div class="label">ดี — บริบทอยู่ใน Project</div>
+    <p>คำสั่งของ Project มีแม่แบบรายงานและระเบียบวิธีอยู่แล้ว แชตใหม่แต่ละครั้ง: <em>"ร่างส่วนแนวโน้ม Q2 จากข้อความที่แนบ"</em> ใช้พรอมต์เพียง ~200 โทเคน</p>
+  </div>
+  <div class="example bad">
+    <div class="label">สิ้นเปลือง — วางบริบทซ้ำทุกครั้ง</div>
+    <p>ทุกแชตเปิดด้วยข้อมูลพื้นหลัง 3,000 คำ แม่แบบฉบับเต็ม และรายงานไตรมาสก่อน ก่อนถึงคำขอจริง</p>
+  </div>
+</section>
+
+<section>
+  <h2>วินัยการใช้โฟลเดอร์ใน Cowork</h2>
+  <p>Cowork ทำงานกับโฟลเดอร์ที่คุณเชื่อมต่ออย่างชัดเจน จงปฏิบัติต่อการเชื่อมต่อนั้นเหมือนการส่งมอบตู้เอกสารทั้งตู้:</p>
+  <ul>
+    <li><strong>หนึ่งโฟลเดอร์งานต่อหนึ่งสัญญางาน</strong> สร้างโฟลเดอร์ทำงานเฉพาะที่มีแต่ไฟล์ที่งานต้องใช้ เชื่อมต่อเฉพาะโฟลเดอร์นั้น — ไม่ใช่โฟลเดอร์แม่ เดสก์ท็อป หรือโฟลเดอร์ซิงก์ Drive ทั้งหมด</li>
+    <li><strong>ห้ามโฟลเดอร์งานส่งมอบลูกค้า</strong> งานส่งมอบลับฉบับสมบูรณ์อยู่ในที่จัดเก็บที่ป้องกันไว้ ซึ่งไม่เชื่อมต่อกับ Cowork เด็ดขาด ทำงานร่างในโฟลเดอร์งาน แล้วย้ายฉบับสมบูรณ์ออกเมื่อเสร็จ</li>
+    <li><strong>คัดกรองก่อนเชื่อมต่อ</strong> ก่อนเชื่อมต่อโฟลเดอร์ ตรวจดูว่าไฟล์ใดระบุชื่อแหล่งข่าว เจ้าหน้าที่ภาคสนาม หรือบุคคลเป้าหมายที่งานไม่ต้องใช้ ให้ย้ายออกก่อน</li>
+    <li><strong>ตรวจสอบสิ่งที่ Cowork สร้าง</strong> ก่อนส่งไฟล์ต่อ คุณคือด่านคุณภาพ เหมือนตรวจงานนักวิเคราะห์รุ่นน้อง</li>
+  </ul>
+</section>
+
+<section>
+  <h2>กฎการเชื่อมต่อ</h2>
+  <table>
+    <tr><th>การเชื่อมต่อ</th><th>สถานะ</th><th>เหตุผล</th></tr>
+    <tr><td>อีเมล (Gmail / Outlook)</td><td><span class="badge red">ห้าม</span></td><td>อีเมลมีจดหมายลูกค้า สัญญา และผู้ติดต่อแหล่งข่าว ห้ามเครื่องมือ AI ใดเชื่อมต่อกับอีเมลของ ENVISAGE เด็ดขาด</td></tr>
+    <tr><td>Google Drive</td><td><span class="badge amber">จำกัด</span></td><td>เฉพาะโฟลเดอร์ทำงานที่อนุมัติล่วงหน้า — ห้ามเข้าถึงระดับราก โฟลเดอร์งานส่งมอบลูกค้า ฝ่ายบุคคล และการเงิน ถูกยกเว้นถาวร ต้องได้รับอนุมัติจากหัวหน้าโครงการ</td></tr>
+    <tr><td>การแชร์เอกสาร / สเปรดชีต</td><td><span class="badge red">ห้าม</span></td><td>ห้ามแชร์ลิงก์ Docs/Sheets ภายในกับเครื่องมือ AI ใด ๆ และห้ามวางเอกสารลับฉบับเต็ม ใช้ข้อความที่คัดกรองแล้วหรือโฟลเดอร์งานใน Cowork</td></tr>
+    <tr><td>โฟลเดอร์งานในเครื่อง (Cowork)</td><td><span class="badge green">อนุมัติ</span></td><td>โฟลเดอร์เฉพาะกิจที่มีแต่ไฟล์ที่เกี่ยวข้องกับงาน ตามวินัยข้างต้น</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>รูปแบบพรอมต์สำหรับงานวิจัย</h2>
+  <h3>ระบุบทบาท แหล่งข้อมูล และรูปแบบผลลัพธ์ — ครั้งเดียว</h3>
+  <pre><code>คุณกำลังช่วยนักวิเคราะห์ของ ENVISAGE ศึกษาห่วงโซ่อุปทาน
+แหล่งข้อมูล: ข้อความด้านล่าง (ข่าวสาธารณะ แปลแล้ว)
+งาน: ดึงชื่อบริษัท สถานที่ และพฤติกรรมที่ถูกกล่าวหา
+เป็นตาราง 3 คอลัมน์ ระบุรายการที่ความเชื่อมั่นต่ำ</code></pre>
+  <h3>ให้ Claude ถามก่อนสร้างผลลัพธ์ยาว</h3>
+  <p>สำหรับงานชิ้นใหญ่ เพิ่มว่า: <em>"ก่อนร่าง ให้แจกแจงสมมติฐานและโครงร่างภายใน 150 คำ แล้วรอการยืนยัน"</em> การแก้โครงร่าง 100 โทเคนถูกกว่าการสร้างร่าง 3,000 โทเคนใหม่มาก</p>
+  <h3>แก้ทีละส่วน ไม่ใช่ทั้งเอกสาร</h3>
+  <p>ขอแก้เฉพาะส่วนที่ต้องปรับ ("แก้เฉพาะย่อหน้า 2 — ส่วนอื่นคงเดิม") ไม่ใช่สร้างใหม่ทั้งหมด</p>
+</section>
+
+<div class="pager">
+  <a href="index.html">← หน้าหลัก</a>
+  <a href="token-efficiency.html">ถัดไป: ประหยัดโทเคน →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အပိုင်း ၁</div>
+    <h1>Claude နှင့် Claude Cowork အကောင်းဆုံးအလေ့အကျင့်များ</h1>
+    <p class="lede">Claude သည် ကျွန်ုပ်တို့၏ အဓိက AI ကိရိယာဖြစ်သည်။ စဉ်းစားရန် Chat၊ လုပ်ဆောင်ရန် Cowork ကိုသုံးပါ — သုတေသနလိုင်းတစ်ခုစီကို တစ်ကြိမ်တည်းတည်ဆောက်ထားလျှင် နောက်ခံအကြောင်းအရာကို ထပ်ခါထပ်ခါရှင်းပြရန် မလိုတော့ပါ။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>Chat နှင့် Cowork — မှန်ကန်သောမုဒ်ကို ရွေးပါ</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <span class="badge blue">Claude Chat</span>
+      <h4>စဉ်းစားခြင်း၊ မူကြမ်းရေးခြင်း၊ ခွဲခြမ်းစိတ်ဖြာခြင်းအတွက်</h4>
+      <ul>
+        <li>သုတေသနမေးခွန်း သို့မဟုတ် ခွဲခြမ်းစိတ်ဖြာမှုဘောင်ကို ဆင်ခြင်ခြင်း</li>
+        <li>အစီရင်ခံစာအပိုင်းများ၊ အကျဉ်းချုပ်များ၊ အကျဉ်းတင်ပြချက်များ ရေးခြင်းနှင့် ပြင်ခြင်း</li>
+        <li>မြန်မာ၊ ထိုင်း၊ ရှမ်းနှင့် အခြားဘာသာစကားများမှ ဘာသာပြန်ချက်များ စစ်ဆေးခြင်း</li>
+        <li>ဖော်ပြထားသော သို့မဟုတ် ကောက်နုတ်ထည့်ထားသော ဒေတာများတွင် ပုံစံများကို အဓိပ္ပာယ်ဖွင့်ဆိုခြင်း</li>
+        <li>အင်တာဗျူးမှတ်စုများ၊ ကွင်းဆင်းမှတ်တမ်းများ ဖွဲ့စည်းခြင်း (အမည်ဖျောက်ထားသော)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge blue">Claude Cowork</span>
+      <h4>ဖိုင်များပေါ်တွင် တိုက်ရိုက်လုပ်ဆောင်ရန်</h4>
+      <ul>
+        <li>ပေးအပ်စာတမ်းများ တည်ဆောက်ခြင်း — Word အစီရင်ခံစာ၊ Excel၊ ဆလိုက်များ</li>
+        <li>ဒေတာဖိုင်များ သန့်စင်ခြင်း၊ ပြန်လည်ဖွဲ့စည်းခြင်း၊ ပြောင်းလဲခြင်း</li>
+        <li>အဆင့်များစွာပါအလုပ်များ — "ဤ CSV ၁၂ ဖိုင်ကို စီမံပြီး အကျဉ်းချုပ်ဇယားထုတ်ပါ"</li>
+        <li>ပရောဂျက်ဖိုင်တွဲအတွင်း ဖိုင်များစွာတွင် ထပ်တလဲလဲ စာရွက်စာတမ်းအလုပ်များ</li>
+        <li>နမူနာဖိုင်များဖြင့် script (Python, SQL) ရေးခြင်းနှင့် စမ်းသပ်ခြင်း</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <p><strong>လက်တွေ့စည်းမျဉ်း —</strong> အဖြေသည် ဖိုင်ထဲမှာရှိသင့်လျှင် Cowork မှာစတင်ပါ။ အဖြေသည် သင့်ဦးနှောက်ထဲမှာရှိသင့်လျှင် Chat မှာစတင်ပါ။ ဖိုင်အကြောင်းအရာများကို Chat ထဲကူးထည့်ခြင်းသည် တိုကင်နှစ်ဆဖြုန်းသည် — ကူးထည့်စဉ်တစ်ကြိမ်၊ Claude က ပြန်ရေးပြစဉ်တစ်ကြိမ်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>သုတေသနလိုင်းတစ်ခုလျှင် Project တစ်ခု တည်ဆောက်ပါ</h2>
+  <p class="sub">Claude Projects သည် တည်မြဲသောအကြောင်းအရာကို သိမ်းဆည်းထားသဖြင့် စကားပြောတိုင်းတွင် ထပ်ရှင်းပြရန် မလိုတော့ပါ။</p>
+  <p>ရေရှည်စာချုပ် သို့မဟုတ် လုပ်ငန်းလိုင်းတစ်ခုစီအတွက် Project တစ်ခုဖန်တီးပါ — ဥပမာ စောင့်ကြည့်လေ့လာရေးစာချုပ်၊ ထောက်ပံ့ရေးကွင်းဆက်အန္တရာယ်လေ့လာမှု၊ SAM ထုတ်ကုန်ဖွံ့ဖြိုးရေး သို့မဟုတ် မြေပုံရေးဆွဲရေးပရောဂျက်။ Project ၏ knowledge/instructions တွင် တည်ငြိမ်သောအကြောင်းအရာကို တစ်ကြိမ်တည်း သိမ်းပါ —</p>
+  <ul>
+    <li>စာချုပ်၏ရည်ရွယ်ချက်၊ နယ်ပယ်နှင့် ဖောက်သည်အတည်ပြု ဝေါဟာရများ (Tier စည်းမျဉ်းခွင့်ပြုသည့်အဆင့်အထိ အမည်ဖျောက်၍)</li>
+    <li>ကျွန်ုပ်တို့၏နည်းစနစ်မှတ်စုများ — သတင်းရင်းမြစ်စစ်ဆေးနည်း၊ အမှတ်ပေးစံ၊ ပုံဖော်မှုစံနှုန်းများ</li>
+    <li>ထုတ်ကုန်ပုံစံများ — အစီရင်ခံစာဖွဲ့စည်းပုံ၊ ကိုးကားပုံစံ၊ စံသတိပေးချက်များ</li>
+    <li>သက်ဆိုင်ရာဒေတာအစုများ၏ schema ဖော်ပြချက် (ဖွဲ့စည်းပုံသာ၊ ဒေတာအတန်းမပါ)</li>
+  </ul>
+  <div class="example good">
+    <div class="label">ကောင်း — အကြောင်းအရာသည် Project ထဲမှာရှိသည်</div>
+    <p>Project instructions တွင် အစီရင်ခံစာပုံစံနှင့် နည်းစနစ်ပါပြီးသား။ စကားပြောအသစ်တိုင်း — <em>"ပူးတွဲကောက်နုတ်ချက်ကိုသုံး၍ Q2 လမ်းကြောင်းအပိုင်း မူကြမ်းရေးပါ"</em> — prompt တိုကင် ~၂၀၀ သာ။</p>
+  </div>
+  <div class="example bad">
+    <div class="label">ဖြုန်းတီး — အကြောင်းအရာကို အကြိမ်တိုင်း ပြန်ကူးထည့်</div>
+    <p>စကားပြောတိုင်း နောက်ခံစာလုံး ၃,၀၀၀၊ ပုံစံအပြည့်အစုံနှင့် ယခင်သုံးလပတ်အစီရင်ခံစာကို အမှန်တကယ်တောင်းဆိုချက်မတိုင်မီ ကူးထည့်သည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>Cowork ဖိုင်တွဲ စည်းကမ်း</h2>
+  <p>Cowork သည် သင်ချိတ်ဆက်ပေးသော ဖိုင်တွဲများပေါ်တွင် အလုပ်လုပ်သည်။ ထိုချိတ်ဆက်မှုကို ဖိုင်ဗီရိုတစ်လုံးလုံး လွှဲအပ်သလို သဘောထားပါ —</p>
+  <ul>
+    <li><strong>စာချုပ်တစ်ခုလျှင် အလုပ်ဖိုင်တွဲတစ်ခု။</strong> အလုပ်လိုအပ်သောဖိုင်များသာပါသည့် သီးသန့်ဖိုင်တွဲဖန်တီးပြီး ၎င်းကိုသာချိတ်ပါ — မိခင်ဖိုင်တွဲ၊ Desktop သို့မဟုတ် Drive sync ဖိုင်တွဲတစ်ခုလုံး ဘယ်တော့မှမချိတ်ရ။</li>
+    <li><strong>ဖောက်သည်ပေးအပ်စာတမ်းဖိုင်တွဲများ မချိတ်ရ။</strong> နောက်ဆုံးလျှို့ဝှက်ပေးအပ်စာတမ်းများသည် Cowork နှင့်ဘယ်တော့မှမချိတ်သော ကာကွယ်ထားသည့်နေရာတွင် ရှိရမည်။ မူကြမ်းများကို အလုပ်ဖိုင်တွဲတွင်လုပ်ပြီး ပြီးလျှင် နောက်ဆုံးမူများကို ရွှေ့ထုတ်ပါ။</li>
+    <li><strong>မချိတ်ခင် စစ်ထုတ်ပါ။</strong> ဖိုင်တွဲမချိတ်ခင် စစ်ဆေးပါ — အလုပ်မလိုအပ်သော သတင်းရင်းမြစ်၊ ကွင်းဆင်းဝန်ထမ်း သို့မဟုတ် စိတ်ဝင်စားရသူပုဂ္ဂိုလ်နာမည်ပါသည့် ဖိုင်များကို အရင်ရွှေ့ထုတ်ပါ။</li>
+    <li><strong>Cowork ထုတ်လုပ်သည့်အရာများကို စစ်ဆေးပါ</strong> — ဖိုင်များကို ရှေ့မဆက်ခင်။ အငယ်တန်းသုံးသပ်သူ၏အလုပ်ကို စစ်သလိုပင် သင်သည် အရည်အသွေးတံခါးဖြစ်သည်။</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ချိတ်ဆက်မှု စည်းမျဉ်းများ</h2>
+  <table>
+    <tr><th>ချိတ်ဆက်မှု</th><th>အခြေအနေ</th><th>အကြောင်းရင်း</th></tr>
+    <tr><td>အီးမေးလ် (Gmail / Outlook)</td><td><span class="badge red">တားမြစ်</span></td><td>အီးမေးလ်တွင် ဖောက်သည်စာပေးစာယူ၊ စာချုပ်များနှင့် သတင်းရင်းမြစ်အဆက်အသွယ်များ ပါသည်။ မည်သည့် AI ကိရိယာမျှ ENVISAGE အီးမေးလ်နှင့် ဘယ်တော့မှ မချိတ်ရ။</td></tr>
+    <tr><td>Google Drive</td><td><span class="badge amber">ကန့်သတ်</span></td><td>ကြိုတင်ခွင့်ပြုထားသော သီးသန့်အလုပ်ဖိုင်တွဲများသာ — root အဆင့် ဘယ်တော့မှမခွင့်ပြုရ။ ဖောက်သည်ပေးအပ်စာတမ်း၊ HR နှင့် ငွေကြေးဖိုင်တွဲများ အမြဲချန်လှပ်ထားသည်။ ပရောဂျက်ခေါင်းဆောင်၏ ခွင့်ပြုချက်လိုသည်။</td></tr>
+    <tr><td>စာတမ်း / spreadsheet မျှဝေခြင်း</td><td><span class="badge red">တားမြစ်</span></td><td>အတွင်းပိုင်း Docs/Sheets လင့်ခ်များကို မည်သည့် AI ကိရိယာနှင့်မျှ မမျှဝေရ၊ လျှို့ဝှက်စာတမ်းအပြည့်အစုံ မကူးထည့်ရ။ သန့်စင်ထားသောကောက်နုတ်ချက် သို့မဟုတ် Cowork အလုပ်ဖိုင်တွဲများကို သုံးပါ။</td></tr>
+    <tr><td>စက်တွင်း အလုပ်ဖိုင်တွဲများ (Cowork)</td><td><span class="badge green">ခွင့်ပြု</span></td><td>အထက်ပါစည်းကမ်းအတိုင်း အလုပ်နှင့်သက်ဆိုင်သောဖိုင်များသာပါသည့် ရည်ရွယ်ချက်သီးသန့်ဖိုင်တွဲများ။</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>သုတေသနအလုပ်အတွက် Prompt ပုံစံများ</h2>
+  <h3>အခန်းကဏ္ဍ၊ ရင်းမြစ်၊ ထုတ်ကုန်ပုံစံကို တစ်ကြိမ်တည်း ပေးပါ</h3>
+  <pre><code>သင်သည် ထောက်ပံ့ရေးကွင်းဆက်လေ့လာမှုတွင် ENVISAGE သုံးသပ်သူကို ကူညီနေသည်။
+ရင်းမြစ် — အောက်ပါကောက်နုတ်ချက် (အများပြည်သူသတင်း၊ ဘာသာပြန်ပြီး)။
+အလုပ် — ကုမ္ပဏီနာမည်၊ တည်နေရာနှင့် စွပ်စွဲခံရသောလုပ်ရပ်များကို
+ကော်လံ ၃ ခုပါဇယားအဖြစ် ထုတ်ပါ။ ယုံကြည်မှုနည်းသောအချက်များကို မှတ်သားပါ။</code></pre>
+  <h3>ရှည်လျားသောထုတ်ကုန် မထုတ်ခင် Claude ကို မေးခိုင်းပါ</h3>
+  <p>ကြီးမားသောပေးအပ်စာတမ်းများအတွက် ထည့်ပါ — <em>"မူကြမ်းမရေးခင် သင့်ယူဆချက်များနှင့် အကြမ်းဖျင်းကို စာလုံး ၁၅၀ အောက်ဖြင့် ဖော်ပြပြီး ကျွန်ုပ်၏အတည်ပြုချက်ကို စောင့်ပါ။"</em> တိုကင် ၁၀၀ တန် အကြမ်းဖျင်းပြင်ဆင်မှုသည် တိုကင် ၃,၀၀၀ တန် မူကြမ်းပြန်ထုတ်ခြင်းထက် များစွာသက်သာသည်။</p>
+  <h3>စာတမ်းတစ်ခုလုံးမဟုတ်ဘဲ အပိုင်းအလိုက် ပြင်ပါ</h3>
+  <p>ပြင်ရန်လိုသောအပိုင်းကိုသာ တောင်းပါ ("စာပိုဒ် ၂ ကိုသာပြင်ပါ — ကျန်အားလုံးထားပါ")၊ အစအဆုံးပြန်ထုတ်ခိုင်းခြင်း မဟုတ်ပါ။</p>
+</section>
+
+<div class="pager">
+  <a href="index.html">← ပင်မ</a>
+  <a href="token-efficiency.html">နောက်တစ်ခု — တိုကင်ချွေတာရေး →</a>
+</div>
+
+</main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>ENVISAGE WORLDWIDE</strong>
+      <span class="lang-section" data-lang="en"> — Internal AI Usage Policy</span>
+      <span class="lang-section" data-lang="th"> — นโยบายการใช้ AI ภายในองค์กร</span>
+      <span class="lang-section" data-lang="my"> — အတွင်းပိုင်း AI အသုံးပြုမှုမူဝါဒ</span>
+    </div>
+    <div>Version 1.0 &middot; June 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
