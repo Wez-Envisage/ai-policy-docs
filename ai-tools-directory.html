@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Tools Directory — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+<style>
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:18px 0}
+.tool-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 18px;box-shadow:0 1px 3px rgba(13,31,60,.06);display:flex;flex-direction:column;gap:6px}
+.tool-card h4{margin:0;font-size:.97rem;color:var(--navy)}
+.tool-card h4 a{color:var(--sapphire);text-decoration:none;font-weight:700}
+.tool-card h4 a:hover{text-decoration:underline}
+.tool-card .why{font-size:.87rem;color:#334155;line-height:1.6;margin:0}
+.tool-tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-bottom:2px}
+.tag-cli{background:#dbeafe;color:#1d4ed8}
+.tag-ide{background:#dcfce7;color:#15803d}
+.tag-ext{background:#fef3c7;color:#92400e}
+.tag-vibe{background:#fce7f3;color:#9d174d}
+.tag-sam{background:var(--navy);color:#fff}
+.cat-heading{color:var(--navy);font-size:1.25rem;margin:32px 0 4px;display:flex;align-items:center;gap:10px}
+.cat-heading .cat-icon{font-size:1.3rem}
+.cat-sub{color:var(--muted);font-size:.88rem;margin-bottom:14px;max-width:820px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+      <li><a href="ai-tools-directory.html" class="active">AI Directory</a></li>
+      <li><a href="por-case-study.html">Case Study</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== ENGLISH ===== -->
+<div class="lang-section" data-lang="en">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Resource Library · All Staff</div>
+    <h1>AI Tools Directory</h1>
+    <p class="lede">Every major AI coding agent, IDE, extension, and app builder — with a plain-language explanation of when to choose each one over the alternatives.</p>
+  </div>
+</div>
+<main>
+
+  <div class="callout">
+    <p><strong>How to use this directory:</strong> Each tool includes a link and a single paragraph explaining its primary differentiator. Use this to decide which tool fits your specific task — not every tool is right for every job. Always apply ENVISAGE data tier rules before connecting any tool to files or databases.</p>
+  </div>
+
+  <!-- CLI AGENTS -->
+  <h2 class="cat-heading"><span class="cat-icon">⌨️</span> Terminal &amp; CLI Coding Agents</h2>
+  <p class="cat-sub">Run from the command line. Developer-oriented. Give explicit control over which files and directories the AI can access.</p>
+  <div class="tool-grid">
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://www.anthropic.com/claude-code" target="_blank">Claude Code</a> <small style="font-weight:400;color:var(--muted)">— Anthropic</small></h4>
+      <p class="why">Best-in-class for reasoning-heavy, multi-step refactors and complex coding tasks. Choose this when you're already in the Anthropic ecosystem and need the most capable model for nuanced, multi-file work. Confirmed compatible with SAM.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://github.com/openai/codex" target="_blank">OpenAI Codex CLI</a> <small style="font-weight:400;color:var(--muted)">— OpenAI</small></h4>
+      <p class="why">Rust-native with a cloud sandbox option that keeps code execution off your local machine. Choose this when you want OpenAI models in a fast CLI with an optional isolated execution environment. Confirmed compatible with SAM.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://github.com/google-gemini/gemini-cli" target="_blank">Gemini CLI</a> <small style="font-weight:400;color:var(--muted)">— Google</small></h4>
+      <p class="why">The only free CLI agent with a 1M-token context window. Choose this when you need to load an entire large codebase or long research document into a single session without paying per token. Open-source and auditable.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line" target="_blank">GitHub Copilot CLI</a> <small style="font-weight:400;color:var(--muted)">— GitHub</small></h4>
+      <p class="why">Best when your team already has GitHub Enterprise licensing. Integrates naturally with your repo, pull requests, and CI workflows without additional setup — no new account or billing required if Copilot is already active.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://sourcegraph.com/amp" target="_blank">Sourcegraph Amp</a> <small style="font-weight:400;color:var(--muted)">— Sourcegraph</small></h4>
+      <p class="why">Composable sub-agent system (Oracle for search, Librarian for context, Painter for generation). Choose this for large, complex codebases where different tasks need specialised agents rather than one general-purpose model.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://mistral.ai/" target="_blank">Mistral Vibe</a> <small style="font-weight:400;color:var(--muted)">— Mistral</small></h4>
+      <p class="why">EU-hosted, open-weight model option. Choose this when your team has European data residency requirements or prefers a non-US AI provider with full transparency into model weights.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://www.atlassian.com/software/rovo" target="_blank">Rovo Dev</a> <small style="font-weight:400;color:var(--muted)">— Atlassian</small></h4>
+      <p class="why">Best when your team runs on Jira and Confluence. Coding context connects directly to your project management and documentation ecosystem — tasks, tickets, and specs inform the AI's understanding of your work automatically.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://www.tabnine.com/" target="_blank">Tabnine CLI</a> <small style="font-weight:400;color:var(--muted)">— Tabnine</small></h4>
+      <p class="why">Docker-distributed, enterprise-licensed, fully self-hostable. Choose this for environments where no code can leave your infrastructure — models run locally and data never touches external servers. Strongest privacy guarantee in this category.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://mentat.ai/" target="_blank">Mentat</a></h4>
+      <p class="why">Cloud-native managed agent — no local infrastructure to maintain. Choose this when you want a capable coding agent without the DevOps overhead of running models locally or managing CLI toolchains yourself.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://aider.chat/" target="_blank">Aider</a></h4>
+      <p class="why">The gold standard for git-native pair programming. Every AI change is committed automatically with a clean message, giving you a full rollback-friendly history of every AI edit. Best choice when auditability of changes matters.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://opencode.ai/" target="_blank">OpenCode</a></h4>
+      <p class="why">Go-based TUI supporting 75+ AI providers. The most portable CLI option — switch between Claude, Gemini, Mistral, and local models with a config change. Confirmed compatible with SAM. Best choice when you must avoid vendor lock-in at the CLI level.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://github.com/block/goose" target="_blank">Goose</a> <small style="font-weight:400;color:var(--muted)">— Block</small></h4>
+      <p class="why">YAML "Recipes" encode repeatable workflows as reusable scripts. Choose this when you want to standardise how your team approaches common coding tasks — a Recipe runs the same workflow consistently every time.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://plandex.ai/" target="_blank">Plandex</a></h4>
+      <p class="why">2M-token context with a diff sandbox. Best for very large-scale, multi-file refactors — you plan the entire change set first, review diffs, then apply. The diff sandbox prevents runaway changes from reaching your actual codebase.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://gptme.org/" target="_blank">gptme</a></h4>
+      <p class="why">Persistent autonomous agent with git-backed memory across sessions. Choose this when you need an agent that remembers prior conversations, decisions, and context from previous work sessions — ideal for long-running research or development projects.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://www.warp.dev/" target="_blank">Warp</a></h4>
+      <p class="why">AI built into the terminal itself rather than bolted on as a plugin. Choose this when you want the shell experience to be AI-native — command suggestions, error explanations, and agent execution all happen inside a modern terminal UI.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://swe-agent.com/" target="_blank">SWE-agent</a> <small style="font-weight:400;color:var(--muted)">— Princeton</small></h4>
+      <p class="why">Research-grade agent built specifically for automated bug fixing on GitHub issues. Best for teams who want to automate issue resolution — feed it a GitHub issue URL and it attempts to write and test the fix autonomously.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://github.com/smol-ai/developer" target="_blank">Smol Developer</a></h4>
+      <p class="why">Designed to scaffold an entire new codebase from a high-level spec in one shot. Choose this for greenfield projects where you want a complete project structure generated from a prompt — not for iterating on existing code.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://forgecode.dev/" target="_blank">ForgeCode</a></h4>
+      <p class="why">Supports 300+ AI models in a single CLI. Choose this when your team uses many different models for different tasks — route heavy reasoning to Claude, fast tasks to a smaller model, and specialist queries to domain-specific models, all from one tool.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://codebuff.com/" target="_blank">Codebuff</a></h4>
+      <p class="why">Multi-agent collaborative CLI — multiple AI agents work the same codebase simultaneously. Choose this over single-agent tools when tasks can be parallelised, such as writing tests while another agent writes the implementation.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://www.trae.ai/" target="_blank">Trae Agent</a> <small style="font-weight:400;color:var(--muted)">— ByteDance</small></h4>
+      <p class="why">ByteDance's terminal-focused coding agent, distinct from their Trae IDE. Choose this when working within ByteDance's AI ecosystem or when you want a capable free-tier option from a major AI lab with strong coding benchmarks.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://kimi.moonshot.cn/" target="_blank">Kimi CLI</a> <small style="font-weight:400;color:var(--muted)">— Moonshot</small></h4>
+      <p class="why">Strong long-context capabilities from Moonshot AI. Choose this for tasks involving very long documents or large codebases where context window size is the limiting factor. <strong>Use Tier 1 public data only per ENVISAGE policy.</strong></p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-cli">CLI Agent</span>
+      <h4><a href="https://github.com/QwenLM/qwen-code" target="_blank">Qwen Code</a> <small style="font-weight:400;color:var(--muted)">— Alibaba</small></h4>
+      <p class="why">Alibaba's coding-tuned model as a CLI agent. Choose this when working with Chinese-market data, needing a non-Western AI provider, or running comparative checks against Western models to identify bias in output. Tier 1 data only.</p>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+
+  <!-- AI-NATIVE IDEs -->
+  <h2 class="cat-heading"><span class="cat-icon">🖥</span> AI-Native IDEs</h2>
+  <p class="cat-sub">Full development environments rebuilt around AI. Replace or supplement VS Code, JetBrains, etc.</p>
+  <div class="tool-grid">
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://cursor.com/" target="_blank">Cursor</a></h4>
+      <p class="why">The market leader for AI-native development with the most mature feature set and largest community. Choose this as your primary switch from VS Code — it has the best balance of AI capability, familiarity, and third-party plugin support.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://windsurf.com/" target="_blank">Windsurf</a> <small style="font-weight:400;color:var(--muted)">— OpenAI-acquired</small></h4>
+      <p class="why">Formerly Codeium, now owned by OpenAI. Choose this for deep integration with GPT-4 and o-series models in a polished IDE — best if your team is invested in OpenAI's ecosystem and wants the tightest model-IDE pairing available.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://zed.dev/" target="_blank">Zed</a></h4>
+      <p class="why">Rust-built for raw speed with real-time collaboration and bring-your-own-model (BYOM) support. Choose this when latency is critical or when you need real-time multiplayer editing. The fastest editor in this list by a significant margin.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://kiro.dev/" target="_blank">Kiro</a> <small style="font-weight:400;color:var(--muted)">— AWS</small></h4>
+      <p class="why">Spec-driven development — requirements are defined first, code is generated from them. Choose this when you want tighter alignment between documentation and implementation, or when working within AWS infrastructure where deep service integration matters.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://www.trae.ai/" target="_blank">Trae</a> <small style="font-weight:400;color:var(--muted)">— ByteDance</small></h4>
+      <p class="why">Fully free AI IDE with adaptive mode that adjusts assistance based on your experience level. Best free alternative to Cursor — choose this when budget is a constraint or when onboarding less-experienced developers who benefit from adaptive guidance.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://replit.com/" target="_blank">Replit</a></h4>
+      <p class="why">Browser-based — zero local setup required. Choose this for rapid prototyping, teaching, or any scenario where you need a full development environment accessible from any device without installation. Includes Replit Agent for autonomous full-stack building.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://trypear.ai/" target="_blank">PearAI</a></h4>
+      <p class="why">Open-source Cursor alternative with community governance. Choose this when transparency and auditability of the IDE itself matter — the full source is inspectable, and the community steers development rather than a commercial entity.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://www.blackbox.ai/" target="_blank">BLACKBOX</a></h4>
+      <p class="why">Broad language and framework support with a focus on speed and simplicity. Choose this as a lightweight entry point to AI-assisted development, particularly for teams that find Cursor or Windsurf overly complex for straightforward tasks.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ide">AI IDE</span>
+      <h4><a href="https://www.marscode.com/" target="_blank">MarsCode</a> <small style="font-weight:400;color:var(--muted)">— ByteDance</small></h4>
+      <p class="why">ByteDance's AI IDE built for the Chinese developer market. Choose this when your team operates primarily in the Chinese AI ecosystem or when you need strong support for frameworks and libraries popular in China-based development environments.</p>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+
+  <!-- IDE EXTENSIONS -->
+  <h2 class="cat-heading"><span class="cat-icon">🔌</span> IDE Extensions &amp; Plugins</h2>
+  <p class="cat-sub">Add AI to your existing editor — VS Code, JetBrains, and others. Lowest disruption path to AI-assisted development.</p>
+  <div class="tool-grid">
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> <small style="font-weight:400;color:var(--muted)">— GitHub/Microsoft</small></h4>
+      <p class="why">The default enterprise choice if your organisation is on GitHub. Now multi-model with Claude and Codex backends. Choose this when your team needs AI assistance that integrates directly with existing GitHub repos, PRs, and code review workflows.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://cline.bot/" target="_blank">Cline</a></h4>
+      <p class="why">Best VS Code extension for complex agentic tasks. Its Plan/Act architecture separates planning from execution — the AI lays out what it will do before touching any code, letting you review and approve the plan first. BYOM with strong Claude integration.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://roocode.com/" target="_blank">Roo Code</a></h4>
+      <p class="why">Cline fork with multiple operating modes (Code, Architect, Ask, Debug). Choose Roo over Cline when you need the same agentic power but want to switch context — ask questions without triggering code changes, or plan architecture without writing a line.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://kilocode.ai/" target="_blank">Kilo Code</a></h4>
+      <p class="why">Adds an Orchestrator mode that routes sub-tasks to specialised agents. Choose this for complex multi-step workflows in VS Code where different parts of a task — search, write, test, document — benefit from different models or agent behaviours.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://continue.dev/" target="_blank">Continue</a></h4>
+      <p class="why">Open-source with a pivot toward AI-assisted CI checks. Choose this when you want full control over model selection, transparent source code, and are building toward AI integration in your continuous integration pipeline rather than just interactive coding.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://augmentcode.com/" target="_blank">Augment Code</a></h4>
+      <p class="why">Purpose-built for very large codebases — 100K+ files. Choose this over other extensions when your project is too large for standard context windows and you need an AI that can genuinely understand the full scope of an enterprise-scale repository.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://aws.amazon.com/q/developer/" target="_blank">Amazon Q Developer</a> <small style="font-weight:400;color:var(--muted)">— AWS</small></h4>
+      <p class="why">Deepest integration with AWS services — CloudFormation, Lambda, CDK, and the full AWS ecosystem. Choose this when your infrastructure is on AWS and you want an AI that understands your cloud architecture, not just your code.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank">Gemini Code Assist</a> <small style="font-weight:400;color:var(--muted)">— Google</small></h4>
+      <p class="why">Best for teams on Google Cloud. Integrates with GCP services, BigQuery, and Firebase, and benefits from Google's long-context models. Choose this when your data and infrastructure live in the Google ecosystem.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://www.jetbrains.com/junie/" target="_blank">JetBrains Junie</a> <small style="font-weight:400;color:var(--muted)">— JetBrains</small></h4>
+      <p class="why">Native to IntelliJ, PyCharm, GoLand, and other JetBrains IDEs. Choose this if your team is invested in the JetBrains ecosystem and doesn't want to switch editors — it provides deep AI integration without losing JetBrains' powerful refactoring and inspection tooling.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://www.tabnine.com/" target="_blank">Tabnine</a></h4>
+      <p class="why">Privacy-first, self-hostable, fine-tuneable on your own codebase. Choose this for regulated industries or security-sensitive environments where no code can be transmitted externally — run the model on your own servers, train it on your own code.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://sourcegraph.com/cody" target="_blank">Sourcegraph Cody</a></h4>
+      <p class="why">Grounded in Sourcegraph's code-search index rather than raw model memory. Choose this when your codebase is too large for any context window — Cody searches the code rather than loading it, so it always works at any scale.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://supermaven.com/" target="_blank">Supermaven</a></h4>
+      <p class="why">Fastest autocomplete in any extension tested, with a 1M-token context window. Choose this specifically for inline completion speed — if you find Copilot or Codeium suggestions lag behind your typing, Supermaven is the fix.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://bito.ai/" target="_blank">Bito AI</a></h4>
+      <p class="why">Specialises in code explanation and test generation rather than general completion. Use Bito alongside your primary coding assistant — not as a replacement — when you need to understand unfamiliar code or rapidly generate test coverage for existing functions.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://www.phind.com/" target="_blank">Phind</a></h4>
+      <p class="why">Combines web search with code generation — answers technical questions with cited sources, then writes the code. Choose this when you need to look something up and implement it in the same step, rather than switching between a browser and your editor.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://codegpt.co/" target="_blank">CodeGPT</a></h4>
+      <p class="why">Multi-provider extension for VS Code and JetBrains — switch between OpenAI, Anthropic, local models, and others from the same interface. Choose this when your team uses different models for different tasks and needs one consistent UI across all of them.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://refact.ai/" target="_blank">Refact.ai</a></h4>
+      <p class="why">Open-source, self-hostable, focused on refactoring and code quality rather than generation volume. Choose this when your priority is improving existing code rather than generating new code — it analyses, restructures, and improves rather than just autocompleting.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://tabby.tabbyml.com/" target="_blank">Tabby</a></h4>
+      <p class="why">Fully self-hosted, open-source AI assistant. The best choice for air-gapped environments or teams with absolute data sovereignty requirements — the model runs on your infrastructure and zero data leaves your network.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://about.gitlab.com/gitlab-duo/" target="_blank">GitLab Duo</a> <small style="font-weight:400;color:var(--muted)">— GitLab</small></h4>
+      <p class="why">AI across the full DevSecOps lifecycle — code, review, security scanning, and deployment. Choose this if your team's DevOps runs on GitLab and you want AI assistance that spans the entire development pipeline, not just the editor.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a></h4>
+      <p class="why">The only AI assistant built natively for Jupyter notebooks. Choose this for data science, research, or any analysis workflow in Jupyter — it understands notebook structure, cell outputs, and data context in a way no general-purpose coding assistant does.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://stagewise.io/" target="_blank">Stagewise</a></h4>
+      <p class="why">Browser-aware bridge between your live app and your coding tools. Unique in this list — you select a UI element directly in Chrome, click "fix this," and it sends the exact context to Cursor, Copilot, Cline, or Windsurf. Use it to eliminate the copy-paste step in frontend debugging.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-ext">Extension</span>
+      <h4><a href="https://codegeex.cn/" target="_blank">CodeGeeX</a> <small style="font-weight:400;color:var(--muted)">— Zhipu AI</small></h4>
+      <p class="why">Open-source with support for 600+ programming languages — the broadest language coverage in this category. Choose this for polyglot teams or when working with niche, domain-specific, or lesser-known programming languages that other tools handle poorly.</p>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+
+  <!-- VIBE-CODING -->
+  <h2 class="cat-heading"><span class="cat-icon">✨</span> Vibe-Coding &amp; Prompt-to-App Builders</h2>
+  <p class="cat-sub">Describe what you want in plain language — the AI builds the app. No coding experience required for basic use. Best for prototyping and non-developer staff.</p>
+  <div class="tool-grid">
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://lovable.dev/" target="_blank">Lovable</a></h4>
+      <p class="why">The most mature and highest-quality full-stack vibe-coding platform ($6.6B valuation). Choose this as your default when a non-developer needs to build a real, deployable web application from a chat description — it produces the most production-ready output in this category.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://bolt.new/" target="_blank">Bolt.new</a> <small style="font-weight:400;color:var(--muted)">— StackBlitz</small></h4>
+      <p class="why">Instant browser-based app building with no local setup. Choose this for the fastest path from idea to working prototype — open a tab, describe what you want, and have a running app in minutes. Best for rapid iteration and early-stage exploration.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://v0.dev/" target="_blank">v0</a> <small style="font-weight:400;color:var(--muted)">— Vercel</small></h4>
+      <p class="why">Best specifically for React and Next.js UI generation. Produces production-ready shadcn/ui components that drop directly into Vercel-hosted projects. Choose this when the deliverable is a React component or page, not a full application.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://replit.com/" target="_blank">Replit Agent</a> <small style="font-weight:400;color:var(--muted)">— Replit</small></h4>
+      <p class="why">Vibe-coding plus hosting in one place. Choose this when you want the AI to build and deploy the app without leaving a single platform — no separate hosting setup, no export step, no deployment pipeline to configure.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://tempo.new/" target="_blank">Tempo</a></h4>
+      <p class="why">Visual React editor where you interact with rendered components while the AI generates the underlying code. Choose this when you want to see and manipulate the UI visually rather than working from code or text descriptions alone.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://www.magicpatterns.com/" target="_blank">Magic Patterns</a></h4>
+      <p class="why">Generates multiple UI variants simultaneously on a shared canvas. Choose this for rapid design exploration when you want to compare four or five different visual approaches to the same feature before committing to one direction.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://www.figma.com/make/" target="_blank">Figma Make</a> <small style="font-weight:400;color:var(--muted)">— Figma</small></h4>
+      <p class="why">Adds interactivity and code to existing Figma designs without leaving the Figma environment. Choose this when you're a designer who already works in Figma and wants to make designs interactive or generate component code without switching to a separate tool.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://www.hostinger.com/horizons" target="_blank">Hostinger Horizons</a></h4>
+      <p class="why">Prompt-to-app plus instant hosting as a single integrated workflow. Choose this when you need a simple public-facing app or landing page deployed quickly — the hosting is built in and there is no separate deployment step or server to configure.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://www.taskade.com/" target="_blank">Taskade Genesis</a></h4>
+      <p class="why">Builds internal business apps — CRMs, dashboards, project trackers — rather than consumer-facing products. Choose this when the deliverable is an operational tool for internal team use rather than a public-facing website or application.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://a0.dev/" target="_blank">A0.dev</a></h4>
+      <p class="why">Mobile-first app generation. Choose this when the target platform is iOS or Android rather than the web — most vibe-coding tools default to browser apps, making A0.dev a rare specialist for native mobile prototyping from a text description.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://www.canva.com/" target="_blank">Canva Code</a> <small style="font-weight:400;color:var(--muted)">— Canva</small></h4>
+      <p class="why">Designed for non-developers already inside Canva who want to add simple interactive elements to their designs. Choose this when your team lives in Canva and the ask is a small interactive widget rather than a full application.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tool-tag tag-vibe">Vibe-Coding</span>
+      <h4><a href="https://emergent.sh/" target="_blank">Emergent</a></h4>
+      <p class="why">India-based vibe-coding platform with regional pricing and support. Choose this for teams in the South Asian market who want local support, regional compliance, or simply a provider whose pricing is calibrated for that market.</p>
+    </div>
+
+  </div>
+
+  <hr class="rule">
+  <div class="callout warn">
+    <p><strong>Reminder — ENVISAGE Data Rules Apply to All Tools Above:</strong> Before connecting any tool to files, databases, or cloud storage, check which data tier applies. Tools from non-Western providers (DeepSeek, Kimi, Qwen Code, Kimi For Coding, CodeGeeX, Tongyi Lingma, Baidu Comate, MarsCode) must be used with <strong>Tier 1 publicly available data only</strong>. Never connect these tools to client deliverables, internal research, or restricted source material. See the <a href="data-security.html">Data Security</a> page for full rules.</p>
+  </div>
+
+  <div class="pager">
+    <a href="ai-toolkit.html">← AI Toolkit</a>
+    <a href="index.html">Home →</a>
+  </div>
+</main>
+</div><!-- /en -->
+
+
+<!-- ===== THAI ===== -->
+<div class="lang-section" data-lang="th">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">คลังทรัพยากร · เจ้าหน้าที่ทุกคน</div>
+    <h1>ไดเร็กทอรีเครื่องมือ AI</h1>
+    <p class="lede">ตัวแทน AI สำหรับการเขียนโค้ด, IDE, ส่วนขยาย และตัวสร้างแอปทุกตัว — พร้อมคำอธิบายภาษาธรรมดาว่าเมื่อใดควรเลือกแต่ละตัวแทนทางเลือกอื่น</p>
+  </div>
+</div>
+<main>
+
+  <div class="callout">
+    <p><strong>วิธีใช้ไดเร็กทอรีนี้:</strong> แต่ละเครื่องมือมีลิงก์และย่อหน้าเดียวที่อธิบายสิ่งที่แตกต่างหลักของมัน ใช้สิ่งนี้เพื่อตัดสินใจว่าเครื่องมือใดเหมาะกับงานเฉพาะของคุณ ปฏิบัติตามกฎระดับข้อมูลของ ENVISAGE ก่อนเชื่อมต่อเครื่องมือใดกับไฟล์หรือฐานข้อมูล</p>
+  </div>
+
+  <h2 class="cat-heading"><span class="cat-icon">⌨️</span> ตัวแทน CLI สำหรับเขียนโค้ด</h2>
+  <p class="cat-sub">ทำงานจากบรรทัดคำสั่ง เหมาะสำหรับนักพัฒนา ให้การควบคุมที่ชัดเจนว่าไฟล์และไดเร็กทอรีใดที่ AI สามารถเข้าถึงได้</p>
+  <div class="tool-grid">
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.anthropic.com/claude-code" target="_blank">Claude Code</a></h4><p class="why">ดีที่สุดสำหรับงานเขียนโค้ดที่ซับซ้อนและต้องการการใช้เหตุผลหลายขั้นตอน เลือกนี้เมื่อคุณอยู่ในระบบนิเวศ Anthropic และต้องการโมเดลที่มีความสามารถมากที่สุดสำหรับงานหลายไฟล์ ยืนยันว่าใช้งานร่วมกับ SAM ได้</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/openai/codex" target="_blank">OpenAI Codex CLI</a></h4><p class="why">Rust-native พร้อมตัวเลือก cloud sandbox ที่รักษาการรันโค้ดออกจากเครื่องของคุณ เลือกนี้เมื่อต้องการโมเดล OpenAI ใน CLI ที่เร็วพร้อมสภาพแวดล้อมการรันแบบแยกส่วน</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/google-gemini/gemini-cli" target="_blank">Gemini CLI</a></h4><p class="why">CLI agent ฟรีเดียวที่มี context window 1 ล้านโทเคน เลือกนี้เมื่อต้องโหลด codebase ขนาดใหญ่หรือเอกสารวิจัยยาวๆ ทั้งหมดในเซสชันเดียว โอเพนซอร์สและตรวจสอบได้</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line" target="_blank">GitHub Copilot CLI</a></h4><p class="why">ดีที่สุดเมื่อทีมมี GitHub Enterprise licensing อยู่แล้ว ผสานรวมกับ repo, pull request และ CI workflow ได้อย่างเป็นธรรมชาติโดยไม่ต้องตั้งค่าเพิ่มเติม</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://sourcegraph.com/amp" target="_blank">Sourcegraph Amp</a></h4><p class="why">ระบบ sub-agent แบบประกอบได้ (Oracle สำหรับค้นหา, Librarian สำหรับบริบท, Painter สำหรับสร้าง) เลือกนี้สำหรับ codebase ขนาดใหญ่ที่ต้องการตัวแทนเฉพาะทางสำหรับงานต่างกัน</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://mistral.ai/" target="_blank">Mistral Vibe</a></h4><p class="why">โฮสต์ในยุโรป พร้อมตัวเลือกโมเดล open-weight เลือกนี้เมื่อทีมมีข้อกำหนดการจัดเก็บข้อมูลในยุโรปหรือต้องการผู้ให้บริการ AI ที่ไม่ใช่สหรัฐอเมริกา</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.atlassian.com/software/rovo" target="_blank">Rovo Dev</a></h4><p class="why">ดีที่สุดเมื่อทีมใช้ Jira และ Confluence บริบทการเขียนโค้ดเชื่อมต่อกับระบบการจัดการโครงการและเอกสารโดยตรง</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.tabnine.com/" target="_blank">Tabnine CLI</a></h4><p class="why">กระจาย Docker ได้ โฮสต์เองได้อย่างสมบูรณ์ เลือกนี้สำหรับสภาพแวดล้อมที่ไม่มีโค้ดออกจากโครงสร้างพื้นฐานของคุณ — โมเดลทำงานในเซิร์ฟเวอร์ของคุณเอง</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://aider.chat/" target="_blank">Aider</a></h4><p class="why">มาตรฐานทองคำสำหรับการเขียนโปรแกรมคู่แบบ git-native ทุกการเปลี่ยนแปลง AI จะถูก commit โดยอัตโนมัติ เลือกนี้เมื่อความสามารถตรวจสอบการเปลี่ยนแปลงมีความสำคัญ</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://opencode.ai/" target="_blank">OpenCode</a></h4><p class="why">TUI แบบ Go รองรับผู้ให้บริการ 75+ ราย ตัวเลือก CLI ที่พกพาได้มากที่สุด — สลับระหว่าง Claude, Gemini, Mistral และโมเดลท้องถิ่นได้ด้วยการเปลี่ยนการตั้งค่า ยืนยันว่าใช้งานร่วมกับ SAM ได้</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/block/goose" target="_blank">Goose</a></h4><p class="why">"Recipes" YAML เข้ารหัส workflow ที่ทำซ้ำได้เป็นสคริปต์ที่ใช้ซ้ำได้ เลือกนี้เมื่อต้องการกำหนดมาตรฐานวิธีที่ทีมของคุณเข้าถึงงานเขียนโค้ดทั่วไป</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://plandex.ai/" target="_blank">Plandex</a></h4><p class="why">Context 2 ล้านโทเคนพร้อม diff sandbox ดีที่สุดสำหรับการ refactor หลายไฟล์ขนาดใหญ่ — วางแผนชุดการเปลี่ยนแปลงทั้งหมดก่อน ตรวจสอบ diff แล้วจึง apply</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://gptme.org/" target="_blank">gptme</a></h4><p class="why">ตัวแทนอิสระที่มี memory แบบ git-backed ข้ามเซสชัน เลือกนี้เมื่อต้องการตัวแทนที่จดจำบทสนทนาก่อนหน้าและการตัดสินใจจากเซสชันงานก่อนหน้า</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.warp.dev/" target="_blank">Warp</a></h4><p class="why">AI ถูกสร้างไว้ใน terminal เองแทนที่จะเป็น plugin เสริม เลือกนี้เมื่อต้องการประสบการณ์ shell ที่ AI-native ตั้งแต่ต้น</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://swe-agent.com/" target="_blank">SWE-agent</a></h4><p class="why">ตัวแทนระดับวิจัยที่สร้างมาเพื่อแก้ไขข้อบกพร่องอัตโนมัติใน GitHub issues เลือกนี้เพื่อพยายามระบุและแก้ไขปัญหาโดยอัตโนมัติ</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://forgecode.dev/" target="_blank">ForgeCode</a></h4><p class="why">รองรับโมเดล 300+ ตัวใน CLI เดียว เลือกนี้เมื่อทีมใช้หลายโมเดลสำหรับงานต่างกัน — จัดเส้นทางงานหนักไปยัง Claude, งานเร็วไปยังโมเดลเล็ก</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://codebuff.com/" target="_blank">Codebuff</a></h4><p class="why">CLI แบบหลาย-agent ที่ทำงานร่วมกัน ตัวแทน AI หลายตัวทำงานบน codebase เดียวกันพร้อมกัน เลือกนี้เมื่องานสามารถทำแบบขนานได้</p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://kimi.moonshot.cn/" target="_blank">Kimi CLI</a></h4><p class="why">ความสามารถ context ยาวจาก Moonshot AI เลือกนี้สำหรับงานที่เกี่ยวข้องกับเอกสารยาวมากหรือ codebase ขนาดใหญ่ <strong>ใช้เฉพาะข้อมูล Tier 1 สาธารณะตามนโยบาย ENVISAGE</strong></p></div>
+
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/QwenLM/qwen-code" target="_blank">Qwen Code</a></h4><p class="why">โมเดลเขียนโค้ดของ Alibaba เป็น CLI agent เลือกนี้เมื่อทำงานกับข้อมูลตลาดจีนหรือต้องการผู้ให้บริการ AI ที่ไม่ใช่ตะวันตก ใช้เฉพาะข้อมูล Tier 1</p></div>
+
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">🖥</span> AI-Native IDEs</h2>
+  <p class="cat-sub">สภาพแวดล้อมการพัฒนาที่สร้างใหม่รอบ AI แทนที่หรือเสริม VS Code, JetBrains ฯลฯ</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://cursor.com/" target="_blank">Cursor</a></h4><p class="why">ผู้นำตลาดสำหรับการพัฒนา AI-native ที่มีชุดคุณสมบัติสมบูรณ์ที่สุดและชุมชนใหญ่ที่สุด เลือกนี้เป็นตัวเลือกหลักเมื่อย้ายจาก VS Code</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://windsurf.com/" target="_blank">Windsurf</a></h4><p class="why">เดิมคือ Codeium ปัจจุบันเป็นของ OpenAI เลือกนี้เพื่อการผสานรวมอย่างลึกซึ้งกับโมเดล GPT-4 และ o-series ใน IDE ที่ขัดเกลาแล้ว</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://zed.dev/" target="_blank">Zed</a></h4><p class="why">สร้างด้วย Rust เพื่อความเร็วสูงสุดพร้อมการทำงานร่วมกันแบบ real-time และรองรับ BYOM เลือกนี้เมื่อ latency สำคัญหรือต้องการการแก้ไขหลายผู้ใช้พร้อมกัน</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://kiro.dev/" target="_blank">Kiro</a></h4><p class="why">การพัฒนาที่ขับเคลื่อนด้วย spec — กำหนดข้อกำหนดก่อน โค้ดถูกสร้างจากนั้น เลือกนี้เมื่อต้องการความสอดคล้องระหว่างเอกสารและการใช้งาน</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://www.trae.ai/" target="_blank">Trae</a></h4><p class="why">IDE AI ที่ฟรีสมบูรณ์พร้อม adaptive mode ทางเลือกฟรีที่ดีที่สุดแทน Cursor เลือกนี้เมื่องบประมาณเป็นข้อจำกัด</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://replit.com/" target="_blank">Replit</a></h4><p class="why">บนเบราว์เซอร์ — ไม่ต้องตั้งค่าในเครื่อง เลือกนี้สำหรับการทำ prototype อย่างรวดเร็วหรือเมื่อต้องการสภาพแวดล้อมการพัฒนาจากอุปกรณ์ใดก็ได้</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://trypear.ai/" target="_blank">PearAI</a></h4><p class="why">ทางเลือก Cursor แบบ open-source ที่มีการกำกับดูแลโดยชุมชน เลือกนี้เมื่อความโปร่งใสและการตรวจสอบ IDE เองมีความสำคัญ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://www.blackbox.ai/" target="_blank">BLACKBOX</a></h4><p class="why">รองรับหลายภาษาและ framework พร้อมเน้นความเร็วและความเรียบง่าย เลือกนี้เป็นจุดเริ่มต้นที่เบาสำหรับการพัฒนาแบบ AI-assisted</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://www.marscode.com/" target="_blank">MarsCode</a></h4><p class="why">IDE AI ของ ByteDance สำหรับตลาดนักพัฒนาจีน เลือกนี้เมื่อทีมทำงานในระบบนิเวศ AI จีนเป็นหลัก ใช้เฉพาะข้อมูล Tier 1</p></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">🔌</span> ส่วนขยายและปลั๊กอิน IDE</h2>
+  <p class="cat-sub">เพิ่ม AI ใน editor ที่มีอยู่ — VS Code, JetBrains และอื่นๆ เส้นทางที่ขัดขวางน้อยที่สุดสู่การพัฒนาแบบ AI-assisted</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></h4><p class="why">ตัวเลือกองค์กรเริ่มต้นสำหรับ GitHub Enterprise ปัจจุบันรองรับหลายโมเดลพร้อม Claude และ Codex เลือกนี้เมื่อทีมต้องการ AI ที่ผสานรวมกับ PR และ code review ที่มีอยู่</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://cline.bot/" target="_blank">Cline</a></h4><p class="why">ส่วนขยาย VS Code ที่ดีที่สุดสำหรับงาน agentic ที่ซับซ้อน สถาปัตยกรรม Plan/Act แยกการวางแผนออกจากการรัน BYOM พร้อมการผสานรวม Claude ที่แข็งแกร่ง</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://roocode.com/" target="_blank">Roo Code</a></h4><p class="why">Cline fork ที่มีหลาย mode (Code, Architect, Ask, Debug) เลือก Roo แทน Cline เมื่อต้องการพลัง agentic เดียวกันแต่สลับบริบทได้</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://kilocode.ai/" target="_blank">Kilo Code</a></h4><p class="why">เพิ่ม Orchestrator mode ที่จัดเส้นทาง sub-task ไปยัง agent เฉพาะทาง เลือกนี้สำหรับ workflow หลายขั้นตอนที่ซับซ้อนใน VS Code</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://continue.dev/" target="_blank">Continue</a></h4><p class="why">Open-source พร้อมการหันไปสู่การตรวจสอบ CI แบบ AI-assisted เลือกนี้เมื่อต้องการควบคุมเต็มรูปแบบในการเลือกโมเดลและโค้ดต้นฉบับที่โปร่งใส</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://augmentcode.com/" target="_blank">Augment Code</a></h4><p class="why">สร้างมาเพื่อ codebase ขนาดใหญ่มาก — ไฟล์ 100K+ เลือกนี้เมื่อโปรเจกต์ใหญ่เกินกว่า context window มาตรฐานจะรองรับได้</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://aws.amazon.com/q/developer/" target="_blank">Amazon Q Developer</a></h4><p class="why">การผสานรวมที่ลึกที่สุดกับบริการ AWS เลือกนี้เมื่อโครงสร้างพื้นฐานอยู่บน AWS และต้องการ AI ที่เข้าใจสถาปัตยกรรม cloud ของคุณ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank">Gemini Code Assist</a></h4><p class="why">ดีที่สุดสำหรับทีมบน Google Cloud ผสานรวมกับ GCP, BigQuery และ Firebase เลือกนี้เมื่อข้อมูลและโครงสร้างพื้นฐานอยู่ใน Google ecosystem</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://www.jetbrains.com/junie/" target="_blank">JetBrains Junie</a></h4><p class="why">Native สำหรับ IntelliJ, PyCharm, GoLand และ IDE JetBrains อื่นๆ เลือกนี้หากทีมลงทุนใน JetBrains ecosystem และไม่ต้องการเปลี่ยน editor</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://www.tabnine.com/" target="_blank">Tabnine</a></h4><p class="why">Privacy-first, โฮสต์เองได้, fine-tune ได้บน codebase ของคุณเอง เลือกนี้สำหรับอุตสาหกรรมที่ถูกควบคุมซึ่งไม่มีโค้ดส่งออกภายนอก</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://sourcegraph.com/cody" target="_blank">Sourcegraph Cody</a></h4><p class="why">ขึ้นอยู่กับ code-search index ของ Sourcegraph แทน memory โมเดลดิบ เลือกนี้เมื่อ codebase ใหญ่เกินกว่า context window ใดจะรองรับ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://supermaven.com/" target="_blank">Supermaven</a></h4><p class="why">Autocomplete เร็วที่สุดในส่วนขยายทุกตัวที่ทดสอบ พร้อม context window 1 ล้านโทเคน เลือกนี้หากคำแนะนำของ Copilot หรือ Codeium ช้ากว่าการพิมพ์ของคุณ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://bito.ai/" target="_blank">Bito AI</a></h4><p class="why">เชี่ยวชาญในการอธิบายโค้ดและสร้าง test ใช้ Bito ควบคู่กับ coding assistant หลักของคุณเมื่อต้องการ test coverage สำหรับฟังก์ชันที่มีอยู่</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://www.phind.com/" target="_blank">Phind</a></h4><p class="why">ผสาน web search กับ code generation ตอบคำถามเทคนิคพร้อมแหล่งอ้างอิงแล้วเขียนโค้ด เลือกนี้เมื่อต้องค้นหาและ implement ในขั้นตอนเดียว</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://codegpt.co/" target="_blank">CodeGPT</a></h4><p class="why">ส่วนขยายหลายผู้ให้บริการสำหรับ VS Code และ JetBrains สลับระหว่าง OpenAI, Anthropic และโมเดลท้องถิ่นจาก interface เดียวกัน</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://tabby.tabbyml.com/" target="_blank">Tabby</a></h4><p class="why">โฮสต์เองได้อย่างสมบูรณ์ open-source ทางเลือกที่ดีที่สุดสำหรับสภาพแวดล้อม air-gapped หรือทีมที่มีข้อกำหนด data sovereignty อย่างเข้มงวด</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://about.gitlab.com/gitlab-duo/" target="_blank">GitLab Duo</a></h4><p class="why">AI ตลอด DevSecOps lifecycle — โค้ด, review, security scanning และ deployment เลือกนี้หาก DevOps ของทีมอยู่บน GitLab</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a></h4><p class="why">AI assistant เดียวที่สร้าง native สำหรับ Jupyter notebooks เลือกนี้สำหรับ data science หรือ workflow วิจัยใน Jupyter</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://stagewise.io/" target="_blank">Stagewise</a></h4><p class="why">Bridge ที่รับรู้เบราว์เซอร์ระหว่างแอปสดและเครื่องมือ coding ของคุณ เลือก UI element โดยตรงใน Chrome แล้วส่ง context ที่แน่นอนไปยัง Cursor, Copilot หรือ Cline</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://codegeex.cn/" target="_blank">CodeGeeX</a></h4><p class="why">Open-source พร้อมรองรับภาษาโปรแกรม 600+ ภาษา การรองรับภาษาที่กว้างที่สุดในหมวดนี้ เลือกนี้สำหรับทีม polyglot หรือภาษาเฉพาะทางที่เครื่องมืออื่นจัดการได้ไม่ดี</p></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">✨</span> Vibe-Coding และตัวสร้างแอปจาก Prompt</h2>
+  <p class="cat-sub">อธิบายสิ่งที่ต้องการในภาษาธรรมดา — AI สร้างแอป ดีที่สุดสำหรับ prototype และเจ้าหน้าที่ที่ไม่ใช่นักพัฒนา</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://lovable.dev/" target="_blank">Lovable</a></h4><p class="why">แพลตฟอร์ม vibe-coding full-stack ที่สมบูรณ์ที่สุดและคุณภาพสูงที่สุด (มูลค่า $6.6B) เลือกนี้เป็นค่าเริ่มต้นเมื่อผู้ที่ไม่ใช่นักพัฒนาต้องสร้างเว็บแอปที่ deploy ได้จริง</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://bolt.new/" target="_blank">Bolt.new</a></h4><p class="why">สร้างแอปบนเบราว์เซอร์ทันทีโดยไม่ต้องตั้งค่าในเครื่อง เลือกนี้สำหรับเส้นทางที่เร็วที่สุดจากไอเดียสู่ prototype ที่ใช้งานได้</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://v0.dev/" target="_blank">v0</a></h4><p class="why">ดีที่สุดสำหรับการสร้าง React/Next.js UI โดยเฉพาะ สร้าง shadcn/ui components ที่พร้อม production ที่ตกลงไปใน Vercel projects โดยตรง</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://replit.com/" target="_blank">Replit Agent</a></h4><p class="why">Vibe-coding พร้อม hosting ในที่เดียว เลือกนี้เมื่อต้องการให้ AI สร้างและ deploy แอปโดยไม่ออกจากแพลตฟอร์มเดียว</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://tempo.new/" target="_blank">Tempo</a></h4><p class="why">Visual React editor ที่คุณโต้ตอบกับ component ที่ render แล้วในขณะที่ AI สร้างโค้ด เลือกนี้เมื่อต้องการเห็นและจัดการ UI แบบ visual</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.magicpatterns.com/" target="_blank">Magic Patterns</a></h4><p class="why">สร้าง UI หลาย variant พร้อมกันบน canvas ที่ใช้ร่วมกัน เลือกนี้สำหรับการสำรวจ design อย่างรวดเร็วเมื่อต้องการเปรียบเทียบหลายแนวทางก่อนตัดสินใจ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.figma.com/make/" target="_blank">Figma Make</a></h4><p class="why">เพิ่มการโต้ตอบและโค้ดให้กับ Figma designs โดยไม่ออกจาก Figma เลือกนี้เมื่อคุณเป็น designer ที่ต้องการทำ designs interactive โดยไม่เปลี่ยนเครื่องมือ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.taskade.com/" target="_blank">Taskade Genesis</a></h4><p class="why">สร้างแอปธุรกิจภายใน — CRM, dashboard, project tracker แทนผลิตภัณฑ์สำหรับผู้บริโภค เลือกนี้เมื่อผลลัพธ์คือเครื่องมือปฏิบัติการสำหรับทีมภายใน</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://a0.dev/" target="_blank">A0.dev</a></h4><p class="why">การสร้างแอปที่เน้น mobile-first เลือกนี้เมื่อ platform เป้าหมายคือ iOS หรือ Android แทนเว็บ — เครื่องมือ vibe-coding ส่วนใหญ่ default ไปยังแอปเบราว์เซอร์</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.canva.com/" target="_blank">Canva Code</a></h4><p class="why">ออกแบบมาสำหรับผู้ที่ไม่ใช่นักพัฒนาที่อยู่ใน Canva แล้วต้องการเพิ่ม element interactive ง่ายๆ เลือกนี้เมื่อทีมอยู่ใน Canva และงานคือ widget interactive เล็กๆ</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://emergent.sh/" target="_blank">Emergent</a></h4><p class="why">แพลตฟอร์ม vibe-coding จากอินเดียพร้อมราคาและการสนับสนุนระดับภูมิภาค เลือกนี้สำหรับทีมในตลาดเอเชียใต้</p></div>
+  </div>
+
+  <hr class="rule">
+  <div class="callout warn"><p><strong>เตือนความจำ — กฎข้อมูล ENVISAGE ใช้กับเครื่องมือทั้งหมดข้างต้น:</strong> เครื่องมือจากผู้ให้บริการที่ไม่ใช่ตะวันตก (DeepSeek, Kimi, Qwen Code, CodeGeeX, Tongyi Lingma, Baidu Comate, MarsCode) ต้องใช้กับ <strong>ข้อมูล Tier 1 สาธารณะเท่านั้น</strong> ดูรายละเอียดในหน้า <a href="data-security.html">ความปลอดภัยข้อมูล</a></p></div>
+  <div class="pager"><a href="ai-toolkit.html">← ชุดเครื่องมือ AI</a><a href="index.html">หน้าหลัก →</a></div>
+</main>
+</div><!-- /th -->
+
+
+<!-- ===== BURMESE ===== -->
+<div class="lang-section" data-lang="my">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">အရင်းအမြစ်စာကြည့်တိုက် · ဝန်ထမ်းအားလုံး</div>
+    <h1>AI ကိရိယာလမ်းညွှန်</h1>
+    <p class="lede">ပြည့်စုံသော AI coding agent, IDE, extension နှင့် app builder များ — မည်သည့်အချိန်တွင် တစ်ခုကို အခြားတစ်ခုအပေါ် ရွေးချယ်ရမည်ကို ရိုးရှင်းသောဘာသာစကားဖြင့် ရှင်းပြချက်ဖြင့်</p>
+  </div>
+</div>
+<main>
+
+  <div class="callout"><p><strong>ဤလမ်းညွှန်ကို မည်သို့သုံးမည်နည်း:</strong> ကိရိယာတစ်ခုချင်းစီတွင် လင့်ခ်နှင့် ၎င်း၏ အဓိကကွဲပြားချက်ကို ရှင်းပြသောပိုဒ်ကြီးတစ်ပိုဒ် ပါဝင်သည်။ ကိုင်တွယ်ဆောင်ရွက်ရေးကိရိယာ သို့မဟုတ် ဒေတာဘေ့စ်နှင့် မချိတ်ဆက်မီ ENVISAGE ဒေတာ tier စည်းကမ်းများ အမြဲတမ်း လိုက်နာပါ။</p></div>
+
+  <h2 class="cat-heading"><span class="cat-icon">⌨️</span> Terminal နှင့် CLI Coding Agents</h2>
+  <p class="cat-sub">ကွန်မန်းလိုင်းမှ run သည်။ developer-oriented။ AI ကိုင်တွယ်နိုင်သော ဖိုင်နှင့် directory များကို ထင်ရှားစွာ ထိန်းချုပ်နိုင်သည်။</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.anthropic.com/claude-code" target="_blank">Claude Code</a></h4><p class="why">ရှုပ်ထွေးသောအကြောင်းအကျိုးဆင်ခြင်မှုနှင့် အဆင့်များစွာပါဝင်သော ကုဒ်ရေးရေး အလုပ်များအတွက် အကောင်းဆုံး။ SAM နှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/openai/codex" target="_blank">OpenAI Codex CLI</a></h4><p class="why">Rust-native ဖြင့် cloud sandbox ရွေးချယ်မှုနှင့်အတူ။ OpenAI models ကို cloud ၌ အလုပ်လုပ်ပြီး local machine ကို မကိုင်တွယ်ဘဲ ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://github.com/google-gemini/gemini-cli" target="_blank">Gemini CLI</a></h4><p class="why">token တစ်သန်း context window ဖြင့် တစ်ခုတည်းသော အခမဲ့ CLI agent။ ကြီးမားသော codebase တစ်ခုလုံးကို တစ်ဆောင်ရွက်မှုတွင် load လုပ်ရန် ဤကိရိယာကို ရွေးပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://aider.chat/" target="_blank">Aider</a></h4><p class="why">git-native pair programming ၏ မြင့်မားသောစံနှုန်း။ AI ပြောင်းလဲမှုတိုင်းကို သန့်ရှင်းသော message ဖြင့် အလိုအလျောက် commit လုပ်သည်။ ပြောင်းလဲမှုများ စစ်ဆေးနိုင်မှု အရေးကြီးသောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://opencode.ai/" target="_blank">OpenCode</a></h4><p class="why">provider 75+ ကို ပံ့ပိုးသော Go-based TUI။ vendor lock-in ကို ရှောင်ရှားလိုသောအချိန်တွင် အသုံးပြုနိုင်ဆုံး CLI ရွေးချယ်မှု။ SAM နှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://plandex.ai/" target="_blank">Plandex</a></h4><p class="why">diff sandbox ဖြင့် context token သန်း ၂ ခု။ အကြီးစားမျိုးစုံဖိုင် refactor များအတွက် အကောင်းဆုံး — ပြောင်းလဲမှုအစုံကို ဦးစွာစီစဉ်ပါ၊ diff စစ်ဆေးပါ၊ ထို့နောက် apply လုပ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://www.warp.dev/" target="_blank">Warp</a></h4><p class="why">terminal ထဲတွင်ကိုယ်တိုင် ထည့်သွင်းထားသော AI၊ ဆောင်ပိုးသည့်ကိရိယာအဖြစ် မဟုတ်ပါ။ AI-native shell အတွေ့အကြုံကို ပထမဆုံးမှ လိုချင်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://forgecode.dev/" target="_blank">ForgeCode</a></h4><p class="why">CLI တစ်ခုတည်းတွင် model 300+ ကို ပံ့ပိုး။ အဖွဲ့မှ မတူသောအလုပ်များအတွက် model များစွာ သုံးသောအချိန်တွင် ရွေးချယ်ပါ — tool တစ်ခုမှ မတူသောပံ့ပိုးသူများသို့ routing လုပ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-cli">CLI Agent</span><h4><a href="https://kimi.moonshot.cn/" target="_blank">Kimi CLI</a></h4><p class="why">Moonshot AI မှ ကြည့်ရှုနိုင်သော context ထူးချွန်မှု။ context window အရွယ်အစားသည် ကန့်သတ်ချက်ဖြစ်သောအချိန်တွင် ရွေးချယ်ပါ။ <strong>ENVISAGE မူဝါဒအရ Tier 1 အများသူငှာဒေတာ သာသုံးပါ။</strong></p></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">🖥</span> AI-Native IDEs</h2>
+  <p class="cat-sub">AI ကို ဗဟိုပြုပြီး ပြန်တည်ဆောက်ထားသော ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်များ VS Code, JetBrains စသည်တို့ကို အစားထိုး သို့မဟုတ် ဖြည့်ဆည်းသည်။</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://cursor.com/" target="_blank">Cursor</a></h4><p class="why">အကြီးကျယ်ဆုံး community ဖြင့် AI-native development ၏ ဈေးကွက်ခေါင်းဆောင်။ VS Code မှ ပြောင်းရာတွင် ပထမရွေးချယ်မှုအဖြစ် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://windsurf.com/" target="_blank">Windsurf</a></h4><p class="why">OpenAI ပိုင်ဖြစ်ပြီး GPT-4 နှင့် o-series model များနှင့် ကိုယ်ထိလက်ရောက် integration။ OpenAI ecosystem တွင် ရင်းနှီးမြုပ်နှံသောအဖွဲ့များအတွက် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://zed.dev/" target="_blank">Zed</a></h4><p class="why">Rust ဖြင့် တည်ဆောက်ထားပြီး real-time ပူးပေါင်းဆောင်ရွက်မှုနှင့် BYOM ပံ့ပိုးမှုဖြင့် အမြင့်ဆုံးမြန်နှုန်းအတွက်။ latency အရေးကြီးသောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://kiro.dev/" target="_blank">Kiro</a></h4><p class="why">spec-driven ဖွံ့ဖြိုးတိုးတက်ရေး — requirement များ ဦးစွာ သတ်မှတ်ပြီး code ကိုထိုမှ ဖန်တီးသည်။ documentation နှင့် implementation ကြား ကိုက်ညီမှု လိုချင်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://www.trae.ai/" target="_blank">Trae</a></h4><p class="why">လုံးဝအခမဲ့ AI IDE ဖြင့် adaptive mode။ Cursor ၏ အကောင်းဆုံးအခမဲ့ အစားထိုး — ဘတ်ဂျက်ကန့်သတ်ချက်ရှိသောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://replit.com/" target="_blank">Replit</a></h4><p class="why">ဘရောက်ဆာ-based — local setup မလိုပါ။ မြန်မြန်ဆန်ဆန် prototype ပြုလုပ်ရန် သို့မဟုတ် မည်သည့်ကိရိယာမှမဆို ဝင်ရောက်နိုင်သော ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်လိုချင်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ide">AI IDE</span><h4><a href="https://trypear.ai/" target="_blank">PearAI</a></h4><p class="why">community ကိုယ်ပိုင်အုပ်ချုပ်မှုဖြင့် open-source Cursor အစားထိုး။ IDE ကိုယ်တိုင်၏ ပွင့်လင်းမြင်သာမှုနှင့် စစ်ဆေးနိုင်မှု အရေးကြီးသောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">🔌</span> IDE Extension များနှင့် Plugin များ</h2>
+  <p class="cat-sub">ရှိပြီးသား editor — VS Code, JetBrains စသည်တို့တွင် AI ထည့်သွင်းပါ။ AI-assisted ဖွံ့ဖြိုးတိုးတက်ရေးသို့ အနှောက်အယှက်အနည်းဆုံးသောလမ်းကြောင်း။</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></h4><p class="why">GitHub Enterprise ရှိပြီးသောအဖွဲ့အစည်းများအတွက် default enterprise ရွေးချယ်မှု။ multi-model ဖြင့် Claude နှင့် Codex backend များနှင့်အတူ PR နှင့် code review workflow နှင့် ချိတ်ဆက်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://cline.bot/" target="_blank">Cline</a></h4><p class="why">ရှုပ်ထွေးသော agentic လုပ်ငန်းများအတွက် အကောင်းဆုံး VS Code extension။ Plan/Act architecture ကတော့ code ကို မကိုင်တွယ်မီ ဘာလုပ်မည်ကို AI က စီစဉ်သည် — plan ကို ဦးစွာစစ်ဆေးပြီး အတည်ပြုနိုင်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://roocode.com/" target="_blank">Roo Code</a></h4><p class="why">mode များစွာဖြင့် Cline fork (Code, Architect, Ask, Debug)။ agentic power တူညီသော်လည်း context ပြောင်းလဲနိုင်မှု လိုချင်သောအချိန်တွင် Cline အစား ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://continue.dev/" target="_blank">Continue</a></h4><p class="why">model ရွေးချယ်မှုကို ပြည့်ပြည့်ဝဝ ထိန်းချုပ်လိုသောအချိန်တွင် open-source ရွေးချယ်မှု — ရင်းမြစ်ကုဒ် စစ်ဆေးနိုင်ပြီး CI pipeline သို့ AI ရောင်ပြန်ဟပ်မှု တည်ဆောက်ရန် ရည်မှန်းသည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://augmentcode.com/" target="_blank">Augment Code</a></h4><p class="why">ဖိုင် 100K+ ဖြင့် ကြီးမားသော codebase များအတွက် ရည်ရွယ်တည်ဆောက်ထားသည်။ standard context window ကျော်လွန်သော project ကြီးများတွင် အခြား extension များထက် ကောင်းသည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://aws.amazon.com/q/developer/" target="_blank">Amazon Q Developer</a></h4><p class="why">AWS ဝန်ဆောင်မှုများနှင့် အနက်ရှိုင်းဆုံး integration — CloudFormation, Lambda, CDK စသည်တို့ပါ။ infrastructure AWS တွင်ရှိပြီး cloud architecture ကို နားလည်သော AI လိုချင်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://www.tabnine.com/" target="_blank">Tabnine</a></h4><p class="why">Privacy-first, self-hostable, သင်၏ကိုယ်ပိုင် codebase တွင် fine-tune လုပ်နိုင်သည်။ code မဆင်ပြေဆင်ပြေ ပြင်ပမပေးပို့ရသော regulated ကဏ္ဍများနှင့် လုံခြုံရေးကိုဦးစားပေးသောပတ်ဝန်းကျင်များအတွက် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://sourcegraph.com/cody" target="_blank">Sourcegraph Cody</a></h4><p class="why">raw model memory အစား Sourcegraph ၏ code-search index ကို အခြေခံသည်။ codebase ကြီးလွန်းသောအချိန်တွင် ရွေးချယ်ပါ — Cody သည် codebase ကို load မလုပ်ဘဲ ရှာဖွေသောကြောင့် မည်သည့်အရွယ်အစားတွင်မဆို အလုပ်လုပ်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://about.gitlab.com/gitlab-duo/" target="_blank">GitLab Duo</a></h4><p class="why">DevSecOps lifecycle တစ်ခုလုံးတွင် AI — code, review, security scanning နှင့် deployment ပါဝင်သည်။ DevOps GitLab တွင် run သောအဖွဲ့များအတွက် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://jupyter-ai.readthedocs.io/" target="_blank">Jupyter AI</a></h4><p class="why">Jupyter notebooks အတွက် native ထည့်သွင်းတည်ဆောက်ထားသော တစ်ခုတည်းသော AI assistant။ data science သို့မဟုတ် Jupyter တွင် သုတေသနနည်းလမ်း workflow များအတွက် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://stagewise.io/" target="_blank">Stagewise</a></h4><p class="why">သင်၏ live app နှင့် coding tool များကြား browser-aware bridge။ Chrome တွင် UI element ကို တိုက်ရိုက်ရွေးပြီး Cursor, Copilot သို့မဟုတ် Cline သို့ context ပေးပို့ပါ — frontend debugging ၏ copy-paste အဆင့်ကို ဖျက်သိမ်းနိုင်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-ext">Extension</span><h4><a href="https://codegeex.cn/" target="_blank">CodeGeeX</a></h4><p class="why">ပရိုဂရမ်မင်းဘာသာစကား 600+ ကို ပံ့ပိုးသော open-source — ဤ category တွင် ဘာသာစကားအကျယ်ဆုံးသောကာဗာ။ polyglot အဖွဲ့များ သို့မဟုတ် အခြားကိရိယာများ မကောင်းသော ဘာသာစကားများနှင့် အလုပ်လုပ်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2 class="cat-heading"><span class="cat-icon">✨</span> Vibe-Coding နှင့် Prompt-to-App တည်ဆောက်သူများ</h2>
+  <p class="cat-sub">သဘာဝဘာသာစကားဖြင့် လိုချင်သည်ကို ဖော်ပြပါ — AI က app တည်ဆောက်သည်။ ပရိုတိုတိုင်နှင့် developer မဟုတ်သောဝန်ထမ်းများအတွက် အကောင်းဆုံး။</p>
+  <div class="tool-grid">
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://lovable.dev/" target="_blank">Lovable</a></h4><p class="why">အကြီးကျယ်ဆုံးနှင့် အကောင်းမွန်ဆုံး full-stack vibe-coding platform (တန်ဖိုး $6.6B)။ developer မဟုတ်သူ deploy လုပ်နိုင်သော web app ဦးဆောင်ရာတွင် ဤကိရိယာကို default အဖြစ် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://bolt.new/" target="_blank">Bolt.new</a></h4><p class="why">local setup မလိုဘဲ browser-based app ချက်ချင်း တည်ဆောက်ပါ။ idea မှ working prototype သို့ အမြန်ဆုံးလမ်းကြောင်း — tab တစ်ခုဖွင့်ပြီး လိုချင်သည်ကို ဖော်ပြပါ မိနစ်အနည်းငယ်အတွင်း run သောapp ရပါသည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://v0.dev/" target="_blank">v0</a></h4><p class="why">React/Next.js UI ဖန်တီးရေးအတွက် တိကျသေချာစွာ အကောင်းဆုံး။ Vercel-hosted project သို့ တိုက်ရိုက်ထည့်နိုင်သော production-ready shadcn/ui component များ ထုတ်လုပ်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://replit.com/" target="_blank">Replit Agent</a></h4><p class="why">platform တစ်ခုတည်းတွင် vibe-coding ပြင် hosting ပါ။ platform တစ်ခုမှ မထွက်ဘဲ AI မှ build နှင့် deploy လုပ်နိုင်ရန် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.figma.com/make/" target="_blank">Figma Make</a></h4><p class="why">Figma environment မထွက်ဘဲ ရှိပြီးသား Figma design များသို့ interactivity နှင့် code ထည့်သည်။ Figma တွင် အလုပ်လုပ်သော designer များနှင့် design ကို interactive ပြုလုပ်လိုသောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.taskade.com/" target="_blank">Taskade Genesis</a></h4><p class="why">consumer-facing ထုတ်ကုန်အစား အတွင်းပိုင်းစီးပွားရေးကိရိယာများ — CRM, dashboard, project tracker — တည်ဆောက်သည်။ deliverable သည် အဖွဲ့အတွင်းပိုင်းလုပ်ငန်းကိရိယာဖြစ်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://a0.dev/" target="_blank">A0.dev</a></h4><p class="why">mobile-first app generation။ target platform သည် iOS သို့မဟုတ် Android ဖြစ်သောအချိန်တွင် ရွေးချယ်ပါ — vibe-coding tool အများစုသည် browser app များသို့ default ဖြစ်သည်၊ A0.dev သည် native mobile prototyping အတွက် သီးသန့်ကျွမ်းကျင်သည်။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://www.canva.com/" target="_blank">Canva Code</a></h4><p class="why">Canva တွင် ရှိပြီးသား developer မဟုတ်သောသူများအတွက် ဒီဇိုင်းသို့ ရိုးရှင်းသော interactive element ထည့်ရန်။ အဖွဲ့ Canva တွင်ရှိပြီး တောင်းဆိုမှုသည် small interactive widget ဖြစ်သောအချိန်တွင် ရွေးချယ်ပါ။</p></div>
+    <div class="tool-card"><span class="tool-tag tag-vibe">Vibe-Coding</span><h4><a href="https://emergent.sh/" target="_blank">Emergent</a></h4><p class="why">ဒေသဆိုင်ရာစျေးနှုန်းနှင့် ပံ့ပိုးမှုဖြင့် India-based vibe-coding platform။ South Asian ဈေးကွက်ရှိ အဖွဲ့များ သို့မဟုတ် ဒေသဆိုင်ရာ ပံ့ပိုးကူညီမှုလိုချင်သောအဖွဲ့များအတွက် ရွေးချယ်ပါ။</p></div>
+  </div>
+
+  <hr class="rule">
+  <div class="callout warn"><p><strong>သတိပေးချက် — အထက်ပါ ကိရိယာများအားလုံးတွင် ENVISAGE ဒေတာစည်းကမ်းများ သက်ရောက်သည်:</strong> တရုတ်မဟုတ်သောနိုင်ငံများမှ ပံ့ပိုးသူများ (DeepSeek, Kimi, Qwen Code, CodeGeeX, MarsCode) ၏ ကိရိယာများကို <strong>Tier 1 အများသူငှာဒေတာ သာ</strong> နှင့် အသုံးပြုရမည်။ <a href="data-security.html">ဒေတာလုံခြုံရေး</a> စာမျက်နှာတွင် စည်းမျဉ်းများကို ကြည့်ပါ။</p></div>
+  <div class="pager"><a href="ai-toolkit.html">← AI ကိရိယာစုံ</a><a href="index.html">ပင်မ →</a></div>
+</main>
+</div><!-- /my -->
+
+</body>
+</html>

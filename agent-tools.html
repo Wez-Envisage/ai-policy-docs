@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Agent Tools & Platform Comparison — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d1f3c;
+    --navy-dark:#081427;
+    --sapphire:#2563eb;
+    --sapphire-light:#dbeafe;
+    --ink:#1e293b;
+    --muted:#64748b;
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --border:#e2e8f0;
+    --green:#15803d;
+    --green-bg:#dcfce7;
+    --amber:#b45309;
+    --amber-bg:#fef3c7;
+    --red:#b91c1c;
+    --red-bg:#fee2e2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:15px}
+
+  /* HEADER */
+  .site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .header-inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .brand{color:#fff;font-weight:800;letter-spacing:.06em;font-size:.95rem;padding:14px 0;text-decoration:none}
+  .brand span{color:#6ea8ff}
+  .header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0}
+  .header-right .doc-label{color:#8fa3c2;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #2e466e;padding-right:12px;margin-right:4px}
+  .lang-nav{display:flex;gap:4px}
+  .lang-nav a{color:#c7d4ea;text-decoration:none;font-size:.82rem;font-weight:600;border:1px solid #2e466e;border-radius:6px;padding:5px 12px;transition:all .15s}
+  .lang-nav a:hover{color:#fff;border-color:#6ea8ff}
+  .lang-nav a.en{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
+
+  /* COVER */
+  .cover{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 60%,#15366b);color:#fff;padding:72px 24px 64px;min-height:480px;display:flex;align-items:center}
+  .cover-inner{max-width:960px;margin:0 auto;width:100%}
+  .eyebrow{color:#6ea8ff;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+  .cover h1{font-size:2rem;line-height:1.22;max-width:800px;margin-bottom:14px}
+  .cover .subtitle{color:#b9c8e0;font-size:1.02rem;max-width:740px;margin-bottom:28px}
+  .cover-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+  .cover-meta-item{display:flex;flex-direction:column;gap:3px}
+  .cover-meta-item .meta-label{color:#6ea8ff;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .cover-meta-item .meta-value{color:#e2e8f0;font-size:.92rem;font-weight:600}
+
+  /* SECTION DIVIDER */
+  .section-divider{background:var(--navy);padding:18px 24px}
+  .section-divider-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:16px}
+  .lang-flag{background:var(--sapphire);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:999px}
+  .section-divider h2{color:#e2e8f0;font-size:1.05rem;font-weight:600}
+
+  /* CONTENT */
+  .lang-section{background:var(--bg)}
+  main.content-area{max-width:960px;margin:0 auto;padding:40px 24px 56px}
+  section{margin-bottom:40px}
+  h2.section-heading{color:var(--navy);font-size:1.3rem;margin-bottom:8px}
+  h3{color:var(--navy);font-size:1.05rem;margin:22px 0 8px}
+  p{margin-bottom:12px;max-width:860px;line-height:1.7}
+  ul,ol{margin:0 0 14px 22px;max-width:860px}
+  li{margin-bottom:5px;line-height:1.65}
+  .rule{border:none;border-top:1px solid var(--border);margin:32px 0}
+
+  /* TOOL CARDS */
+  .tool-grid{display:grid;gap:16px;margin:20px 0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .tool-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;box-shadow:0 1px 3px rgba(13,31,60,.06)}
+  .tool-card .tool-icon{font-size:1.4rem;margin-bottom:8px}
+  .tool-card h4{color:var(--navy);font-size:1rem;margin-bottom:4px}
+  .tool-card .tool-type{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .tool-card p{font-size:.9rem;margin-bottom:0;color:#334155}
+
+  /* BADGES */
+  .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 9px;border-radius:999px;white-space:nowrap}
+  .badge.green{background:var(--green-bg);color:var(--green)}
+  .badge.amber{background:var(--amber-bg);color:var(--amber)}
+  .badge.red{background:var(--red-bg);color:var(--red)}
+  .badge.blue{background:var(--sapphire-light);color:var(--sapphire)}
+  .badge.navy{background:var(--navy);color:#fff}
+
+  /* CALLOUTS */
+  .callout{border-left:4px solid var(--sapphire);background:var(--sapphire-light);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;max-width:860px}
+  .callout.warn{border-left-color:var(--amber);background:var(--amber-bg)}
+  .callout.ok{border-left-color:var(--green);background:var(--green-bg)}
+  .callout.danger{border-left-color:var(--red);background:var(--red-bg)}
+  .callout p{margin:0;font-size:.92rem}
+  .callout p+p{margin-top:7px}
+  .callout strong{color:var(--navy)}
+
+  /* MATRIX TABLE */
+  .matrix-wrap{overflow-x:auto;margin:20px 0}
+  table.matrix{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:.85rem;min-width:700px}
+  table.matrix th{background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-size:.78rem;letter-spacing:.04em;white-space:nowrap}
+  table.matrix th:first-child{min-width:140px}
+  table.matrix td{padding:10px 14px;border-top:1px solid var(--border);vertical-align:top;line-height:1.5}
+  table.matrix tr:nth-child(even) td{background:#fafcff}
+  table.matrix td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+  .pro{color:var(--green);font-weight:600}
+  .con{color:var(--red);font-weight:600}
+  .neutral{color:var(--amber);font-weight:600}
+
+  /* PROS/CONS CARDS */
+  .pc-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin:16px 0}
+  .pc-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(13,31,60,.06)}
+  .pc-card h4{font-size:.95rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .pc-card ul{margin:0 0 0 18px;font-size:.88rem}
+  .pc-card li{margin-bottom:5px}
+  .pc-pros h4{color:var(--green)}
+  .pc-cons h4{color:var(--red)}
+
+  /* FOOTER */
+  .page-footer{background:var(--navy-dark);color:#8fa3c2;padding:24px}
+  .page-footer-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.8rem}
+  .page-footer strong{color:#fff}
+
+  /* PRINT INSTRUCTIONS */
+  .print-note{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px 18px;margin:16px auto;font-size:.85rem;color:#78350f;max-width:920px}
+  .print-note strong{color:#92400e}
+
+  /* THAI */
+  .lang-th{font-family:'Noto Sans Thai',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}
+  .lang-th .cover h1{line-height:1.4}
+  .lang-th th,.lang-th td{line-height:1.7}
+
+  /* BURMESE */
+  .lang-my{font-family:'Noto Sans Myanmar',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.95}
+  .lang-my .cover h1{line-height:1.55}
+  .lang-my th,.lang-my td{line-height:1.85}
+  .lang-my p,.lang-my li{line-height:1.95}
+
+  /* PRINT */
+  @media print{
+    .site-header,.print-note{display:none!important}
+    body{background:#fff;font-size:11pt}
+    .cover{min-height:auto;padding:48px 24px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .section-divider{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .lang-section.break-before{page-break-before:always}
+    th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .tool-card,.pc-card{break-inside:avoid}
+    .matrix-wrap{overflow:visible}
+    table.matrix{min-width:0;font-size:8pt}
+  }
+
+  @media(max-width:640px){
+    .cover h1{font-size:1.45rem}
+    .header-inner{padding:0 14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER NAV -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span>ENVISAGE</span> WORLDWIDE</a>
+    <div class="header-right">
+      <span class="doc-label">Internal Briefing</span>
+      <nav class="lang-nav">
+        <a href="#section-en" class="en">EN</a>
+        <a href="#section-th">TH</a>
+        <a href="#section-my">MY</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="print-note">
+  <strong>To save as PDF:</strong> Open in Chrome → File → Print (Ctrl+P / ⌘P) → Destination: <em>Save as PDF</em> → More settings → enable <em>Background graphics</em> → Save.
+</div>
+
+<!-- ═══════════════ ENGLISH ═══════════════ -->
+<div id="section-en" class="lang-section">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">Internal Briefing · Technology Assessment · ENVISAGE WORLDWIDE</div>
+      <h1>AI Agent Tools &amp; Platforms: Capabilities and Considerations</h1>
+      <p class="subtitle">A plain-language overview of the AI agent tools available to ENVISAGE teams, with a structured pros and cons matrix to guide platform decisions for the Sapphire and SAM programmes.</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <span class="meta-label">Origin</span>
+          <span class="meta-value">Simon &amp; Joel — Team Discussion</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Audience</span>
+          <span class="meta-value">All Staff &amp; Kenneth</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Classification</span>
+          <span class="meta-value">Internal — Staff Use</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.0 · June 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">EN</span>
+      <h2>English — AI Agent Tools Briefing &amp; Comparison Matrix</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <h2 class="section-heading">Background</h2>
+      <p>As ENVISAGE teams explore how to connect AI tools to live data — broker notes, research databases, client files — it is important to understand what each platform actually does, what it can access, and what risks it introduces. This briefing summarises the six key tools under consideration and provides a structured comparison to guide decisions.</p>
+      <p>The central question is not which tool is most capable, but which tool gives ENVISAGE the right combination of control, security, and flexibility — particularly given the sensitive nature of our client data and the long-term ambition of SamAI as our own decision-making infrastructure.</p>
+      <div class="callout warn">
+        <p><strong>Security Context:</strong> Any tool that connects to your computer, file system, or cloud storage is, to some degree, giving the AI provider access to that data. The tools below vary significantly in how much access they require, how transparent they are about it, and how much control you retain. This must be weighed carefully before connecting any tool to confidential client data.</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">The Six Platforms at a Glance</h2>
+
+      <div class="tool-grid">
+
+        <div class="tool-card">
+          <div class="tool-icon">🖥</div>
+          <h4>Claude Cowork</h4>
+          <div class="tool-type">Desktop AI Workspace · Anthropic</div>
+          <p>A desktop application that connects Claude to files, folders, and external services via MCP (Model Context Protocol). It presents as a clean, user-friendly interface, but underneath it functions as a UI connecting directly to Anthropic's cloud infrastructure. Once connected to a folder or Google Drive, the AI can read and act on those files.</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">⌨️</div>
+          <h4>Claude Code</h4>
+          <div class="tool-type">CLI Coding Agent · Anthropic</div>
+          <p>A command-line tool that lets developers run Claude directly from the terminal to write, edit, and debug code. It can be granted access to specific files and directories. More transparent than Cowork for technical users — the developer explicitly controls what Claude sees. Confirmed compatible with ENVISAGE's SAM environment.</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🔓</div>
+          <h4>OpenCode</h4>
+          <div class="tool-type">Open-Source CLI Coding Agent</div>
+          <p>An open-source alternative to Claude Code and Codex. It can work with multiple LLMs and does not lock you into a single provider. Because the source code is publicly auditable, security-conscious teams can inspect exactly what data is transmitted. Confirmed compatible with SAM.</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🤖</div>
+          <h4>OpenAI Codex</h4>
+          <div class="tool-type">CLI Coding Agent · OpenAI</div>
+          <p>OpenAI's equivalent of Claude Code — a terminal-based coding agent that can read files, write code, and execute tasks. Operates within a sandboxed environment but still transmits data to OpenAI's infrastructure. Confirmed compatible with SAM. A strong alternative when Claude is unavailable or for cross-verification tasks.</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🗄️</div>
+          <h4>Pi Agent (NL-to-SQL)</h4>
+          <div class="tool-type">Natural Language to SQL Agent</div>
+          <p>A category of coding agent that translates plain-language questions into SQL database queries. The user describes what they want to find; the agent generates the query. Particularly useful for non-developer staff who need to extract data from SAM's databases (PostgreSQL, Snowflake, Elasticsearch) without writing code. Confirmed compatible with SAM.</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">🏗️</div>
+          <h4>SamAI</h4>
+          <div class="tool-type">ENVISAGE Proprietary Platform</div>
+          <p>ENVISAGE's own AI decision-making infrastructure. Unlike the other tools, SamAI is designed to be LLM-agnostic — any model can plug in and operate within its structure. It places an explicit control layer between the LLM and ENVISAGE's databases, meaning the AI only sees what ENVISAGE deliberately chooses to expose. Skills, tools, and decision logic are owned and controlled entirely by ENVISAGE.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">Pros &amp; Cons by Platform</h2>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ Claude Cowork — Strengths</h4>
+          <ul>
+            <li>Excellent UI — accessible to non-technical staff</li>
+            <li>Broad MCP connector library (Google Drive, Slack, etc.)</li>
+            <li>Persistent context across sessions via Projects</li>
+            <li>Already used and tested by ENVISAGE team</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ Claude Cowork — Risks &amp; Limits</h4>
+          <ul>
+            <li>Fundamentally gives Anthropic access to connected files and folders</li>
+            <li>Prompt injection vulnerabilities are not fully solved</li>
+            <li>Limited transparency for non-developers about what data is shared</li>
+            <li>Locks you into Claude / Anthropic infrastructure</li>
+            <li>Not suitable for connecting to confidential client deliverables</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ Claude Code — Strengths</h4>
+          <ul>
+            <li>Developer-controlled — explicit file and directory permissions</li>
+            <li>Highly capable for code generation, debugging, and data tasks</li>
+            <li>Can be limited to specific files or read-only access</li>
+            <li>Confirmed compatible with SAM environment</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ Claude Code — Risks &amp; Limits</h4>
+          <ul>
+            <li>Requires technical setup — not suitable for non-developer staff</li>
+            <li>Data still transmitted to Anthropic's infrastructure</li>
+            <li>LLM-locked to Claude/Anthropic</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ OpenCode — Strengths</h4>
+          <ul>
+            <li>Open-source and auditable — full transparency on data handling</li>
+            <li>Works with multiple LLMs — not locked to any single provider</li>
+            <li>Can be self-hosted to keep data entirely in-house</li>
+            <li>Confirmed compatible with SAM</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ OpenCode — Risks &amp; Limits</h4>
+          <ul>
+            <li>Less polished UI — requires technical confidence to set up</li>
+            <li>Smaller community and support ecosystem</li>
+            <li>Requires more initial configuration than commercial tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ OpenAI Codex — Strengths</h4>
+          <ul>
+            <li>Strong coding capabilities — reliable for complex tasks</li>
+            <li>Good alternative when Claude is at capacity or for cross-checking</li>
+            <li>Sandboxed execution environment reduces some risk</li>
+            <li>Confirmed compatible with SAM</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ OpenAI Codex — Risks &amp; Limits</h4>
+          <ul>
+            <li>Data transmitted to OpenAI's infrastructure</li>
+            <li>LLM-locked to OpenAI</li>
+            <li>Paid service — cost scales with usage</li>
+            <li>Privacy policy differences from Anthropic — review before use with client data</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ Pi Agent (NL-to-SQL) — Strengths</h4>
+          <ul>
+            <li>Makes database querying accessible to non-technical staff</li>
+            <li>Schema-in / query-out pattern keeps AI away from raw data</li>
+            <li>Dramatically reduces time to extract structured insights from SAM databases</li>
+            <li>Confirmed compatible with SAM (PostgreSQL, Snowflake, Elasticsearch)</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ Pi Agent — Risks &amp; Limits</h4>
+          <ul>
+            <li>Database schema must be carefully controlled — do not expose full schema</li>
+            <li>Generated SQL queries must be reviewed before execution on production data</li>
+            <li>Quality varies — complex multi-table queries may require human correction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pc-grid">
+        <div class="pc-card pc-pros">
+          <h4>✅ SamAI — Strengths</h4>
+          <ul>
+            <li>LLM-agnostic — any model can be swapped in without rebuilding</li>
+            <li>ENVISAGE owns the skills, tools, and decision logic entirely</li>
+            <li>Explicit access control layer between LLM and databases</li>
+            <li>Purpose-built for ENVISAGE's research and investment workflows</li>
+            <li>No external provider has access to client data beyond what ENVISAGE defines</li>
+            <li>Continuously improvable — skills and features evolve with team needs</li>
+          </ul>
+        </div>
+        <div class="pc-card pc-cons">
+          <h4>⚠️ SamAI — Risks &amp; Limits</h4>
+          <ul>
+            <li>Still being built — some features require development time</li>
+            <li>Requires internal technical expertise to extend and maintain</li>
+            <li>Higher upfront investment than using off-the-shelf tools</li>
+            <li>Team must be disciplined about not bypassing the control layer</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">Full Comparison Matrix</h2>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Claude Cowork</th>
+              <th>Claude Code</th>
+              <th>OpenCode</th>
+              <th>Codex (OpenAI)</th>
+              <th>Pi Agent</th>
+              <th>SamAI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data sent to 3rd party</td>
+              <td><span class="con">Yes — Anthropic</span></td>
+              <td><span class="con">Yes — Anthropic</span></td>
+              <td><span class="pro">Can be self-hosted</span></td>
+              <td><span class="con">Yes — OpenAI</span></td>
+              <td><span class="neutral">Schema only (safe pattern)</span></td>
+              <td><span class="pro">No — internal only</span></td>
+            </tr>
+            <tr>
+              <td>LLM flexibility</td>
+              <td><span class="con">Claude only</span></td>
+              <td><span class="con">Claude only</span></td>
+              <td><span class="pro">Multi-LLM</span></td>
+              <td><span class="con">OpenAI only</span></td>
+              <td><span class="neutral">Varies by tool</span></td>
+              <td><span class="pro">LLM-agnostic</span></td>
+            </tr>
+            <tr>
+              <td>Access control</td>
+              <td><span class="con">Limited — folder-level</span></td>
+              <td><span class="neutral">Dev-controlled</span></td>
+              <td><span class="pro">Fully configurable</span></td>
+              <td><span class="neutral">Sandboxed</span></td>
+              <td><span class="pro">Schema-only exposure</span></td>
+              <td><span class="pro">Explicit control layer</span></td>
+            </tr>
+            <tr>
+              <td>Usable by non-developers</td>
+              <td><span class="pro">Yes — UI-driven</span></td>
+              <td><span class="con">No — CLI only</span></td>
+              <td><span class="con">No — CLI only</span></td>
+              <td><span class="con">No — CLI only</span></td>
+              <td><span class="pro">Yes — plain language</span></td>
+              <td><span class="pro">Yes — via Chatbot/Tools</span></td>
+            </tr>
+            <tr>
+              <td>MCP / API connectivity</td>
+              <td><span class="pro">Broad (many connectors)</span></td>
+              <td><span class="pro">Yes — configurable</span></td>
+              <td><span class="pro">Yes — configurable</span></td>
+              <td><span class="pro">Yes — configurable</span></td>
+              <td><span class="neutral">Database-focused</span></td>
+              <td><span class="pro">Yes — via Skills/Tools</span></td>
+            </tr>
+            <tr>
+              <td>Safe for client data</td>
+              <td><span class="con">High risk — avoid</span></td>
+              <td><span class="neutral">With strict controls</span></td>
+              <td><span class="pro">Yes — if self-hosted</span></td>
+              <td><span class="neutral">With strict controls</span></td>
+              <td><span class="pro">Yes — schema-in only</span></td>
+              <td><span class="pro">Yes — by design</span></td>
+            </tr>
+            <tr>
+              <td>Safe for Tier 1 public data</td>
+              <td><span class="pro">Yes</span></td>
+              <td><span class="pro">Yes</span></td>
+              <td><span class="pro">Yes</span></td>
+              <td><span class="pro">Yes</span></td>
+              <td><span class="pro">Yes</span></td>
+              <td><span class="pro">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Prompt injection risk</td>
+              <td><span class="con">Not fully mitigated</span></td>
+              <td><span class="neutral">Moderate</span></td>
+              <td><span class="neutral">Moderate</span></td>
+              <td><span class="neutral">Moderate</span></td>
+              <td><span class="pro">Low — structured output</span></td>
+              <td><span class="pro">Mitigated by control layer</span></td>
+            </tr>
+            <tr>
+              <td>Cost</td>
+              <td><span class="neutral">Subscription</span></td>
+              <td><span class="neutral">API usage</span></td>
+              <td><span class="pro">Free (open source)</span></td>
+              <td><span class="neutral">API usage</span></td>
+              <td><span class="pro">Free / low cost</span></td>
+              <td><span class="neutral">Internal build cost</span></td>
+            </tr>
+            <tr>
+              <td>SAM compatibility</td>
+              <td><span class="neutral">Partial</span></td>
+              <td><span class="pro">Confirmed</span></td>
+              <td><span class="pro">Confirmed</span></td>
+              <td><span class="pro">Confirmed</span></td>
+              <td><span class="pro">Confirmed</span></td>
+              <td><span class="pro">Native</span></td>
+            </tr>
+            <tr>
+              <td>Long-term strategic fit</td>
+              <td><span class="con">Limited — vendor lock-in</span></td>
+              <td><span class="neutral">Useful — dev tool</span></td>
+              <td><span class="pro">Good — flexible</span></td>
+              <td><span class="neutral">Useful — dev tool</span></td>
+              <td><span class="pro">Good — staff productivity</span></td>
+              <td><span class="pro">High — core infrastructure</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">Recommended Approach</h2>
+      <div class="callout ok">
+        <p><strong>For day-to-day staff work (Tier 1 &amp; 2 data):</strong> Claude Cowork and Claude Chat remain appropriate for research, summarisation, and analysis of non-confidential material. Follow the data tier rules in the ENVISAGE AI Policy.</p>
+      </div>
+      <div class="callout">
+        <p><strong>For database access and structured data extraction:</strong> Use Pi Agent (NL-to-SQL) via the schema-in / query-out pattern. The AI sees the structure, not the raw data. All generated queries should be reviewed before execution.</p>
+      </div>
+      <div class="callout warn">
+        <p><strong>For any task involving client deliverables or Tier 3 data:</strong> Do not use any third-party AI tool. Route through SamAI where the access control layer protects sensitive data by design. If SamAI does not yet support a task, escalate to Simon or the technical team — do not improvise with external tools.</p>
+      </div>
+      <div class="callout ok">
+        <p><strong>Long-term direction:</strong> As SamAI matures, it should become the primary interface for all data-connected AI work at ENVISAGE. The decision to remain LLM-agnostic is intentional — it prevents vendor lock-in and ensures ENVISAGE's skills and decision logic remain our own intellectual property regardless of which model we use.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · AI Policy &amp; Technology Assessment</span>
+      <span>Internal use only · Do not share externally</span>
+    </div>
+  </footer>
+
+</div><!-- /section-en -->
+
+
+<!-- ═══════════════ THAI ═══════════════ -->
+<div id="section-th" class="lang-section lang-th break-before">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">บันทึกภายใน · การประเมินเทคโนโลยี · ENVISAGE WORLDWIDE</div>
+      <h1>เครื่องมือ AI Agent และแพลตฟอร์ม: ความสามารถและข้อพิจารณา</h1>
+      <p class="subtitle">ภาพรวมของเครื่องมือ AI agent ที่มีให้ทีม ENVISAGE พร้อมเมทริกซ์ข้อดีและข้อเสียเพื่อชี้แนะการตัดสินใจเลือกแพลตฟอร์มสำหรับโครงการ Sapphire และ SAM</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item"><span class="meta-label">ที่มา</span><span class="meta-value">Simon &amp; Joel — การอภิปรายทีม</span></div>
+        <div class="cover-meta-item"><span class="meta-label">กลุ่มเป้าหมาย</span><span class="meta-value">เจ้าหน้าที่ทุกคนและ Kenneth</span></div>
+        <div class="cover-meta-item"><span class="meta-label">การจำแนก</span><span class="meta-value">ภายใน — สำหรับเจ้าหน้าที่</span></div>
+        <div class="cover-meta-item"><span class="meta-label">เวอร์ชัน</span><span class="meta-value">1.0 · มิถุนายน 2569</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">TH</span>
+      <h2>ภาษาไทย — บทสรุปเครื่องมือ AI Agent และเมทริกซ์เปรียบเทียบ</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <h2 class="section-heading">ภูมิหลัง</h2>
+      <p>เมื่อทีม ENVISAGE สำรวจวิธีเชื่อมต่อเครื่องมือ AI กับข้อมูลสด — บันทึกนายหน้า ฐานข้อมูลวิจัย ไฟล์ลูกค้า — สิ่งสำคัญคือต้องเข้าใจว่าแต่ละแพลตฟอร์มทำอะไรได้จริง เข้าถึงอะไรได้ และมีความเสี่ยงอะไร</p>
+      <p>คำถามหลักไม่ใช่เครื่องมือใดมีความสามารถมากที่สุด แต่คือเครื่องมือใดให้ ENVISAGE ได้รับการควบคุม ความปลอดภัย และความยืดหยุ่นที่เหมาะสม โดยเฉพาะเมื่อพิจารณาถึงความอ่อนไหวของข้อมูลลูกค้าของเราและความทะเยอทะยานระยะยาวของ SamAI</p>
+      <div class="callout warn">
+        <p><strong>บริบทความปลอดภัย:</strong> เครื่องมือใดก็ตามที่เชื่อมต่อกับคอมพิวเตอร์ ระบบไฟล์ หรือที่เก็บข้อมูลบนคลาวด์ของคุณ จะให้ผู้ให้บริการ AI เข้าถึงข้อมูลนั้นในระดับหนึ่ง ต้องชั่งน้ำหนักอย่างรอบคอบก่อนเชื่อมต่อเครื่องมือใดๆ กับข้อมูลลูกค้าที่เป็นความลับ</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">หกแพลตฟอร์มโดยสรุป</h2>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🖥</div>
+          <h4>Claude Cowork</h4>
+          <div class="tool-type">พื้นที่ทำงาน AI ตั้งโต๊ะ · Anthropic</div>
+          <p>แอปพลิเคชันตั้งโต๊ะที่เชื่อมต่อ Claude กับไฟล์ โฟลเดอร์ และบริการภายนอกผ่าน MCP ดูเป็นอินเทอร์เฟซที่เรียบง่าย แต่ในความเป็นจริงคือ UI ที่เชื่อมต่อโดยตรงกับโครงสร้างพื้นฐานคลาวด์ของ Anthropic</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⌨️</div>
+          <h4>Claude Code</h4>
+          <div class="tool-type">ตัวแทนเขียนโค้ด CLI · Anthropic</div>
+          <p>เครื่องมือบรรทัดคำสั่งที่ให้นักพัฒนาใช้ Claude จากเทอร์มินัลเพื่อเขียน แก้ไข และดีบักโค้ด นักพัฒนาควบคุมโดยตรงว่า Claude เห็นอะไร ยืนยันว่าใช้งานร่วมกับสภาพแวดล้อม SAM ได้</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔓</div>
+          <h4>OpenCode</h4>
+          <div class="tool-type">ตัวแทนเขียนโค้ด CLI โอเพนซอร์ส</div>
+          <p>ทางเลือกโอเพนซอร์สสำหรับ Claude Code และ Codex ทำงานร่วมกับหลาย LLM และไม่ผูกคุณกับผู้ให้บริการรายเดียว โค้ดต้นฉบับสามารถตรวจสอบได้ ยืนยันว่าใช้งานร่วมกับ SAM ได้</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🤖</div>
+          <h4>OpenAI Codex</h4>
+          <div class="tool-type">ตัวแทนเขียนโค้ด CLI · OpenAI</div>
+          <p>เทียบเท่ากับ Claude Code ของ OpenAI — ตัวแทนเขียนโค้ดผ่านเทอร์มินัล ยืนยันว่าใช้งานร่วมกับ SAM ได้ เป็นทางเลือกที่ดีเมื่อ Claude ไม่พร้อมใช้หรือสำหรับการตรวจสอบข้าม</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🗄️</div>
+          <h4>Pi Agent (NL-to-SQL)</h4>
+          <div class="tool-type">ตัวแทนแปลงภาษาธรรมชาติเป็น SQL</div>
+          <p>ประเภทของตัวแทนที่แปลคำถามภาษาธรรมดาเป็นคำสั่ง SQL สำหรับฐานข้อมูล ผู้ใช้อธิบายสิ่งที่ต้องการค้นหา ตัวแทนสร้างคำสั่ง ยืนยันว่าใช้งานร่วมกับ SAM ได้ (PostgreSQL, Snowflake, Elasticsearch)</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🏗️</div>
+          <h4>SamAI</h4>
+          <div class="tool-type">แพลตฟอร์มของ ENVISAGE</div>
+          <p>โครงสร้างพื้นฐานการตัดสินใจด้วย AI ของ ENVISAGE เอง ออกแบบให้ไม่ผูกกับ LLM ใด วาง layer ควบคุมที่ชัดเจนระหว่าง LLM และฐานข้อมูลของ ENVISAGE ทักษะ เครื่องมือ และตรรกะการตัดสินใจเป็นของ ENVISAGE อย่างสมบูรณ์</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">เมทริกซ์เปรียบเทียบครบถ้วน</h2>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>มิติ</th>
+              <th>Claude Cowork</th>
+              <th>Claude Code</th>
+              <th>OpenCode</th>
+              <th>Codex (OpenAI)</th>
+              <th>Pi Agent</th>
+              <th>SamAI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ส่งข้อมูลให้บุคคลที่สาม</td>
+              <td><span class="con">ใช่ — Anthropic</span></td>
+              <td><span class="con">ใช่ — Anthropic</span></td>
+              <td><span class="pro">โฮสต์เองได้</span></td>
+              <td><span class="con">ใช่ — OpenAI</span></td>
+              <td><span class="neutral">Schema เท่านั้น</span></td>
+              <td><span class="pro">ไม่ — ภายในเท่านั้น</span></td>
+            </tr>
+            <tr>
+              <td>ความยืดหยุ่นของ LLM</td>
+              <td><span class="con">Claude เท่านั้น</span></td>
+              <td><span class="con">Claude เท่านั้น</span></td>
+              <td><span class="pro">หลาย LLM</span></td>
+              <td><span class="con">OpenAI เท่านั้น</span></td>
+              <td><span class="neutral">แล้วแต่เครื่องมือ</span></td>
+              <td><span class="pro">ไม่ผูกกับ LLM</span></td>
+            </tr>
+            <tr>
+              <td>การควบคุมการเข้าถึง</td>
+              <td><span class="con">จำกัด — ระดับโฟลเดอร์</span></td>
+              <td><span class="neutral">นักพัฒนาควบคุม</span></td>
+              <td><span class="pro">ตั้งค่าได้ทั้งหมด</span></td>
+              <td><span class="neutral">Sandboxed</span></td>
+              <td><span class="pro">เปิดเผยเฉพาะ Schema</span></td>
+              <td><span class="pro">Layer ควบคุมชัดเจน</span></td>
+            </tr>
+            <tr>
+              <td>ใช้งานโดยผู้ที่ไม่ใช่นักพัฒนา</td>
+              <td><span class="pro">ใช่ — ผ่าน UI</span></td>
+              <td><span class="con">ไม่ — CLI เท่านั้น</span></td>
+              <td><span class="con">ไม่ — CLI เท่านั้น</span></td>
+              <td><span class="con">ไม่ — CLI เท่านั้น</span></td>
+              <td><span class="pro">ใช่ — ภาษาธรรมดา</span></td>
+              <td><span class="pro">ใช่ — ผ่าน Chatbot</span></td>
+            </tr>
+            <tr>
+              <td>ปลอดภัยสำหรับข้อมูลลูกค้า</td>
+              <td><span class="con">ความเสี่ยงสูง — หลีกเลี่ยง</span></td>
+              <td><span class="neutral">ด้วยการควบคุมที่เข้มงวด</span></td>
+              <td><span class="pro">ใช่ — หากโฮสต์เอง</span></td>
+              <td><span class="neutral">ด้วยการควบคุมที่เข้มงวด</span></td>
+              <td><span class="pro">ใช่ — Schema เท่านั้น</span></td>
+              <td><span class="pro">ใช่ — ออกแบบมาเพื่อนี้</span></td>
+            </tr>
+            <tr>
+              <td>ความเข้ากันได้กับ SAM</td>
+              <td><span class="neutral">บางส่วน</span></td>
+              <td><span class="pro">ยืนยันแล้ว</span></td>
+              <td><span class="pro">ยืนยันแล้ว</span></td>
+              <td><span class="pro">ยืนยันแล้ว</span></td>
+              <td><span class="pro">ยืนยันแล้ว</span></td>
+              <td><span class="pro">ดั้งเดิม</span></td>
+            </tr>
+            <tr>
+              <td>ความเหมาะสมเชิงกลยุทธ์ระยะยาว</td>
+              <td><span class="con">จำกัด — ผูกกับผู้ขาย</span></td>
+              <td><span class="neutral">มีประโยชน์ — เครื่องมือนักพัฒนา</span></td>
+              <td><span class="pro">ดี — ยืดหยุ่น</span></td>
+              <td><span class="neutral">มีประโยชน์ — เครื่องมือนักพัฒนา</span></td>
+              <td><span class="pro">ดี — ผลิตภาพเจ้าหน้าที่</span></td>
+              <td><span class="pro">สูง — โครงสร้างพื้นฐานหลัก</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">แนวทางที่แนะนำ</h2>
+      <div class="callout ok"><p><strong>สำหรับงานเจ้าหน้าที่ประจำวัน (ข้อมูลระดับ 1 และ 2):</strong> Claude Cowork และ Claude Chat ยังเหมาะสมสำหรับการวิจัย สรุป และวิเคราะห์วัสดุที่ไม่เป็นความลับ ปฏิบัติตามกฎระดับข้อมูลในนโยบาย AI ของ ENVISAGE</p></div>
+      <div class="callout"><p><strong>สำหรับการเข้าถึงฐานข้อมูล:</strong> ใช้ Pi Agent (NL-to-SQL) ผ่านรูปแบบ Schema-in / query-out AI เห็นเฉพาะโครงสร้าง ไม่ใช่ข้อมูลดิบ ควรตรวจสอบคำสั่ง SQL ที่สร้างขึ้นก่อนประมวลผล</p></div>
+      <div class="callout warn"><p><strong>สำหรับงานที่เกี่ยวข้องกับผลงานลูกค้าหรือข้อมูลระดับ 3:</strong> ห้ามใช้เครื่องมือ AI ของบุคคลที่สาม ใช้ผ่าน SamAI ที่มี layer ควบคุมการเข้าถึงปกป้องข้อมูลที่อ่อนไหวโดยออกแบบ</p></div>
+      <div class="callout ok"><p><strong>ทิศทางระยะยาว:</strong> เมื่อ SamAI พัฒนาขึ้น ควรกลายเป็นอินเทอร์เฟซหลักสำหรับงาน AI ทั้งหมดที่เชื่อมต่อข้อมูลที่ ENVISAGE การตัดสินใจไม่ผูกกับ LLM เป็นเจตนาเพื่อป้องกันการผูกกับผู้ขายและรับรองว่าทักษะและตรรกะการตัดสินใจของ ENVISAGE ยังคงเป็นทรัพย์สินทางปัญญาของเราเอง</p></div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · นโยบาย AI และการประเมินเทคโนโลยี</span>
+      <span>ใช้ภายในเท่านั้น · ห้ามแชร์ภายนอก</span>
+    </div>
+  </footer>
+
+</div><!-- /section-th -->
+
+
+<!-- ═══════════════ BURMESE ═══════════════ -->
+<div id="section-my" class="lang-section lang-my break-before">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">အတွင်းပိုင်းမှတ်တမ်း · နည်းပညာဆန်းစစ်မှု · ENVISAGE WORLDWIDE</div>
+      <h1>AI Agent ကိရိယာများနှင့် ပလက်ဖောင်းများ: စွမ်းဆောင်ရည်နှင့် ထည့်သွင်းစဉ်းစားချက်များ</h1>
+      <p class="subtitle">ENVISAGE အဖွဲ့များအသုံးပြုနိုင်သော AI agent ကိရိယာများ ခြုံငုံသုံးသပ်ချက်နှင့် Sapphire နှင့် SAM အစီအစဉ်များအတွက် ပလက်ဖောင်းဆုံးဖြတ်ချက်ချသည့် ဖွဲ့စည်းပုံကျသော အားသာချက်/အားနည်းချက် မက်ထရစ်</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item"><span class="meta-label">ရင်းမြစ်</span><span class="meta-value">Simon &amp; Joel — အဖွဲ့ဆွေးနွေးချက်</span></div>
+        <div class="cover-meta-item"><span class="meta-label">ပစ်မှတ်ပရိသတ်</span><span class="meta-value">ဝန်ထမ်းအားလုံးနှင့် Kenneth</span></div>
+        <div class="cover-meta-item"><span class="meta-label">အမျိုးအစားခွဲ</span><span class="meta-value">အတွင်းပိုင်း — ဝန်ထမ်းသုံး</span></div>
+        <div class="cover-meta-item"><span class="meta-label">ဗားရှင်း</span><span class="meta-value">1.0 · ဇွန် ၂၀၂၆</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">MY</span>
+      <h2>မြန်မာဘာသာ — AI Agent ကိရိယာ အကျဉ်းချုပ် &amp; နှိုင်းယှဉ်မက်ထရစ်</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <h2 class="section-heading">နောက်ခံ</h2>
+      <p>ENVISAGE အဖွဲ့များ AI ကိရိယာများကို တိုက်ရိုက်ဒေတာ — ဒိုင်ကွမ်းမှတ်တမ်းများ၊ သုတေသနဒေတာဘေ့စ်များ၊ ဖောက်သည်ဖိုင်များ — နှင့် မည်သို့ချိတ်ဆက်မည်ကို စူးစမ်းသောအချိန်တွင် ပလက်ဖောင်းတစ်ခုချင်းစီ အမှန်တကယ်ဘာလုပ်သည်၊ ဘာကိုအသုံးပြုနိုင်သည်၊ ဘာအန္တရာယ်မြောက်ဆောင်လာသည်ကို နားလည်ရန် အရေးကြီးသည်။</p>
+      <p>အဓိကမေးခွန်းမှာ မည်သည့်ကိရိယာ အစွမ်းထက်ဆုံးသည်မဟုတ်ဘဲ မည်သည့်ကိရိယာ ENVISAGE ကို ထိန်းချုပ်မှု၊ လုံခြုံရေးနှင့် ပြောင်းလွယ်ပြင်လွယ်မှု မှန်ကန်သောပေါင်းစပ်ချက်ပေးသည်ဆိုသည်ဖြစ်သည်။</p>
+      <div class="callout warn">
+        <p><strong>လုံခြုံရေးအကြောင်းအရာ:</strong> သင်၏ကွန်ပျူတာ၊ ဖိုင်စနစ် သို့မဟုတ် cloud သိုလှောင်မှုနှင့် ချိတ်ဆက်သောကိရိယာတစ်ခုမဆို AI ပံ့ပိုးသူကို ဒေတာကိုင်တွယ်ရန် ပေးသောအချက်ဖြစ်သည်။ လျှို့ဝှက်ဖောက်သည်ဒေတာနှင့် မချိတ်ဆက်မီ ဤအချက်ကို သေချာစဉ်းစားရမည်။</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">ပလက်ဖောင်းခြောက်ခု အကျဉ်းချုပ်</h2>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🖥</div>
+          <h4>Claude Cowork</h4>
+          <div class="tool-type">Desktop AI လုပ်ငန်းခွင် · Anthropic</div>
+          <p>MCP မှတဆင့် Claude ကို ဖိုင်များ၊ ဖိုင်တွဲများနှင့် ပြင်ပဝန်ဆောင်မှုများနှင့် ချိတ်ဆက်သောကြိုးမဲ့ကွန်ပျူတာကိရိယာ။ မျက်နှာဆိုင်ရာသည် ရိုးရှင်းဆင်ကိုသော်လည်း Anthropic ၏ cloud အခြေခံဆောက်လုပ်ရေးသို့ တိုက်ရိုက်ချိတ်ဆက်ထားသော UI ဖြစ်သည်။</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">⌨️</div>
+          <h4>Claude Code</h4>
+          <div class="tool-type">CLI ကုဒ်ရေးတိုင်ပင်ဆွေးနွေးသည် · Anthropic</div>
+          <p>ကုဒ်ရေးသားရန်၊ တည်းဖြတ်ရန်နှင့် အမှားပြင်ရန် terminal မှ Claude ကိုအသုံးပြုနိုင်သောကွန်မန်းလိုင်းကိရိယာ။ SAM ပတ်ဝန်းကျင်နှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး။</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔓</div>
+          <h4>OpenCode</h4>
+          <div class="tool-type">Open-Source CLI ကုဒ်ရေးတိုင်ပင်ဆွေးနွေးသည်</div>
+          <p>Claude Code နှင့် Codex ၏ open-source အစားထိုး။ LLM များစွာနှင့် အလုပ်လုပ်ပြီး ဝန်ဆောင်မှုတစ်ခုတည်းသို့ ဆွဲချည်မထားသည်။ SAM နှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး။</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🤖</div>
+          <h4>OpenAI Codex</h4>
+          <div class="tool-type">CLI ကုဒ်ရေးတိုင်ပင်ဆွေးနွေးသည် · OpenAI</div>
+          <p>Claude Code နှင့် OpenAI ၏ ညီတူ — terminal ကုဒ်ရေး agent။ SAM နှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး။ Claude မရနိုင်သောအချိန်တွင် ကောင်းသောအစားထိုးဖြစ်သည်။</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🗄️</div>
+          <h4>Pi Agent (NL-to-SQL)</h4>
+          <div class="tool-type">သဘာဝဘာသာမှ SQL ပြောင်းသောကိုယ်စားလှယ်</div>
+          <p>ရိုးရိုးဘာသာစကားမေးခွန်းများကို SQL ဒေတာဘေ့စ်မေးမြန်းချက်များသို့ ဘာသာပြန်သောကိရိယာ။ SAM ၏ ဒေတာဘေ့စ်များနှင့် ကိုက်ညီကြောင်း အတည်ပြုပြီး (PostgreSQL, Snowflake, Elasticsearch)။</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🏗️</div>
+          <h4>SamAI</h4>
+          <div class="tool-type">ENVISAGE ပိုင်ပလက်ဖောင်း</div>
+          <p>ENVISAGE ၏ကိုယ်ပိုင် AI ဆုံးဖြတ်ချက်ချသောအခြေခံဆောက်လုပ်ရေး။ LLM-agnostic ဒီဇိုင်းဖြင့် ဆောက်လုပ်ထားပြီး LLM နှင့် ENVISAGE ၏ ဒေတာဘေ့စ်ကြား ထိန်းချုပ်ရေး layer ထားသည်။ Skills၊ Tools နှင့် ဆုံးဖြတ်ချက်ချသောယုတ္တိ ENVISAGE ပိုင်ဆိုင်သည်။</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">ပြည့်စုံသောနှိုင်းယှဉ်မက်ထရစ်</h2>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>အတိုင်းအတာ</th>
+              <th>Claude Cowork</th>
+              <th>Claude Code</th>
+              <th>OpenCode</th>
+              <th>Codex (OpenAI)</th>
+              <th>Pi Agent</th>
+              <th>SamAI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ဒေတာပြင်ပသို့ပေးပို့မှု</td>
+              <td><span class="con">ဟုတ် — Anthropic</span></td>
+              <td><span class="con">ဟုတ် — Anthropic</span></td>
+              <td><span class="pro">ကိုယ်တိုင်host လုပ်နိုင်</span></td>
+              <td><span class="con">ဟုတ် — OpenAI</span></td>
+              <td><span class="neutral">Schema သာ</span></td>
+              <td><span class="pro">မဟုတ် — အတွင်းသာ</span></td>
+            </tr>
+            <tr>
+              <td>LLM ပြောင်းလွယ်မှု</td>
+              <td><span class="con">Claude သာ</span></td>
+              <td><span class="con">Claude သာ</span></td>
+              <td><span class="pro">LLM များစွာ</span></td>
+              <td><span class="con">OpenAI သာ</span></td>
+              <td><span class="neutral">ကိရိယာပေါ်မူတည်</span></td>
+              <td><span class="pro">LLM-agnostic</span></td>
+            </tr>
+            <tr>
+              <td>ဖောက်သည်ဒေတာ လုံခြုံမှု</td>
+              <td><span class="con">အန္တရာယ်မြင့် — ရှောင်ပါ</span></td>
+              <td><span class="neutral">တင်းကျပ်သောထိန်းချုပ်မှုဖြင့်</span></td>
+              <td><span class="pro">ဟုတ် — ကိုယ်တိုင် host လျှင်</span></td>
+              <td><span class="neutral">တင်းကျပ်သောထိန်းချုပ်မှုဖြင့်</span></td>
+              <td><span class="pro">ဟုတ် — Schema သာ</span></td>
+              <td><span class="pro">ဟုတ် — ဒီဇိုင်းဖြင့်</span></td>
+            </tr>
+            <tr>
+              <td>SAM ကိုက်ညီမှု</td>
+              <td><span class="neutral">တချို့သာ</span></td>
+              <td><span class="pro">အတည်ပြုပြီး</span></td>
+              <td><span class="pro">အတည်ပြုပြီး</span></td>
+              <td><span class="pro">အတည်ပြုပြီး</span></td>
+              <td><span class="pro">အတည်ပြုပြီး</span></td>
+              <td><span class="pro">ဇာတိ</span></td>
+            </tr>
+            <tr>
+              <td>ရေရှည်ဗျူဟာကိုက်ညီမှု</td>
+              <td><span class="con">အကန့်အသတ် — ဝန်ဆောင်မှုပြားချည်မှု</span></td>
+              <td><span class="neutral">အသုံးဝင် — dev ကိရိယာ</span></td>
+              <td><span class="pro">ကောင်း — ပြောင်းလွယ်</span></td>
+              <td><span class="neutral">အသုံးဝင် — dev ကိရိယာ</span></td>
+              <td><span class="pro">ကောင်း — ဝန်ထမ်းထုတ်လုပ်မှု</span></td>
+              <td><span class="pro">မြင့် — အဓိကအခြေခံဆောက်လုပ်ရေး</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">အကြံပြုထားသောချဉ်းကပ်နည်း</h2>
+      <div class="callout ok"><p><strong>နေ့စဉ်ဝန်ထမ်းလုပ်ငန်းများအတွက် (Tier 1 &amp; 2 ဒေတာ):</strong> Claude Cowork နှင့် Claude Chat သည် လျှို့ဝှက်မဟုတ်သောသုတေသန၊ အကျဉ်းချုပ်နှင့် ခွဲခြမ်းစိတ်ဖြာမှုအတွက် သင့်တော်သည်။ ENVISAGE AI မူဝါဒရှိ ဒေတာ tier စည်းကမ်းများ လိုက်နာပါ။</p></div>
+      <div class="callout"><p><strong>ဒေတာဘေ့စ်ကိုင်တွယ်မှုအတွက်:</strong> Schema-in / query-out ပုံစံမှတဆင့် Pi Agent (NL-to-SQL) သုံးပါ။ AI သည် ဖွဲ့စည်းပုံသာမြင်သည်၊ ကြမ်းဒေတာမဟုတ်။ SQL command များ execute မလုပ်မီ စစ်ဆေးပါ။</p></div>
+      <div class="callout warn"><p><strong>ဖောက်သည်ရလဒ်များ သို့မဟုတ် Tier 3 ဒေတာပါဝင်သောအလုပ်အတွက်:</strong> မည်သည့် ပြင်ပ AI ကိရိယာမျှ မသုံးပါနှင့်။ ဒေတာကို ဒီဇိုင်းအရ ကာကွယ်သော ထိန်းချုပ်ရေး layer ပါသည့် SamAI မှတဆင့် လမ်းကြောင်းလွှဲပါ။</p></div>
+      <div class="callout ok"><p><strong>ရေရှည်လမ်းညွှန်ချက်:</strong> SamAI ကြီးထွားလာသောအချိန်တွင် ENVISAGE ရှိ ဒေတာချိတ်ဆက်သော AI လုပ်ငန်းအားလုံးအတွက် အဓိကမျက်နှာဆိုင်ရာဖြစ်လာသင့်သည်။ LLM-agnostic ဆုံးဖြတ်ချက်သည် ဝန်ဆောင်မှုပြားချည်မှု တားဆီးပြီး ENVISAGE ၏ skills နှင့် ဆုံးဖြတ်ချက်ချသောယုတ္တိ ကျွန်ုပ်တို့၏ ဉာဏပိုင်ဆိုင်မှုအဖြစ် ကျန်ရှိနေကြောင်း သေချာစေသည်။</p></div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · AI မူဝါဒနှင့် နည်းပညာဆန်းစစ်မှု</span>
+      <span>အတွင်းသုံးသာ · ပြင်ပသို့ မမျှဝေပါနှင့်</span>
+    </div>
+  </footer>
+
+</div><!-- /section-my -->
+
+</body>
+</html>

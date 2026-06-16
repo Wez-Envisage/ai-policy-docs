@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From Raw Data to Structured Intelligence — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── BRAND TOKENS ───────────────────────────────────── */
+  :root{
+    --navy:#0d1f3c;
+    --navy-dark:#081427;
+    --sapphire:#2563eb;
+    --sapphire-light:#dbeafe;
+    --ink:#1e293b;
+    --muted:#64748b;
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --border:#e2e8f0;
+    --green:#15803d;
+    --green-bg:#dcfce7;
+    --amber:#b45309;
+    --amber-bg:#fef3c7;
+    --red:#b91c1c;
+    --red-bg:#fee2e2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:15px}
+
+  /* ── HEADER NAV ─────────────────────────────────────── */
+  .site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .header-inner{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .brand{color:#fff;font-weight:800;letter-spacing:.06em;font-size:.95rem;padding:14px 0;text-decoration:none}
+  .brand span{color:#6ea8ff}
+  .header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0}
+  .header-right .doc-label{color:#8fa3c2;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #2e466e;padding-right:12px;margin-right:4px}
+  .lang-nav{display:flex;gap:4px}
+  .lang-nav a{color:#c7d4ea;text-decoration:none;font-size:.82rem;font-weight:600;border:1px solid #2e466e;border-radius:6px;padding:5px 12px;transition:all .15s}
+  .lang-nav a:hover{color:#fff;border-color:#6ea8ff}
+  .lang-nav a.en{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
+
+  /* ── COVER PAGE ─────────────────────────────────────── */
+  .cover{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 60%,#15366b);color:#fff;padding:72px 24px 64px;min-height:520px;display:flex;align-items:center}
+  .cover-inner{max-width:920px;margin:0 auto;width:100%}
+  .eyebrow{color:#6ea8ff;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+  .cover h1{font-size:2.1rem;line-height:1.22;max-width:780px;margin-bottom:14px}
+  .cover .subtitle{color:#b9c8e0;font-size:1.05rem;max-width:720px;margin-bottom:28px}
+  .cover-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12)}
+  .cover-meta-item{display:flex;flex-direction:column;gap:3px}
+  .cover-meta-item .meta-label{color:#6ea8ff;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .cover-meta-item .meta-value{color:#e2e8f0;font-size:.92rem;font-weight:600}
+
+  /* ── SECTION DIVIDER ─────────────────────────────────── */
+  .section-divider{background:var(--navy);color:#fff;padding:18px 24px;margin-top:0}
+  .section-divider-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:16px}
+  .section-divider .lang-flag{background:var(--sapphire);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:999px}
+  .section-divider h2{color:#e2e8f0;font-size:1.05rem;font-weight:600}
+
+  /* ── MAIN CONTENT ────────────────────────────────────── */
+  .lang-section{background:var(--bg)}
+  main.content-area{max-width:920px;margin:0 auto;padding:40px 24px 56px}
+  section.step{margin-bottom:36px}
+  .step-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+  .step-num{flex-shrink:0;background:var(--sapphire);color:#fff;font-weight:800;font-size:.85rem;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .step-title-block h3{color:var(--navy);font-size:1.12rem;margin:0 0 3px}
+  .step-title-block .step-sub{color:var(--muted);font-size:.85rem}
+  p{margin-bottom:12px;max-width:820px;line-height:1.7}
+  ul,ol{margin:0 0 14px 22px;max-width:820px}
+  li{margin-bottom:5px;line-height:1.65}
+  h2.section-heading{color:var(--navy);font-size:1.3rem;margin-bottom:6px;margin-top:0;padding-top:0}
+  .rule{border:none;border-top:1px solid var(--border);margin:32px 0}
+
+  /* CARDS */
+  .grid{display:grid;gap:14px;margin:16px 0}
+  .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(13,31,60,.06)}
+  .card h4{color:var(--navy);font-size:.96rem;margin-bottom:8px;margin-top:0}
+  .card p,.card li{font-size:.91rem}
+  .card ul{margin-bottom:0}
+
+  /* CALLOUTS */
+  .callout{border-left:4px solid var(--sapphire);background:var(--sapphire-light);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;max-width:820px}
+  .callout.warn{border-left-color:var(--amber);background:var(--amber-bg)}
+  .callout.ok{border-left-color:var(--green);background:var(--green-bg)}
+  .callout.rule-block{border-left-color:var(--red);background:var(--red-bg)}
+  .callout p{margin:0;font-size:.92rem}
+  .callout p+p{margin-top:7px}
+  .callout strong{color:var(--navy)}
+  .callout ul{margin:8px 0 0 18px;font-size:.92rem}
+  .callout ul li{margin-bottom:3px}
+
+  /* EXAMPLE BLOCKS */
+  .example{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:12px 0;max-width:820px}
+  .example .label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+  .example.good .label{color:var(--green)}
+  .example.neutral .label{color:var(--sapphire)}
+  .example p{font-size:.91rem;margin-bottom:0;font-family:"SF Mono",Consolas,Menlo,monospace;color:#334155;white-space:pre-wrap;line-height:1.55}
+
+  /* TABLES */
+  table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:.88rem}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-size:.8rem;letter-spacing:.03em}
+  td{padding:9px 14px;border-top:1px solid var(--border);vertical-align:top;line-height:1.55}
+  tr:nth-child(even) td{background:#fafcff}
+  .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 9px;border-radius:999px}
+  .badge.green{background:var(--green-bg);color:var(--green)}
+  .badge.amber{background:var(--amber-bg);color:var(--amber)}
+  .badge.blue{background:var(--sapphire-light);color:var(--sapphire)}
+
+  /* SUMMARY FLOW */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:16px 0;max-width:820px}
+  .flow-step{background:var(--sapphire);color:#fff;font-size:.8rem;font-weight:700;padding:7px 14px;border-radius:999px}
+  .flow-arrow{color:var(--muted);font-size:1.1rem;font-weight:700}
+
+  /* FOOTER */
+  .page-footer{background:var(--navy-dark);color:#8fa3c2;padding:24px;font-size:.8rem}
+  .page-footer-inner{max-width:920px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .page-footer strong{color:#fff}
+
+  /* ── THAI FONT ───────────────────────────────────────── */
+  .lang-th{font-family:'Noto Sans Thai',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}
+  .lang-th .cover h1{line-height:1.4}
+  .lang-th th,.lang-th td{line-height:1.7}
+
+  /* ── BURMESE FONT ────────────────────────────────────── */
+  .lang-my{font-family:'Noto Sans Myanmar',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.95}
+  .lang-my .cover h1{line-height:1.55}
+  .lang-my th,.lang-my td{line-height:1.85}
+  .lang-my p,.lang-my li{line-height:1.95}
+
+  /* ── PRINT CSS ───────────────────────────────────────── */
+  @media print{
+    .site-header{display:none}
+    .print-note{display:none!important}
+    body{background:#fff;font-size:11pt}
+    .cover{min-height:auto;padding:48px 24px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .section-divider{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .lang-section.break-before{page-break-before:always}
+    th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .step-num{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .flow-step{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .callout,.example,.card{break-inside:avoid}
+    main.content-area{padding:24px 24px 40px}
+  }
+
+  /* ── PRINT INSTRUCTIONS BANNER ───────────────────────── */
+  .print-note{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px 18px;margin:16px 24px;font-size:.85rem;color:#78350f;max-width:880px;margin-left:auto;margin-right:auto}
+  .print-note strong{color:#92400e}
+
+  @media(max-width:640px){
+    .cover h1{font-size:1.5rem}
+    .header-inner{padding:0 14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER NAV
+     ═══════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span>ENVISAGE</span> WORLDWIDE</a>
+    <div class="header-right">
+      <span class="doc-label">Case Study</span>
+      <nav class="lang-nav">
+        <a href="#section-en" class="en">EN</a>
+        <a href="#section-th">TH</a>
+        <a href="#section-my">MY</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRINT INSTRUCTIONS (screen only)
+     ═══════════════════════════════════════════════════════ -->
+<div class="print-note">
+  <strong>To save as PDF:</strong> Open this file in Chrome → File → Print (or Ctrl+P / ⌘P) → Destination: <em>Save as PDF</em> → More settings → enable <em>Background graphics</em> → Save. The Thai and Burmese fonts will be embedded automatically.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 1 — ENGLISH
+     ═══════════════════════════════════════════════════════ -->
+<div id="section-en" class="lang-section">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">Staff Research Methods · Case Study · ENVISAGE WORLDWIDE</div>
+      <h1>From Raw Data to Structured Intelligence</h1>
+      <p class="subtitle">A step-by-step workflow for using AI as a controlled intelligence processing system — applicable across the Sapphire and SAM research programmes.</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <span class="meta-label">Author</span>
+          <span class="meta-value">Por — Staff Researcher</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Programme</span>
+          <span class="meta-value">Sapphire &amp; SAM</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Classification</span>
+          <span class="meta-value">Internal — Staff Use</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">Version</span>
+          <span class="meta-value">1.0 · June 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">EN</span>
+      <h2>English — Research Workflow Case Study</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <p>This case study documents a proven methodology for transforming raw, unstructured source material into verified, structured intelligence outputs using AI tools — including free-tier platforms. The workflow is designed to maximise extraction quality while maintaining the data security standards required for ENVISAGE research.</p>
+      <p>The core principle: <strong>AI is not a question-answering chatbot. It is a controlled intelligence processing system.</strong> This distinction determines every decision in the workflow below.</p>
+    </section>
+
+    <hr class="rule">
+
+    <!-- STEP 1 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title-block">
+          <h3>Begin with Raw Inputs — Not Questions</h3>
+          <span class="step-sub">Compile all source material before engaging the AI</span>
+        </div>
+      </div>
+      <p>The first action in any research session is not to ask the AI a question. Instead, compile all available raw inputs and load them in full before issuing any task. Typical inputs include:</p>
+      <ul>
+        <li>Source reports (human rights documentation, field reports, open-source publications)</li>
+        <li>News articles and source links</li>
+        <li>Geographic coordinates and location data</li>
+        <li>Screenshots and visual references</li>
+        <li>Existing datasets from prior research versions</li>
+      </ul>
+      <div class="example good">
+        <div class="label">Recommended Prompt Opening</div>
+        <p>Here is the full dataset.
+Focus: Scam compound networks and connectivity infrastructure.
+Exclude: Extractive industries.
+Use all provided material. Do not summarise.</p>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Pre-filtering data before the AI sees it causes the model to miss critical context. The AI must see the complete picture to perform reliable extraction. Do not summarise on behalf of the AI — let it work from the source.</p>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title-block">
+          <h3>Assign a Specific Role Before Any Task</h3>
+          <span class="step-sub">Role assignment shifts AI from generic to analyst-level output</span>
+        </div>
+      </div>
+      <p>Never begin a research session without assigning the AI a precise operational role. A defined role fundamentally changes the quality and structure of output.</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>Extraction Role</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">Prompt</div>
+            <p>You are an Intelligence Extraction Engine. Your job is maximum data extraction. Do not summarise. Do not simplify.</p>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Analysis Role</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">Prompt</div>
+            <p>Act as an OSINT analyst specialising in cross-border criminal networks. Extract all named entities, locations, and relationships.</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Without a role, AI defaults to generic, conversational responses. With a precise role, it produces structured, analyst-level output that matches the task at hand.</p>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title-block">
+          <h3>Set Strict Output Rules Before Extraction Begins</h3>
+          <span class="step-sub">Rules prevent fabrication and enforce structured, honest output</span>
+        </div>
+      </div>
+      <p>Before any extraction task, define explicit rules that govern how the AI must handle uncertainty and evidence gaps. This is non-negotiable for research-grade work.</p>
+      <div class="callout rule-block">
+        <p><strong>Standard Output Rules — include in every extraction prompt:</strong></p>
+        <ul>
+          <li>No evidence = No confirmed entity. Do not invent or infer beyond the data.</li>
+          <li>Separate all output into clearly labelled tiers: Verified facts / Reliable reporting / Weak signals / Structural inference / Hypothesis</li>
+          <li>Mark all intelligence gaps explicitly.</li>
+          <li>One fact per line. Do not merge unrelated items.</li>
+        </ul>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> The goal is reliable, structured output — not polished prose. Explicit rules prevent AI fabrication, force honest handling of uncertainty, and make the output auditable.</p>
+      </div>
+    </section>
+
+    <!-- STEP 4 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title-block">
+          <h3>Extract Data Before Writing Any Report</h3>
+          <span class="step-sub">Raw intelligence units first — synthesis comes later</span>
+        </div>
+      </div>
+      <p>Never ask the AI to generate a report or narrative as the first output. Always force a structured extraction step first. Reports built on un-extracted data inherit the AI's interpretive biases.</p>
+      <div class="example good">
+        <div class="label">Extraction Prompt Template</div>
+        <p>Extract all of the following from the dataset. One fact per line. No merging. No summarising:
+• Names and aliases
+• Organisations and affiliations
+• Locations and coordinates
+• Relationships and connections
+• Activities and events
+• Risk indicators</p>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Raw intelligence units are more valuable than premature conclusions. Extraction first, synthesis later. This sequence also makes the final report verifiable against the source material.</p>
+      </div>
+    </section>
+
+    <!-- STEP 5 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <div class="step-title-block">
+          <h3>Convert Extracted Data into a Structured Dataset</h3>
+          <span class="step-sub">Transform raw extraction into a reusable, scalable system</span>
+        </div>
+      </div>
+      <p>Once extraction is complete, ask the AI to structure the raw output into a clean, standardised dataset. This is the step that makes the research reusable and scalable.</p>
+      <table>
+        <thead>
+          <tr><th>Dataset Component</th><th>Contents</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Entity table</strong></td><td>Names, types, roles, aliases</td><td>Core reference for all further analysis</td></tr>
+          <tr><td><strong>Relationship edges</strong></td><td>Who connects to whom, how, when</td><td>Network mapping and link analysis</td></tr>
+          <tr><td><strong>Risk classification</strong></td><td>Risk level per entity or location</td><td>Prioritisation and flagging</td></tr>
+          <tr><td><strong>Coordinates dataset</strong></td><td>Lat/lon for all locations</td><td>Map output and spatial analysis</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Structured data is reusable and scalable. Raw AI text output is neither. A dataset created in this step can be updated, versioned, and fed into future research cycles.</p>
+      </div>
+    </section>
+
+    <!-- STEP 6 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">6</div>
+        <div class="step-title-block">
+          <h3>Convert the Dataset into Usable Outputs</h3>
+          <span class="step-sub">Operational tools, not just documents</span>
+        </div>
+      </div>
+      <p>The structured dataset is the source from which all output formats are derived. Do not produce these in parallel — build the dataset first, then generate outputs from it.</p>
+      <div class="grid cols-2" style="margin-top:14px">
+        <div class="card">
+          <h4>🗺 Map Output</h4>
+          <p>Export a clean CSV for Google My Maps. Required columns: Name, Latitude, Longitude, Short Description. Keep descriptions under 140 characters.</p>
+        </div>
+        <div class="card">
+          <h4>📊 Dashboard</h4>
+          <p>Build a structured overview of risk levels and network relationships. Use the entity and risk classification tables as the data source.</p>
+        </div>
+        <div class="card">
+          <h4>📄 Intelligence Report</h4>
+          <p>Convert the dataset into a formatted report. Maintain clear separation between verified facts and inference. Never blend the two in the same paragraph.</p>
+        </div>
+        <div class="card">
+          <h4>🗃 Archive Dataset</h4>
+          <p>Save the structured dataset as the canonical record of this research cycle. It becomes the base for the next version update.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Usability is the goal — not readability. Every output must function as a working operational tool, not merely a document to be read once.</p>
+      </div>
+    </section>
+
+    <!-- STEP 7 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">7</div>
+        <div class="step-title-block">
+          <h3>Work in Versions — Never Start Over</h3>
+          <span class="step-sub">Treat research as a living, versioned system</span>
+        </div>
+      </div>
+      <p>Research datasets are not one-time outputs. They are living systems that grow with each new data cycle. When updating, patch the existing dataset — do not rebuild from scratch.</p>
+      <div class="example good">
+        <div class="label">Version Update Workflow</div>
+        <p>Use existing dataset (v3) as base.
+Load new source material.
+Instruct: "Add new entities and update existing records. Do not remove prior entries. Flag all changes."
+Export as v4.1.</p>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Incremental versioning preserves prior work, eliminates redundant re-extraction, and creates an auditable research trail. Every version update should take a fraction of the time of the original build.</p>
+      </div>
+    </section>
+
+    <!-- STEP 8 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">8</div>
+        <div class="step-title-block">
+          <h3>Audit the AI's Output Before Finalising</h3>
+          <span class="step-sub">Use AI to validate its own work — then apply human review</span>
+        </div>
+      </div>
+      <p>Before closing any AI session, require the model to perform a self-audit of everything it produced. This is a separate, explicit prompt — not a continuation of the extraction task.</p>
+      <div class="example good">
+        <div class="label">Self-Audit Prompt</div>
+        <p>Review everything you have produced in this session.
+Is this complete? What is missing?
+Identify all gaps, weak signals, unverified claims, and any areas where you inferred beyond the evidence.
+List them clearly.</p>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> AI produces output efficiently — but it also catches its own errors when prompted to look for them. The self-audit step routinely surfaces missed entities, incorrect inferences, and incomplete extractions that would otherwise reach the final output.</p>
+      </div>
+    </section>
+
+    <!-- STEP 9 -->
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">9</div>
+        <div class="step-title-block">
+          <h3>Use Multiple AI Systems — Not Just One</h3>
+          <span class="step-sub">Cross-leverage different tools to reduce bias and improve accuracy</span>
+        </div>
+      </div>
+      <p>No single AI platform is sufficient for research-grade intelligence work. Each model has different strengths, training biases, and blind spots. A multi-system workflow compensates for these limitations.</p>
+      <table>
+        <thead>
+          <tr><th>Platform</th><th>Role in Workflow</th><th>Tier</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ChatGPT</strong></td><td>Primary extraction &amp; report drafting</td><td><span class="badge blue">1–2</span></td><td>Strong on long structured tasks</td></tr>
+          <tr><td><strong>Claude</strong></td><td>Reasoning, audit &amp; refinement</td><td><span class="badge blue">1–2</span></td><td>Excellent logical consistency</td></tr>
+          <tr><td><strong>Gemini</strong></td><td>Cross-verification of facts</td><td><span class="badge blue">1–2</span></td><td>Good on current events</td></tr>
+          <tr><td><strong>Grok</strong></td><td>Second-opinion audit</td><td><span class="badge blue">1–2</span></td><td>Useful alternative perspective</td></tr>
+          <tr><td><strong>DeepSeek</strong></td><td>Bulk extraction on public data</td><td><span class="badge green">1 only</span></td><td>Free tier — public data only</td></tr>
+          <tr><td><strong>Kimi</strong></td><td>Large-context document handling</td><td><span class="badge green">1 only</span></td><td>Free tier — public data only</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn">
+        <p><strong>Data Security Reminder:</strong> DeepSeek and Kimi are free-tier tools and must be used with Tier 1 (publicly available) data only. Never upload internal documents, client deliverables, or restricted source material to these platforms.</p>
+      </div>
+      <div class="callout">
+        <p><strong>Why this matters:</strong> Every AI model has embedded biases. Using one for extraction, another for auditing, and a third for refinement introduces independent checks that significantly reduce the risk of undetected errors reaching the final output.</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- SUMMARY -->
+    <section>
+      <h2 class="section-heading">Summary: The Core Workflow</h2>
+      <div class="callout" style="margin-bottom:20px">
+        <p><strong>Guiding Principle:</strong> Do not use AI to ask questions. Use it as a controlled intelligence processing system to transform messy, unstructured information into structured, verifiable, operational outputs.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">Raw Data</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Extraction</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Structured Dataset</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Usable Outputs</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Self-Audit</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">Final Delivery</div>
+      </div>
+      <div class="grid cols-2" style="margin-top:20px">
+        <div class="card">
+          <h4>What this achieves</h4>
+          <ul>
+            <li>Faster research workflows with less rework</li>
+            <li>Structured, reusable, versionable data</li>
+            <li>Verifiable and auditable outputs</li>
+            <li>Real-world operational usability</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Where this applies</h4>
+          <ul>
+            <li>Sapphire project — network and location intelligence</li>
+            <li>SAM project — cross-border entity mapping</li>
+            <li>Any OSINT or field research cycle</li>
+            <li>Multi-source synthesis tasks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · AI Policy &amp; Research Methods</span>
+      <span>Internal use only · Do not share externally</span>
+    </div>
+  </footer>
+
+</div><!-- /section-en -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 2 — THAI
+     ═══════════════════════════════════════════════════════ -->
+<div id="section-th" class="lang-section lang-th break-before">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">วิธีการวิจัยของเจ้าหน้าที่ · กรณีศึกษา · ENVISAGE WORLDWIDE</div>
+      <h1>จากข้อมูลดิบสู่ข่าวกรองที่มีโครงสร้าง</h1>
+      <p class="subtitle">คู่มือขั้นตอนการใช้ AI เป็นระบบประมวลผลข่าวกรองแบบควบคุม — ใช้ได้กับงานวิจัยโครงการ Sapphire และ SAM</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <span class="meta-label">ผู้เขียน</span>
+          <span class="meta-value">พร — นักวิจัย</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">โครงการ</span>
+          <span class="meta-value">Sapphire &amp; SAM</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">การจำแนก</span>
+          <span class="meta-value">ภายใน — สำหรับเจ้าหน้าที่</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">เวอร์ชัน</span>
+          <span class="meta-value">1.0 · มิถุนายน 2569</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">TH</span>
+      <h2>ภาษาไทย — กรณีศึกษากระบวนการวิจัย</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <p>กรณีศึกษานี้บันทึกวิธีการที่พิสูจน์แล้วในการแปลงข้อมูลดิบที่ไม่มีโครงสร้างให้เป็นผลลัพธ์ข่าวกรองที่ตรวจสอบได้และมีโครงสร้างชัดเจน โดยใช้เครื่องมือ AI รวมถึงแพลตฟอร์มแบบฟรี กระบวนการนี้ออกแบบมาเพื่อเพิ่มคุณภาพการดึงข้อมูลสูงสุด พร้อมรักษามาตรฐานความปลอดภัยข้อมูลที่จำเป็นสำหรับงานวิจัย ENVISAGE</p>
+      <p>หลักการสำคัญ: <strong>AI ไม่ใช่แชทบอทตอบคำถาม แต่คือระบบประมวลผลข่าวกรองแบบควบคุม</strong> ความแตกต่างนี้กำหนดทุกการตัดสินใจในกระบวนการด้านล่าง</p>
+    </section>
+
+    <hr class="rule">
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title-block">
+          <h3>เริ่มต้นด้วยข้อมูลดิบ — ไม่ใช่คำถาม</h3>
+          <span class="step-sub">รวบรวมเอกสารต้นฉบับทั้งหมดก่อนเปิด AI</span>
+        </div>
+      </div>
+      <p>ขั้นตอนแรกในทุกเซสชันวิจัยคือ ไม่ใช่การถามคำถาม AI แต่คือการรวบรวมข้อมูลดิบทั้งหมดและโหลดให้ครบก่อนสั่งงานใดๆ ข้อมูลทั่วไปได้แก่:</p>
+      <ul>
+        <li>รายงานต้นฉบับ (เอกสารสิทธิมนุษยชน รายงานภาคสนาม สิ่งพิมพ์โอเพนซอร์ส)</li>
+        <li>บทความข่าวและลิงก์แหล่งที่มา</li>
+        <li>พิกัดภูมิศาสตร์และข้อมูลสถานที่</li>
+        <li>ภาพหน้าจอและเอกสารอ้างอิงภาพ</li>
+        <li>ชุดข้อมูลที่มีอยู่จากรอบวิจัยก่อนหน้า</li>
+      </ul>
+      <div class="example good">
+        <div class="label">ตัวอย่างการเปิดพรอมต์ที่แนะนำ</div>
+        <p>นี่คือชุดข้อมูลทั้งหมด
+โฟกัส: เครือข่ายสถานที่หลอกลวงและโครงสร้างพื้นฐานการเชื่อมต่อ
+ยกเว้น: อุตสาหกรรมสกัดทรัพยากร
+ใช้เนื้อหาที่ให้ไว้ทั้งหมด อย่าสรุปย่อ</p>
+      </div>
+      <div class="callout">
+        <p><strong>เหตุผล:</strong> การกรองข้อมูลล่วงหน้าก่อนให้ AI เห็นทำให้โมเดลพลาดบริบทสำคัญ AI ต้องเห็นภาพรวมทั้งหมดเพื่อดึงข้อมูลได้อย่างน่าเชื่อถือ อย่าสรุปข้อมูลแทน AI — ให้มันทำงานจากแหล่งต้นฉบับโดยตรง</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title-block">
+          <h3>กำหนดบทบาทเฉพาะก่อนทุกงาน</h3>
+          <span class="step-sub">การกำหนดบทบาทเปลี่ยน AI จากทั่วไปสู่ระดับนักวิเคราะห์</span>
+        </div>
+      </div>
+      <p>อย่าเริ่มเซสชันวิจัยโดยไม่กำหนดบทบาทปฏิบัติการที่ชัดเจนให้ AI บทบาทที่กำหนดจะเปลี่ยนคุณภาพและโครงสร้างของผลลัพธ์อย่างมีนัยสำคัญ</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>บทบาทการดึงข้อมูล</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">พรอมต์</div>
+            <p>คุณคือเครื่องมือดึงข่าวกรอง งานของคุณคือการดึงข้อมูลสูงสุด อย่าสรุปย่อ อย่าทำให้เข้าใจง่ายขึ้น</p>
+          </div>
+        </div>
+        <div class="card">
+          <h4>บทบาทการวิเคราะห์</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">พรอมต์</div>
+            <p>ทำหน้าที่เป็นนักวิเคราะห์ OSINT ที่เชี่ยวชาญเครือข่ายข้ามพรมแดน ดึงข้อมูลหน่วยงาน สถานที่ และความสัมพันธ์ทั้งหมด</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>เหตุผล:</strong> หากไม่มีบทบาท AI จะตอบแบบทั่วไปและสนทนา เมื่อมีบทบาทที่ชัดเจน AI จะสร้างผลลัพธ์ระดับนักวิเคราะห์ที่มีโครงสร้างตรงกับงาน</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title-block">
+          <h3>กำหนดกฎผลลัพธ์ที่เข้มงวดก่อนเริ่มดึงข้อมูล</h3>
+          <span class="step-sub">กฎป้องกันการสร้างข้อมูลเท็จและบังคับผลลัพธ์ที่มีโครงสร้างและซื่อสัตย์</span>
+        </div>
+      </div>
+      <p>ก่อนงานดึงข้อมูลใดๆ ให้กำหนดกฎที่ชัดเจนว่า AI ต้องจัดการกับความไม่แน่นอนและช่องว่างหลักฐานอย่างไร สิ่งนี้ไม่สามารถละเว้นได้สำหรับงานวิจัยระดับมืออาชีพ</p>
+      <div class="callout rule-block">
+        <p><strong>กฎผลลัพธ์มาตรฐาน — ใส่ในทุกพรอมต์การดึงข้อมูล:</strong></p>
+        <ul>
+          <li>ไม่มีหลักฐาน = ไม่มีหน่วยงานที่ยืนยัน อย่าสร้างหรืออนุมานเกินข้อมูล</li>
+          <li>แยกผลลัพธ์ทั้งหมดตามระดับที่มีป้ายกำกับชัดเจน: ข้อเท็จจริงที่ตรวจสอบแล้ว / รายงานที่น่าเชื่อถือ / สัญญาณอ่อน / การอนุมานโครงสร้าง / สมมติฐาน</li>
+          <li>ทำเครื่องหมายช่องว่างข่าวกรองทั้งหมดอย่างชัดเจน</li>
+          <li>หนึ่งข้อเท็จจริงต่อหนึ่งบรรทัด อย่ารวมรายการที่ไม่เกี่ยวข้อง</li>
+        </ul>
+      </div>
+      <div class="callout">
+        <p><strong>เหตุผล:</strong> เป้าหมายคือผลลัพธ์ที่น่าเชื่อถือและมีโครงสร้าง ไม่ใช่ร้อยแก้วที่สวยงาม กฎที่ชัดเจนป้องกันการสร้างข้อมูลโดย AI บังคับการจัดการความไม่แน่นอนอย่างซื่อสัตย์ และทำให้ผลลัพธ์สามารถตรวจสอบได้</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title-block">
+          <h3>ดึงข้อมูลก่อนเขียนรายงาน</h3>
+          <span class="step-sub">หน่วยข่าวกรองดิบก่อน — การสังเคราะห์มาทีหลัง</span>
+        </div>
+      </div>
+      <p>อย่าขอให้ AI สร้างรายงานหรือเนื้อหาเป็นผลลัพธ์แรก ให้บังคับขั้นตอนดึงข้อมูลที่มีโครงสร้างก่อนเสมอ รายงานที่สร้างจากข้อมูลที่ยังไม่ได้ดึงจะรับอคติการตีความของ AI มาทั้งหมด</p>
+      <div class="example good">
+        <div class="label">แม่แบบพรอมต์การดึงข้อมูล</div>
+        <p>ดึงข้อมูลต่อไปนี้ทั้งหมดจากชุดข้อมูล หนึ่งข้อเท็จจริงต่อหนึ่งบรรทัด อย่ารวม อย่าสรุปย่อ:
+• ชื่อและชื่อเล่น
+• องค์กรและสังกัด
+• สถานที่และพิกัด
+• ความสัมพันธ์และการเชื่อมต่อ
+• กิจกรรมและเหตุการณ์
+• ตัวบ่งชี้ความเสี่ยง</p>
+      </div>
+      <div class="callout">
+        <p><strong>เหตุผล:</strong> หน่วยข่าวกรองดิบมีคุณค่ามากกว่าข้อสรุปที่รีบเร่ง ดึงข้อมูลก่อน สังเคราะห์ทีหลัง ลำดับขั้นตอนนี้ยังทำให้รายงานสุดท้ายสามารถตรวจสอบได้กับเนื้อหาต้นฉบับ</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <div class="step-title-block">
+          <h3>แปลงข้อมูลที่ดึงมาเป็นชุดข้อมูลที่มีโครงสร้าง</h3>
+          <span class="step-sub">เปลี่ยนการดึงข้อมูลดิบให้เป็นระบบที่นำกลับมาใช้ได้และขยายได้</span>
+        </div>
+      </div>
+      <p>เมื่อการดึงข้อมูลเสร็จสิ้น ให้ขอให้ AI จัดโครงสร้างผลลัพธ์ดิบให้เป็นชุดข้อมูลที่สะอาดและเป็นมาตรฐาน นี่คือขั้นตอนที่ทำให้งานวิจัยนำกลับมาใช้ได้และขยายได้</p>
+      <table>
+        <thead>
+          <tr><th>ส่วนประกอบของชุดข้อมูล</th><th>เนื้อหา</th><th>วัตถุประสงค์</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ตารางหน่วยงาน</strong></td><td>ชื่อ ประเภท บทบาท ชื่อเล่น</td><td>อ้างอิงหลักสำหรับการวิเคราะห์ทั้งหมด</td></tr>
+          <tr><td><strong>ขอบความสัมพันธ์</strong></td><td>ใครเชื่อมต่อกับใคร อย่างไร เมื่อไร</td><td>การทำแผนที่เครือข่ายและการวิเคราะห์ลิงก์</td></tr>
+          <tr><td><strong>การจำแนกความเสี่ยง</strong></td><td>ระดับความเสี่ยงต่อหน่วยงานหรือสถานที่</td><td>การจัดลำดับความสำคัญและการแจ้งเตือน</td></tr>
+          <tr><td><strong>ชุดพิกัด</strong></td><td>ละติจูด/ลองจิจูดสำหรับทุกสถานที่</td><td>ผลลัพธ์แผนที่และการวิเคราะห์เชิงพื้นที่</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">6</div>
+        <div class="step-title-block">
+          <h3>แปลงชุดข้อมูลเป็นผลลัพธ์ที่ใช้งานได้</h3>
+          <span class="step-sub">เครื่องมือปฏิบัติการ ไม่ใช่แค่เอกสาร</span>
+        </div>
+      </div>
+      <p>ชุดข้อมูลที่มีโครงสร้างคือแหล่งที่มาซึ่งรูปแบบผลลัพธ์ทั้งหมดมาจาก อย่าสร้างสิ่งเหล่านี้พร้อมกัน — สร้างชุดข้อมูลก่อน จากนั้นสร้างผลลัพธ์จากมัน</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>🗺 ผลลัพธ์แผนที่</h4>
+          <p>ส่งออก CSV ที่สะอาดสำหรับ Google My Maps คอลัมน์ที่จำเป็น: ชื่อ ละติจูด ลองจิจูด คำอธิบายสั้น</p>
+        </div>
+        <div class="card">
+          <h4>📊 แดชบอร์ด</h4>
+          <p>สร้างภาพรวมระดับความเสี่ยงและความสัมพันธ์เครือข่าย ใช้ตารางหน่วยงานและการจำแนกความเสี่ยงเป็นแหล่งข้อมูล</p>
+        </div>
+        <div class="card">
+          <h4>📄 รายงานข่าวกรอง</h4>
+          <p>แปลงชุดข้อมูลเป็นรายงานที่จัดรูปแบบ รักษาการแยกที่ชัดเจนระหว่างข้อเท็จจริงที่ยืนยันแล้วและการอนุมาน</p>
+        </div>
+        <div class="card">
+          <h4>🗃 ชุดข้อมูลเก็บถาวร</h4>
+          <p>บันทึกชุดข้อมูลที่มีโครงสร้างเป็นบันทึกหลักของรอบวิจัยนี้ มันจะกลายเป็นฐานสำหรับการอัปเดตเวอร์ชันถัดไป</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">7</div>
+        <div class="step-title-block">
+          <h3>ทำงานเป็นเวอร์ชัน — ไม่ใช่เริ่มใหม่ทุกครั้ง</h3>
+          <span class="step-sub">ปฏิบัติต่อการวิจัยเหมือนระบบที่มีชีวิตและมีเวอร์ชัน</span>
+        </div>
+      </div>
+      <p>ชุดข้อมูลการวิจัยไม่ใช่ผลลัพธ์ครั้งเดียว แต่เป็นระบบที่มีชีวิตซึ่งเติบโตตามรอบข้อมูลใหม่แต่ละรอบ เมื่ออัปเดต ให้แก้ไขชุดข้อมูลที่มีอยู่ — อย่าสร้างใหม่ตั้งแต่ต้น</p>
+      <div class="callout">
+        <p><strong>เหตุผล:</strong> การกำหนดเวอร์ชันแบบค่อยเป็นค่อยไปรักษางานก่อนหน้า ลดการดึงข้อมูลซ้ำซ้อน และสร้างเส้นทางการวิจัยที่ตรวจสอบได้ การอัปเดตเวอร์ชันแต่ละครั้งควรใช้เวลาเพียงส่วนหนึ่งของการสร้างต้นฉบับ</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">8</div>
+        <div class="step-title-block">
+          <h3>ตรวจสอบผลลัพธ์ AI ก่อนสรุปผล</h3>
+          <span class="step-sub">ใช้ AI ตรวจสอบงานของตัวเอง — จากนั้นทบทวนโดยมนุษย์</span>
+        </div>
+      </div>
+      <p>ก่อนปิดเซสชัน AI ใดๆ ให้กำหนดให้โมเดลตรวจสอบตัวเองในทุกสิ่งที่ผลิต นี่เป็นพรอมต์แยกต่างหากที่ชัดเจน — ไม่ใช่การต่อเนื่องจากงานดึงข้อมูล</p>
+      <div class="example good">
+        <div class="label">พรอมต์การตรวจสอบตัวเอง</div>
+        <p>ตรวจสอบทุกสิ่งที่คุณผลิตในเซสชันนี้
+สมบูรณ์หรือไม่? อะไรที่ขาดหาย?
+ระบุช่องว่างทั้งหมด สัญญาณอ่อน การอ้างที่ไม่ได้ยืนยัน และพื้นที่ที่คุณอนุมานเกินหลักฐาน
+แสดงรายการอย่างชัดเจน</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">9</div>
+        <div class="step-title-block">
+          <h3>ใช้ระบบ AI หลายตัว — ไม่ใช่แค่ตัวเดียว</h3>
+          <span class="step-sub">ใช้ประโยชน์จากเครื่องมือต่างๆ ร่วมกันเพื่อลดอคติและเพิ่มความแม่นยำ</span>
+        </div>
+      </div>
+      <p>ไม่มีแพลตฟอร์ม AI เดียวที่เพียงพอสำหรับงานข่าวกรองระดับวิจัย แต่ละโมเดลมีจุดแข็ง อคติการฝึก และจุดบอดที่แตกต่างกัน กระบวนการหลายระบบชดเชยข้อจำกัดเหล่านี้</p>
+      <table>
+        <thead>
+          <tr><th>แพลตฟอร์ม</th><th>บทบาทในกระบวนการ</th><th>ระดับ</th><th>หมายเหตุ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ChatGPT</strong></td><td>การดึงข้อมูลหลักและร่างรายงาน</td><td><span class="badge blue">1–2</span></td><td>ดีสำหรับงานมีโครงสร้างยาว</td></tr>
+          <tr><td><strong>Claude</strong></td><td>การใช้เหตุผล การตรวจสอบ และการปรับปรุง</td><td><span class="badge blue">1–2</span></td><td>ความสม่ำเสมอเชิงตรรกะดีเยี่ยม</td></tr>
+          <tr><td><strong>Gemini</strong></td><td>การตรวจสอบข้อเท็จจริงข้าม</td><td><span class="badge blue">1–2</span></td><td>ดีสำหรับเหตุการณ์ปัจจุบัน</td></tr>
+          <tr><td><strong>Grok</strong></td><td>การตรวจสอบความคิดเห็นที่สอง</td><td><span class="badge blue">1–2</span></td><td>มุมมองทางเลือกที่มีประโยชน์</td></tr>
+          <tr><td><strong>DeepSeek</strong></td><td>การดึงข้อมูลจำนวนมากบนข้อมูลสาธารณะ</td><td><span class="badge green">ระดับ 1 เท่านั้น</span></td><td>ฟรีเทียร์ — ข้อมูลสาธารณะเท่านั้น</td></tr>
+          <tr><td><strong>Kimi</strong></td><td>การจัดการเอกสารบริบทขนาดใหญ่</td><td><span class="badge green">ระดับ 1 เท่านั้น</span></td><td>ฟรีเทียร์ — ข้อมูลสาธารณะเท่านั้น</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn">
+        <p><strong>การแจ้งเตือนความปลอดภัยข้อมูล:</strong> DeepSeek และ Kimi เป็นเครื่องมือฟรีเทียร์และต้องใช้กับข้อมูลระดับ 1 (ที่เผยแพร่สาธารณะ) เท่านั้น ห้ามอัปโหลดเอกสารภายใน ผลงานลูกค้า หรือวัสดุต้นฉบับที่จำกัดบนแพลตฟอร์มเหล่านี้</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">สรุป: กระบวนการหลัก</h2>
+      <div class="callout" style="margin-bottom:20px">
+        <p><strong>หลักการนำทาง:</strong> อย่าใช้ AI เพื่อถามคำถาม ใช้มันเป็นระบบประมวลผลข่าวกรองแบบควบคุมเพื่อแปลงข้อมูลที่ยุ่งเหยิงและไม่มีโครงสร้างให้เป็นผลลัพธ์ที่มีโครงสร้าง ตรวจสอบได้ และใช้ปฏิบัติการได้</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">ข้อมูลดิบ</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">การดึงข้อมูล</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">ชุดข้อมูลมีโครงสร้าง</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">ผลลัพธ์ที่ใช้งานได้</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">การตรวจสอบ</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">ส่งมอบสุดท้าย</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · นโยบาย AI และวิธีการวิจัย</span>
+      <span>ใช้ภายในเท่านั้น · ห้ามแชร์ภายนอก</span>
+    </div>
+  </footer>
+
+</div><!-- /section-th -->
+
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION 3 — BURMESE
+     ═══════════════════════════════════════════════════════ -->
+<div id="section-my" class="lang-section lang-my break-before">
+
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="eyebrow">ဝန်ထမ်းသုတေသနနည်းလမ်း · ကိစ္စလေ့လာချက် · ENVISAGE WORLDWIDE</div>
+      <h1>အချက်အလက်ကြမ်းများမှ ဖွဲ့စည်းပုံကျသောသတင်းထောက်လှမ်းချက်သို့</h1>
+      <p class="subtitle">AI ကို ထိန်းချုပ်ထားသောသတင်းထောက်လှမ်းချက်ပြုစုနည်းစနစ်အဖြစ် အဆင့်ဆင့်အသုံးပြုရန် လမ်းညွှန်ချက် — Sapphire နှင့် SAM သုတေသနအစီအစဉ်များတွင် တိုက်ရိုက်အသုံးချနိုင်သည်။</p>
+      <div class="cover-meta">
+        <div class="cover-meta-item">
+          <span class="meta-label">ရေးသားသူ</span>
+          <span class="meta-value">Por — ဝန်ထမ်းသုတေသီ</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">အစီအစဉ်</span>
+          <span class="meta-value">Sapphire &amp; SAM</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">အမျိုးအစားခွဲ</span>
+          <span class="meta-value">အတွင်းပိုင်း — ဝန်ထမ်းသုံး</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="meta-label">ဗားရှင်း</span>
+          <span class="meta-value">1.0 · ဇွန် ၂၀၂၆</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider">
+    <div class="section-divider-inner">
+      <span class="lang-flag">MY</span>
+      <h2>မြန်မာဘာသာ — သုတေသနနည်းလမ်း ကိစ္စလေ့လာချက်</h2>
+    </div>
+  </div>
+
+  <main class="content-area">
+
+    <section>
+      <p>ဤကိစ္စလေ့လာချက်တွင် AI ကိရိယာများ — အခမဲ့ tier ပလက်ဖောင်းများအပါအဝင် — ကိုသုံး၍ ဖွဲ့စည်းပုံမကျသောရင်းမြစ်အချက်အလက်ကို စစ်ဆေးနိုင်ပြီး ဖွဲ့စည်းပုံကျသောသတင်းထောက်လှမ်းချက်ရလဒ်များသို့ ပြောင်းလဲရန် သက်သေပြပြီးဖြစ်သောနည်းလမ်းကို မှတ်တမ်းတင်ထားသည်။</p>
+      <p>အဓိကမူ: <strong>AI သည် မေးခွန်းဖြေသောချတ်ဘော့မဟုတ်ပါ။ ၎င်းသည် ထိန်းချုပ်ထားသောသတင်းထောက်လှမ်းချက်ပြုစုနည်းစနစ်ဖြစ်သည်။</strong> ဤကွာခြားချက်သည် အောက်ပါနည်းလမ်းရှိ ဆုံးဖြတ်ချက်တိုင်းကို သတ်မှတ်သည်။</p>
+    </section>
+
+    <hr class="rule">
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title-block">
+          <h3>အချက်အလက်ကြမ်းများဖြင့် စတင်ပါ — မေးခွန်းများဖြင့် မဟုတ်</h3>
+          <span class="step-sub">AI မဖွင့်မီ ရင်းမြစ်အချက်အလက်အားလုံး စုစည်းပါ</span>
+        </div>
+      </div>
+      <p>မည်သည့်သုတေသနဆောင်ရွက်မှုတွင်မဆို ပထမဆုံးလုပ်ဆောင်ချက်မှာ AI ကို မေးခွန်းမေးခြင်းမဟုတ်ပါ။ ယင်းအစား ကိုင်တွယ်ရမည့် အချက်အလက်ကြမ်းအားလုံး ရင်းမြစ်ကြိုတင်ပြင်ဆင်ပြီး မည်သည့်အလုပ်မဆိုစတင်မပေးမီ အပြည့်အဝ ဖတ်ရှုနိုင်အောင်ထားပါ။ ပုံမှန်အချက်အလက်များတွင် ပါဝင်သည်:</p>
+      <ul>
+        <li>ရင်းမြစ်အစီရင်ခံစာများ (လူ့အခွင့်အရေးမှတ်တမ်းများ၊ မြေပြင်အစီရင်ခံစာများ၊ အများသိရင်းမြစ်ထုတ်ဝေမှုများ)</li>
+        <li>သတင်းဆောင်းပါးများနှင့် ရင်းမြစ်လင့်ခ်များ</li>
+        <li>ပထဝီကိုဩဒိနိတ်နှင့် တည်နေရာဒေတာ</li>
+        <li>ဖန်သားပြင်ဓာတ်ပုံများနှင့် မြင်ကွင်းရည်ညွှန်းချက်များ</li>
+        <li>ယခင်သုတေသနဆောင်ရွက်မှုများမှ ရှိပြီးသားဒေတာအစုများ</li>
+      </ul>
+      <div class="example good">
+        <div class="label">အကြံပြုထားသော Prompt ဖွင့်ချက်</div>
+        <p>ဒေတာအစုတစ်ခုလုံးဤတွင်ပါ။
+အဓိကဦးတည်ချက်: လှည့်ဖျားဖောက်ဖျက်ရေးကွန်ယက်နှင့် ချိတ်ဆက်မှုအခြေခံဆောက်လုပ်ရေး။
+ဖယ်ရှားရန်: ကုန်ထုတ်လုပ်ငန်းများ။
+ပေးထားသောအချက်အလက်အားလုံးသုံးပါ။ အကျဉ်းချုပ်မပြုလုပ်ပါနှင့်။</p>
+      </div>
+      <div class="callout">
+        <p><strong>အဘယ်ကြောင့်အရေးကြီးသနည်း:</strong> AI မမြင်မီ ဒေတာကို ကြိုတင်စစ်ထုတ်ခြင်းက မော်ဒယ်အား အရေးကြီးသောအကြောင်းအရင်းကို လွတ်သွားစေသည်။ AI မှ ယုံကြည်ရသောထုတ်ဖော်ကောက်နှုတ်မှု ပြုလုပ်ရန် ပုံကြီးတစ်ခုလုံးမြင်ရမည်ဖြစ်သည်။</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title-block">
+          <h3>မည်သည့်အလုပ်မဆို မစတင်မီ AI ကို တိကျသောအခန်းကဏ္ဍပေးပါ</h3>
+          <span class="step-sub">အခန်းကဏ္ဍသတ်မှတ်ချက်က AI ကို ယေဘုယျမှ ခွဲခြမ်းစိတ်ဖြာသူအဆင့်သို့ ပြောင်းလဲသည်</span>
+        </div>
+      </div>
+      <p>AI ကို တိကျသောလုပ်ငန်းဆောင်ရွက်ရေးအခန်းကဏ္ဍ သတ်မှတ်မပေးဘဲ သုတေသနဆောင်ရွက်မှုမစတင်ပါနှင့်။ သတ်မှတ်ထားသောအခန်းကဏ္ဍသည် ရလဒ်၏ အရည်အသွေးနှင့် ဖွဲ့စည်းပုံကို အခြေခံကျကျ ပြောင်းလဲစေသည်။</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>ထုတ်ဖော်ကောက်နှုတ်ရေးအခန်းကဏ္ဍ</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">Prompt</div>
+            <p>သင်သည် သတင်းထောက်လှမ်းချက်ကောက်နှုတ်ရေးစက်ဖြစ်သည်။ သင်၏အလုပ်မှာ ဒေတာများကို အမြင့်ဆုံးကောက်နှုတ်ထုတ်ယူရန်ဖြစ်သည်။ အကျဉ်းချုပ်မပြုလုပ်ပါနှင့်။ ရိုးရှင်းအောင်မလုပ်ပါနှင့်။</p>
+          </div>
+        </div>
+        <div class="card">
+          <h4>ခွဲခြမ်းစိတ်ဖြာရေးအခန်းကဏ္ဍ</h4>
+          <div class="example neutral" style="margin:0">
+            <div class="label">Prompt</div>
+            <p>နယ်စပ်ဖြတ်ကျော်ကွန်ယက်များတွင် အထူးကျွမ်းကျင်သော OSINT ခွဲခြမ်းစိတ်ဖြာသူအဖြစ် ဆောင်ရွက်ပါ။ အမည်ခံအဖွဲ့အစည်းများ တည်နေရာများနှင့် ဆက်ဆံရေးများအားလုံး ထုတ်ဖော်ပါ။</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>အဘယ်ကြောင့်အရေးကြီးသနည်း:</strong> အခန်းကဏ္ဍမရှိဘဲ AI သည် ယေဘုယျ စကားပြောနည်းဖြင့် တုံ့ပြန်သည်။ တိကျသောအခန်းကဏ္ဍဖြင့် ၎င်းသည် လုပ်ငန်းနှင့်ကိုက်ညီသော ဖွဲ့စည်းပုံကျ ခွဲခြမ်းစိတ်ဖြာသူအဆင့် ရလဒ်ထုတ်လုပ်သည်။</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title-block">
+          <h3>ကောက်နှုတ်မှုမစတင်မီ တင်းကျပ်သောထွက်ရှိမည့်ရလဒ်စည်းကမ်းများ သတ်မှတ်ပါ</h3>
+          <span class="step-sub">စည်းကမ်းများက တီထွင်ဖန်တီးမှုကို တားဆီး၍ ဖွဲ့စည်းပုံကျ ရိုးသားသောရလဒ်ကို ချပ်ချေ့သည်</span>
+        </div>
+      </div>
+      <p>မည်သည့်ကောက်နှုတ်ရေးလုပ်ငန်းမဆို မစတင်မီ AI မှ မသေချာမှုနှင့် သက်သေပြချက်ကွာဟချက်များကို မည်သို့ကိုင်တွယ်ရမည်ကို ထိန်းချုပ်သည့် ထင်ရှားသောစည်းကမ်းများ သတ်မှတ်ပါ။</p>
+      <div class="callout rule-block">
+        <p><strong>စံထွက်ရှိမည့်ရလဒ်စည်းကမ်းများ — ကောက်နှုတ်ရေး prompt တိုင်းတွင် ထည့်သွင်းပါ:</strong></p>
+        <ul>
+          <li>သက်သေမရှိ = အတည်ပြုထားသောအဖွဲ့အစည်းမရှိ။ ဒေတာကျော်၍ တီထွင်မပြုပါနှင့် သို့မဟုတ် ကောက်ချက်မဆွဲပါနှင့်။</li>
+          <li>ရလဒ်အားလုံးကို ရှင်းလင်းစွာ အမှတ်အသားပြုထားသောအဆင့်များသို့ ခွဲခြားပါ: စစ်ဆေးပြီးသောအချက်အလက်များ / ယုံကြည်ရသောသတင်းပေးပို့ချက်များ / အားနည်းသောအချက်ပြမှုများ / ဖွဲ့စည်းပုံဆိုင်ရာကောက်ချက် / မိကောင်းပုံရ</li>
+          <li>သတင်းထောက်လှမ်းချက်ကွာဟချက်အားလုံးကို ထင်ရှားစွာ မှတ်သားပါ</li>
+          <li>တစ်ကြောင်းတစ်ချက်မျှ။ မသက်ဆိုင်သောအရာများ မပေါင်းစပ်ပါနှင့်</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title-block">
+          <h3>မည်သည့်အစီရင်ခံစာမဆို မရေးမီ ဒေတာကောက်နှုတ်ပါ</h3>
+          <span class="step-sub">အချမ်းသာဆုံးသတင်းထောက်လှမ်းချက်ယူနစ်များ ဦးစွာ — ပေါင်းစပ်ခြင်းနောက်မှ</span>
+        </div>
+      </div>
+      <p>AI ကို ပထမဆုံးရလဒ်အဖြစ် အစီရင်ခံစာ သို့မဟုတ် ဇာတ်လမ်းဖန်တီးရန် မတောင်းခံပါနှင့်။ ဖွဲ့စည်းပုံကျသောကောက်နှုတ်ရေးအဆင့် ဦးစွာ ချပ်ချေ့ပါ။ ကောက်နှုတ်မထားသောဒေတာပေါ်တွင် တည်ဆောက်ထားသောအစီရင်ခံစာများသည် AI ၏ ဆိုဆောင်ချင်သောအသွင်ကောက်ချက်များကို အမွေဆက်ခံသည်။</p>
+      <div class="example good">
+        <div class="label">ကောက်နှုတ်ရေး Prompt ပုံစံ</div>
+        <p>ဒေတာအစုမှ အောက်ပါအားလုံးကောက်နှုတ်ပါ။ တစ်ကြောင်းတစ်ချက်မျှ။ မပေါင်းစပ်ပါနှင့်။ မကျဉ်းမပြုပါနှင့်:
+• အမည်များနှင့် လောင်းကစားအမည်များ
+• အဖွဲ့အစည်းများနှင့် ဆက်ဆံရေးများ
+• တည်နေရာများနှင့် ကိုဩဒိနိတ်များ
+• ဆက်နွယ်မှုများနှင့် ချိတ်ဆက်မှုများ
+• လှုပ်ရှားမှုများနှင့် ဖြစ်ရပ်များ
+• အန္တရာယ်ရှိနိုင်ချေ ညွှန်ကိန်းများ</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <div class="step-title-block">
+          <h3>ကောက်နှုတ်ထားသောဒေတာကို ဖွဲ့စည်းပုံကျသောဒေတာအစုသို့ ပြောင်းပါ</h3>
+          <span class="step-sub">ကြမ်းသောကောက်နှုတ်ချက်ကို ပြန်လည်အသုံးပြုနိုင်ပြီး ချဲ့ထွင်နိုင်သောစနစ်သို့ ပြောင်းလဲပါ</span>
+        </div>
+      </div>
+      <p>ကောက်နှုတ်ခြင်းပြီးဆုံးသောအခါ AI ကို ကြမ်းသောရလဒ်ကို သန့်ရှင်းပြီး စံနှုန်းချဒေတာအစုသို့ ဖွဲ့စည်းခိုင်းပါ။ ဒါသည် သုတေသနကို ပြန်လည်အသုံးပြုနိုင်ပြီး ချဲ့ထွင်နိုင်အောင်ပြုသောအဆင့်ဖြစ်သည်။</p>
+      <table>
+        <thead>
+          <tr><th>ဒေတာအစုအစိတ်အပိုင်း</th><th>အကြောင်းအရာ</th><th>ရည်ရွယ်ချက်</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>အဖွဲ့အစည်းဇယား</strong></td><td>အမည်များ၊ အမျိုးအစားများ၊ အခန်းကဏ္ဍများ</td><td>နောက်ထပ်ခွဲခြမ်းစိတ်ဖြာမှုအတွက် အဓိကရည်ညွှန်းချက်</td></tr>
+          <tr><td><strong>ဆက်နွယ်မှုအင်တာဖေ့စ်</strong></td><td>မည်သူမည်သူနှင့် မည်သို့ မည်သည့်အချိန် ချိတ်ဆက်သည်</td><td>ကွန်ယက်မြေပုံဆွဲရေးနှင့် လင့်ခ်ခွဲခြမ်းစိတ်ဖြာမှု</td></tr>
+          <tr><td><strong>အန္တရာယ်အမျိုးအစားသတ်မှတ်ချက်</strong></td><td>အဖွဲ့အစည်း သို့မဟုတ် တည်နေရာတစ်ခုချင်းစီ၏ အန္တရာယ်အဆင့်</td><td>ဦးစားပေးမှုနှင့် အလံများ</td></tr>
+          <tr><td><strong>ကိုဩဒိနိတ်ဒေတာအစု</strong></td><td>တည်နေရာအားလုံးအတွက် ကြောင်/ဒဂုံ</td><td>မြေပုံရလဒ်နှင့် တည်နေရာဆိုင်ရာခွဲခြမ်းစိတ်ဖြာမှု</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">6</div>
+        <div class="step-title-block">
+          <h3>ဒေတာအစုကို အသုံးဝင်သောရလဒ်များသို့ ပြောင်းပါ</h3>
+          <span class="step-sub">ကိုင်တွယ်ဆောင်ရွက်ရေးကိရိယာများ — မှတ်တမ်းများသာမဟုတ်</h3>
+        </div>
+      </div>
+      <p>ဖွဲ့စည်းပုံကျသောဒေတာအစုသည် ရလဒ်ပုံစံအားလုံး ဆင်းသက်လာသည့် ရင်းမြစ်ဖြစ်သည်။ ဒါတွေကို တပြိုင်နက်မဖန်တီးပါနှင့် — ဒေတာအစုကို ဦးစွာတည်ဆောက်ပြီးနောက် ၎င်းမှ ရလဒ်ဖန်တီးပါ။</p>
+      <div class="grid cols-2">
+        <div class="card">
+          <h4>🗺 မြေပုံရလဒ်</h4>
+          <p>Google My Maps အတွက် CSV စစ်ဆင်းသည်ကို ထုတ်ယူပါ။ လိုအပ်သောကော်လံများ: အမည်၊ ကြောင်ဒဂုံ၊ တိုတောင်းသောဖော်ပြချက်</p>
+        </div>
+        <div class="card">
+          <h4>📊 ဒက်ရှ်ဘုတ်</h4>
+          <p>အန္တရာယ်အဆင့်နှင့် ကွန်ယက်ဆက်နွယ်မှုများ ခြုံငုံသုံးသပ်ချက် တည်ဆောက်ပါ</p>
+        </div>
+        <div class="card">
+          <h4>📄 သတင်းထောက်လှမ်းချက်အစီရင်ခံစာ</h4>
+          <p>ဒေတာအစုကို ဖောင်မတ်ချထားသောအစီရင်ခံစာသို့ ပြောင်းပါ။ စစ်ဆေးပြီးသောအချက်အလက်နှင့် ကောက်ချက်ကြားကို ရှင်းလင်းစွာ ခွဲခြားပါ</p>
+        </div>
+        <div class="card">
+          <h4>🗃 မှတ်တမ်းဒေတာအစု</h4>
+          <p>ဖွဲ့စည်းပုံကျသောဒေတာအစုကို ဤသုတေသနဆောင်ရွက်မှုကာလ၏ ကာနိုနီကယ်မှတ်တမ်းအဖြစ် သိမ်းဆည်းပါ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">7</div>
+        <div class="step-title-block">
+          <h3>ဗားရှင်းများဖြင့် အလုပ်လုပ်ပါ — ဘယ်တော့မှ အသစ်မစပါနှင့်</h3>
+          <span class="step-sub">သုတေသနကို ဗားရှင်းဖြင့် ရေပမာဝေ့ဝဲသောစနစ်အဖြစ် ဆက်ဆံပါ</span>
+        </div>
+      </div>
+      <p>သုတေသနဒေတာအစုများသည် တစ်ကြိမ်ထုတ်ရလဒ်မဟုတ်ပါ။ ၎င်းတို့သည် ဒေတာဆောင်ရွက်မှုတစ်ခုချင်းနှင့်အတူ ကြီးထွားသော ရေပမာဝေ့ဝဲနေသောစနစ်များဖြစ်သည်။ အပ်ဒိတ်လုပ်သောအခါ ရှိပြီးသားဒေတာအစုကို ဖြည့်ဆည်းပါ — အသစ်မစတင်ဘဲ</p>
+      <div class="callout">
+        <p><strong>အဘယ်ကြောင့်အရေးကြီးသနည်း:</strong> ဆင့်ကဲဆင့်ကဲဗားရှင်းသတ်မှတ်ခြင်းက ယခင်အလုပ်ကိုထိန်းသိမ်းသည်၊ ထပ်ကာထပ်ကာကောက်နှုတ်ခြင်းကို ဖယ်ရှားသည်နှင့် စစ်ဆေးနိုင်သောသုတေသနလမ်းကြောင်းဖန်တီးသည်။</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">8</div>
+        <div class="step-title-block">
+          <h3>နောက်ဆုံးမသတ်မှတ်မီ AI ၏ ရလဒ်ကို စစ်ဆေးပါ</h3>
+          <span class="step-sub">AI ကို ၎င်း၏ကိုယ်ပိုင်အလုပ်ကို စစ်ဆေးရန် သုံးပါ — ထို့နောက် လူ့ပြန်လည်သုံးသပ်ပါ</span>
+        </div>
+      </div>
+      <p>မည်သည့် AI ဆောင်ရွက်မှုမဆိုမပိတ်မီ မော်ဒယ်အား ၎င်းထုတ်လုပ်ထားသောအရာအားလုံးကို ကိုယ်တိုင်စစ်ဆေးရန် ခိုင်းပါ။ ဤသည်မှာ သီးခြားထင်ရှားသော prompt တစ်ခုဖြစ်သည် — ကောက်နှုတ်ရေးလုပ်ငန်း မဆက်လက်ခြင်းမဟုတ်ပါ</p>
+      <div class="example good">
+        <div class="label">ကိုယ်တိုင်စစ်ဆေးရေး Prompt</div>
+        <p>ဤဆောင်ရွက်မှုတွင် သင်ထုတ်လုပ်ထားသောအားလုံးကို ပြန်သုံးသပ်ပါ။
+ပြည့်စုံပြီလော? ဘာကျန်နေပါသေးသနည်း?
+ကွာဟချက်များ၊ အားနည်းသောအချက်ပြမှုများ၊ စစ်ဆေးမပြီးသောကြွေးကြော်ချက်များနှင့် သက်သေပြင်ကျော်ကောက်ချက်ဆွဲသောနေရာများကို ဖော်ထုတ်ပါ
+ရှင်းလင်းစွာ စာရင်းပြုပါ</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-header">
+        <div class="step-num">9</div>
+        <div class="step-title-block">
+          <h3>AI စနစ်တစ်ခုတည်းမဟုတ်ဘဲ များစွာကို သုံးပါ</h3>
+          <span class="step-sub">ကိရိယာအမျိုးမျိုးကို ချိတ်ဆက်အသုံးချ၍ ဘက်လိုက်မှုကို လျှော့ချပြီး တိကျမှန်ကန်မှုကို တိုးမြှင့်ပါ</span>
+        </div>
+      </div>
+      <p>AI ပလက်ဖောင်းတစ်ခုတည်းသည် သုတေသနနှင့်ညီမျှသောသတင်းထောက်လှမ်းချက်လုပ်ငန်းအတွက် မလုံလောက်ပါ။ မော်ဒယ်တစ်ခုချင်းစီတွင် ကွဲပြားသောအားသာချက်များ၊ လေ့ကျင့်ထားသောဘက်လိုက်မှုများနှင့် မျက်စိကွယ်နေရာများ ရှိသည်။</p>
+      <table>
+        <thead>
+          <tr><th>ပလက်ဖောင်း</th><th>နည်းလမ်းရှိ အခန်းကဏ္ဍ</th><th>အဆင့်</th><th>မှတ်ချက်</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>ChatGPT</strong></td><td>ပင်မကောက်နှုတ်မှုနှင့် အစီရင်ခံစာမူကြမ်း</td><td><span class="badge blue">1–2</span></td><td>ရှည်သောဖွဲ့စည်းပုံကျလုပ်ငန်းများအတွက် ကောင်း</td></tr>
+          <tr><td><strong>Claude</strong></td><td>အကြောင်းအကျိုး စစ်ဆေးမှုနှင့် ပြင်ဆင်မှု</td><td><span class="badge blue">1–2</span></td><td>ယုတ္တိဆိုင်ရာသာတူညီမျှမှု ထူးထူးခြားခြားကောင်း</td></tr>
+          <tr><td><strong>Gemini</strong></td><td>အချက်အလက်ဆန့်ကျင်စစ်ဆေးမှု</td><td><span class="badge blue">1–2</span></td><td>ပစ္စုပ္ပန်ဖြစ်ရပ်များအတွက် ကောင်း</td></tr>
+          <tr><td><strong>Grok</strong></td><td>ဒုတိယအမြင် စစ်ဆေးမှု</td><td><span class="badge blue">1–2</span></td><td>အသုံးဝင်သောအခြားရှုမြင်မှု</td></tr>
+          <tr><td><strong>DeepSeek</strong></td><td>အများသူငှာဒေတာပေါ်တွင် အမြောက်အများကောက်နှုတ်မှု</td><td><span class="badge green">အဆင့် ၁ သာ</span></td><td>အခမဲ့ tier — အများသူငှာဒေတာသာ</td></tr>
+          <tr><td><strong>Kimi</strong></td><td>ကြီးမားသောအကြောင်းအရာ မှတ်တမ်းကိုင်တွယ်မှု</td><td><span class="badge green">အဆင့် ၁ သာ</span></td><td>အခမဲ့ tier — အများသူငှာဒေတာသာ</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn">
+        <p><strong>ဒေတာလုံခြုံရေးသတိပေးချက်:</strong> DeepSeek နှင့် Kimi တို့သည် အခမဲ့ tier ကိရိယာများဖြစ်ပြီး အဆင့် ၁ (အများသူငှာရရှိနိုင်သော) ဒေတာနှင့်သာ အသုံးပြုရမည်။ ဤပလက်ဖောင်းများတွင် အတွင်းပိုင်းစာရွက်စာတမ်းများ၊ ဖောက်သည်ရလဒ်များ သို့မဟုတ် ကန့်သတ်ထားသောရင်းမြစ်ပစ္စည်းများ မည်သည်ကိုမျှ Upload မလုပ်ပါနှင့်။</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2 class="section-heading">အကျဉ်းချုပ်: အဓိကနည်းလမ်း</h2>
+      <div class="callout" style="margin-bottom:20px">
+        <p><strong>လမ်းညွှန်မူ:</strong> မေးခွန်းမေးရန် AI ကို မသုံးပါနှင့်။ ရှုပ်ထွေးပြီး ဖွဲ့စည်းပုံမကျသောအချက်အလက်ကို ဖွဲ့စည်းပုံကျ စစ်ဆေးနိုင်ပြီး ကိုင်တွယ်ဆောင်ရွက်ရေးရလဒ်များသို့ ပြောင်းလဲရန် ထိန်းချုပ်ထားသောသတင်းထောက်လှမ်းချက်ပြုစုနည်းစနစ်အဖြစ် ၎င်းကိုသုံးပါ။</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">အချက်အလက်ကြမ်း</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">ကောက်နှုတ်ချက်</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">ဒေတာအစုဖွဲ့စည်းပုံ</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">အသုံးဝင်သောရလဒ်များ</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">စစ်ဆေးမှု</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step">နောက်ဆုံးပေးပို့ချက်</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer-inner">
+      <span><strong>ENVISAGE WORLDWIDE</strong> · AI မူဝါဒနှင့် သုတေသနနည်းလမ်းများ</span>
+      <span>အတွင်းသုံးသာ · ပြင်ပသို့ မမျှဝေပါနှင့်</span>
+    </div>
+  </footer>
+
+</div><!-- /section-my -->
+
+</body>
+</html>
