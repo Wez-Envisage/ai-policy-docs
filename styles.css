@@ -25,7 +25,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 8px
 .brand{color:#fff;font-weight:800;letter-spacing:.06em;font-size:.95rem;padding:14px 0;text-decoration:none}
 .brand span{color:#6ea8ff}
 .nav-links{display:flex;flex-wrap:wrap;gap:2px;list-style:none}
-.nav-links a{color:#c7d4ea;text-decoration:none;font-size:.85rem;padding:14px 12px;display:block;border-bottom:3px solid transparent}
+.nav-links a{color:#c7d4ea;text-decoration:none;font-size:.8rem;padding:14px 8px;display:block;border-bottom:3px solid transparent}
 .nav-links a:hover{color:#fff}
 .nav-links a.active{color:#fff;border-bottom-color:var(--sapphire);font-weight:600}
 

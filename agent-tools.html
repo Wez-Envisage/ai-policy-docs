@@ -7,39 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
 <style>
-  :root{
-    --navy:#0d1f3c;
-    --navy-dark:#081427;
-    --sapphire:#2563eb;
-    --sapphire-light:#dbeafe;
-    --ink:#1e293b;
-    --muted:#64748b;
-    --bg:#f7f9fc;
-    --card:#ffffff;
-    --border:#e2e8f0;
-    --green:#15803d;
-    --green-bg:#dcfce7;
-    --amber:#b45309;
-    --amber-bg:#fef3c7;
-    --red:#b91c1c;
-    --red-bg:#fee2e2;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:15px}
-
-  /* HEADER */
-  .site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-  .header-inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-  .brand{color:#fff;font-weight:800;letter-spacing:.06em;font-size:.95rem;padding:14px 0;text-decoration:none}
-  .brand span{color:#6ea8ff}
-  .header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0}
-  .header-right .doc-label{color:#8fa3c2;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #2e466e;padding-right:12px;margin-right:4px}
-  .lang-nav{display:flex;gap:4px}
-  .lang-nav a{color:#c7d4ea;text-decoration:none;font-size:.82rem;font-weight:600;border:1px solid #2e466e;border-radius:6px;padding:5px 12px;transition:all .15s}
-  .lang-nav a:hover{color:#fff;border-color:#6ea8ff}
-  .lang-nav a.en{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
-
   /* COVER */
   .cover{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 60%,#15366b);color:#fff;padding:72px 24px 64px;min-height:480px;display:flex;align-items:center}
   .cover-inner{max-width:960px;margin:0 auto;width:100%}
@@ -75,23 +45,6 @@
   .tool-card h4{color:var(--navy);font-size:1rem;margin-bottom:4px}
   .tool-card .tool-type{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   .tool-card p{font-size:.9rem;margin-bottom:0;color:#334155}
-
-  /* BADGES */
-  .badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 9px;border-radius:999px;white-space:nowrap}
-  .badge.green{background:var(--green-bg);color:var(--green)}
-  .badge.amber{background:var(--amber-bg);color:var(--amber)}
-  .badge.red{background:var(--red-bg);color:var(--red)}
-  .badge.blue{background:var(--sapphire-light);color:var(--sapphire)}
-  .badge.navy{background:var(--navy);color:#fff}
-
-  /* CALLOUTS */
-  .callout{border-left:4px solid var(--sapphire);background:var(--sapphire-light);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;max-width:860px}
-  .callout.warn{border-left-color:var(--amber);background:var(--amber-bg)}
-  .callout.ok{border-left-color:var(--green);background:var(--green-bg)}
-  .callout.danger{border-left-color:var(--red);background:var(--red-bg)}
-  .callout p{margin:0;font-size:.92rem}
-  .callout p+p{margin-top:7px}
-  .callout strong{color:var(--navy)}
 
   /* MATRIX TABLE */
   .matrix-wrap{overflow-x:auto;margin:20px 0}
@@ -136,7 +89,7 @@
 
   /* PRINT */
   @media print{
-    .site-header,.print-note{display:none!important}
+    nav,.print-note{display:none!important}
     body{background:#fff;font-size:11pt}
     .cover{min-height:auto;padding:48px 24px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .section-divider{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -155,27 +108,33 @@
 </head>
 <body>
 
-<!-- HEADER NAV -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html"><span>ENVISAGE</span> WORLDWIDE</a>
-    <div class="header-right">
-      <span class="doc-label">Internal Briefing</span>
-      <nav class="lang-nav">
-        <a href="#section-en" class="en">EN</a>
-        <a href="#section-th">TH</a>
-        <a href="#section-my">MY</a>
-      </nav>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+      <li><a href="ai-tools-directory.html">AI Directory</a></li>
+      <li><a href="por-case-study.html">Case Study</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
     </div>
   </div>
-</header>
+</nav>
 
 <div class="print-note">
   <strong>To save as PDF:</strong> Open in Chrome → File → Print (Ctrl+P / ⌘P) → Destination: <em>Save as PDF</em> → More settings → enable <em>Background graphics</em> → Save.
 </div>
 
 <!-- ═══════════════ ENGLISH ═══════════════ -->
-<div id="section-en" class="lang-section">
+<div class="lang-section" data-lang="en">
 
   <div class="cover">
     <div class="cover-inner">
@@ -559,7 +518,7 @@
 
 
 <!-- ═══════════════ THAI ═══════════════ -->
-<div id="section-th" class="lang-section lang-th break-before">
+<div class="lang-section lang-th break-before" data-lang="th">
 
   <div class="cover">
     <div class="cover-inner">
@@ -746,7 +705,7 @@
 
 
 <!-- ═══════════════ BURMESE ═══════════════ -->
-<div id="section-my" class="lang-section lang-my break-before">
+<div class="lang-section lang-my break-before" data-lang="my">
 
   <div class="cover">
     <div class="cover-inner">

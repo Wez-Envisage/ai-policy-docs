@@ -7,40 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
 <style>
-  /* ── BRAND TOKENS ───────────────────────────────────── */
-  :root{
-    --navy:#0d1f3c;
-    --navy-dark:#081427;
-    --sapphire:#2563eb;
-    --sapphire-light:#dbeafe;
-    --ink:#1e293b;
-    --muted:#64748b;
-    --bg:#f7f9fc;
-    --card:#ffffff;
-    --border:#e2e8f0;
-    --green:#15803d;
-    --green-bg:#dcfce7;
-    --amber:#b45309;
-    --amber-bg:#fef3c7;
-    --red:#b91c1c;
-    --red-bg:#fee2e2;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:15px}
-
-  /* ── HEADER NAV ─────────────────────────────────────── */
-  .site-header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-  .header-inner{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-  .brand{color:#fff;font-weight:800;letter-spacing:.06em;font-size:.95rem;padding:14px 0;text-decoration:none}
-  .brand span{color:#6ea8ff}
-  .header-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0}
-  .header-right .doc-label{color:#8fa3c2;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #2e466e;padding-right:12px;margin-right:4px}
-  .lang-nav{display:flex;gap:4px}
-  .lang-nav a{color:#c7d4ea;text-decoration:none;font-size:.82rem;font-weight:600;border:1px solid #2e466e;border-radius:6px;padding:5px 12px;transition:all .15s}
-  .lang-nav a:hover{color:#fff;border-color:#6ea8ff}
-  .lang-nav a.en{background:var(--sapphire);border-color:var(--sapphire);color:#fff}
-
   /* ── COVER PAGE ─────────────────────────────────────── */
   .cover{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 60%,#15366b);color:#fff;padding:72px 24px 64px;min-height:520px;display:flex;align-items:center}
   .cover-inner{max-width:920px;margin:0 auto;width:100%}
@@ -131,7 +100,7 @@
 
   /* ── PRINT CSS ───────────────────────────────────────── */
   @media print{
-    .site-header{display:none}
+    nav{display:none}
     .print-note{display:none!important}
     body{background:#fff;font-size:11pt}
     .cover{min-height:auto;padding:48px 24px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -156,26 +125,27 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════
-     HEADER NAV
-     ═══════════════════════════════════════════════════════ -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html"><span>ENVISAGE</span> WORLDWIDE</a>
-    <div class="header-right">
-      <span class="doc-label">Case Study</span>
-      <nav class="lang-nav">
-        <a href="#section-en" class="en">EN</a>
-        <a href="#section-th">TH</a>
-        <a href="#section-my">MY</a>
-      </nav>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+      <li><a href="ai-tools-directory.html">AI Directory</a></li>
+      <li><a href="por-case-study.html" class="active">Case Study</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
     </div>
   </div>
-</header>
+</nav>
 
-<!-- ═══════════════════════════════════════════════════════
-     PRINT INSTRUCTIONS (screen only)
-     ═══════════════════════════════════════════════════════ -->
 <div class="print-note">
   <strong>To save as PDF:</strong> Open this file in Chrome → File → Print (or Ctrl+P / ⌘P) → Destination: <em>Save as PDF</em> → More settings → enable <em>Background graphics</em> → Save. The Thai and Burmese fonts will be embedded automatically.
 </div>
@@ -183,7 +153,7 @@
 <!-- ═══════════════════════════════════════════════════════
      SECTION 1 — ENGLISH
      ═══════════════════════════════════════════════════════ -->
-<div id="section-en" class="lang-section">
+<div id="section-en" class="lang-section" data-lang="en">
 
   <div class="cover">
     <div class="cover-inner">
@@ -528,7 +498,7 @@ List them clearly.</p>
 <!-- ═══════════════════════════════════════════════════════
      SECTION 2 — THAI
      ═══════════════════════════════════════════════════════ -->
-<div id="section-th" class="lang-section lang-th break-before">
+<div id="section-th" class="lang-section lang-th break-before" data-lang="th">
 
   <div class="cover">
     <div class="cover-inner">
@@ -824,7 +794,7 @@ List them clearly.</p>
 <!-- ═══════════════════════════════════════════════════════
      SECTION 3 — BURMESE
      ═══════════════════════════════════════════════════════ -->
-<div id="section-my" class="lang-section lang-my break-before">
+<div id="section-my" class="lang-section lang-my break-before" data-lang="my">
 
   <div class="cover">
     <div class="cover-inner">
@@ -994,7 +964,7 @@ List them clearly.</p>
         <div class="step-num">6</div>
         <div class="step-title-block">
           <h3>ဒေတာအစုကို အသုံးဝင်သောရလဒ်များသို့ ပြောင်းပါ</h3>
-          <span class="step-sub">ကိုင်တွယ်ဆောင်ရွက်ရေးကိရိယာများ — မှတ်တမ်းများသာမဟုတ်</h3>
+          <span class="step-sub">ကိုင်တွယ်ဆောင်ရွက်ရေးကိရိယာများ — မှတ်တမ်းများသာမဟုတ်</span>
         </div>
       </div>
       <p>ဖွဲ့စည်းပုံကျသောဒေတာအစုသည် ရလဒ်ပုံစံအားလုံး ဆင်းသက်လာသည့် ရင်းမြစ်ဖြစ်သည်။ ဒါတွေကို တပြိုင်နက်မဖန်တီးပါနှင့် — ဒေတာအစုကို ဦးစွာတည်ဆောက်ပြီးနောက် ၎င်းမှ ရလဒ်ဖန်တီးပါ။</p>
