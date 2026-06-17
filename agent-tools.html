@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="styles.css">
 <script src="i18n.js"></script>
 <style>
+  body{line-height:1.65;font-size:15px}
   /* COVER */
   .cover{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 60%,#15366b);color:#fff;padding:72px 24px 64px;min-height:480px;display:flex;align-items:center}
   .cover-inner{max-width:960px;margin:0 auto;width:100%}
@@ -30,13 +31,7 @@
   /* CONTENT */
   .lang-section{background:var(--bg)}
   main.content-area{max-width:960px;margin:0 auto;padding:40px 24px 56px}
-  section{margin-bottom:40px}
   h2.section-heading{color:var(--navy);font-size:1.3rem;margin-bottom:8px}
-  h3{color:var(--navy);font-size:1.05rem;margin:22px 0 8px}
-  p{margin-bottom:12px;max-width:860px;line-height:1.7}
-  ul,ol{margin:0 0 14px 22px;max-width:860px}
-  li{margin-bottom:5px;line-height:1.65}
-  .rule{border:none;border-top:1px solid var(--border);margin:32px 0}
 
   /* TOOL CARDS */
   .tool-grid{display:grid;gap:16px;margin:20px 0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
@@ -67,25 +62,9 @@
   .pc-pros h4{color:var(--green)}
   .pc-cons h4{color:var(--red)}
 
-  /* FOOTER */
-  .page-footer{background:var(--navy-dark);color:#8fa3c2;padding:24px}
-  .page-footer-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.8rem}
-  .page-footer strong{color:#fff}
-
   /* PRINT INSTRUCTIONS */
   .print-note{background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px 18px;margin:16px auto;font-size:.85rem;color:#78350f;max-width:920px}
   .print-note strong{color:#92400e}
-
-  /* THAI */
-  .lang-th{font-family:'Noto Sans Thai',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}
-  .lang-th .cover h1{line-height:1.4}
-  .lang-th th,.lang-th td{line-height:1.7}
-
-  /* BURMESE */
-  .lang-my{font-family:'Noto Sans Myanmar',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.95}
-  .lang-my .cover h1{line-height:1.55}
-  .lang-my th,.lang-my td{line-height:1.85}
-  .lang-my p,.lang-my li{line-height:1.95}
 
   /* PRINT */
   @media print{
@@ -102,7 +81,6 @@
 
   @media(max-width:640px){
     .cover h1{font-size:1.45rem}
-    .header-inner{padding:0 14px}
   }
 </style>
 </head>
@@ -120,6 +98,7 @@
       <li><a href="ai-toolkit.html">AI Toolkit</a></li>
       <li><a href="ai-tools-directory.html">AI Directory</a></li>
       <li><a href="por-case-study.html">Case Study</a></li>
+      <li><a href="osint-usage.html">Usage of OSINT</a></li>
     </ul>
     <div class="lang-switch">
       <button data-setlang="en">EN</button>
@@ -133,7 +112,7 @@
   <strong>To save as PDF:</strong> Open in Chrome → File → Print (Ctrl+P / ⌘P) → Destination: <em>Save as PDF</em> → More settings → enable <em>Background graphics</em> → Save.
 </div>
 
-<!-- ═══════════════ ENGLISH ═══════════════ -->
+<!-- ================= ENGLISH ================= -->
 <div class="lang-section" data-lang="en">
 
   <div class="cover">
@@ -516,8 +495,7 @@
 
 </div><!-- /section-en -->
 
-
-<!-- ═══════════════ THAI ═══════════════ -->
+<!-- ================= THAI ================= -->
 <div class="lang-section lang-th break-before" data-lang="th">
 
   <div class="cover">
@@ -704,7 +682,7 @@
 </div><!-- /section-th -->
 
 
-<!-- ═══════════════ BURMESE ═══════════════ -->
+<!-- ================= BURMESE ================= -->
 <div class="lang-section lang-my break-before" data-lang="my">
 
   <div class="cover">

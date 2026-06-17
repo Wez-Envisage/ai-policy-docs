@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usage of OSINT — ENVISAGE WORLDWIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">ENVISAGE <span>WORLDWIDE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="claude.html">Claude &amp; Cowork</a></li>
+      <li><a href="token-efficiency.html">Token Efficiency</a></li>
+      <li><a href="data-security.html">Data Security</a></li>
+      <li><a href="verification.html">Verification</a></li>
+      <li><a href="ai-toolkit.html">AI Toolkit</a></li>
+      <li><a href="ai-tools-directory.html">AI Directory</a></li>
+      <li><a href="por-case-study.html">Case Study</a></li>
+      <li><a href="osint-usage.html" class="active">Usage of OSINT</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button data-setlang="en">EN</button>
+      <button data-setlang="th">ไทย</button>
+      <button data-setlang="my">မြန်မာ</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= ENGLISH ================= -->
+<div class="lang-section" data-lang="en">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">OSINT Policy · All Staff</div>
+    <h1>AI Usage in OSINT Research</h1>
+    <p class="lede">AI tools may support ENVISAGE open-source research workflows — but what you can send, and to which tool, depends on whether the material is raw public-source OSINT or ENVISAGE-enriched analytical work product.</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>1. Purpose</h2>
+  <p>AI tools may be used to support ENVISAGE open-source research workflows, including translation, summarization, entity extraction, data cleaning, formatting, mapping preparation, coding support, and first-pass structuring of public-source material.</p>
+  <p>This section clarifies that raw public-source OSINT inputs and ENVISAGE analytical work product should not be treated the same way. The goal is to keep the policy practical for normal OSINT work while preserving strict protection for client information, source identities, field staff, partners, and sensitive internal analysis.</p>
+</section>
+
+<section>
+  <h2>2. Core Principle</h2>
+  <p>Raw public-source OSINT should generally remain <strong>Tier 1</strong> when used on its own. Public-source material should be reclassified as Tier 2 or Tier 3 only when ENVISAGE adds internal analysis, client context, field verification, source information, priority targeting, risk classification, or non-public relationship/network-mapping judgments.</p>
+  <div class="grid cols-2">
+    <div class="card"><span class="badge green">Tier 1</span><h4>Raw Public OSINT Input</h4><p>Used on its own, without ENVISAGE context added. Generally permitted for AI tools.</p></div>
+    <div class="card"><span class="badge amber">Tier 2 / Tier 3</span><h4>ENVISAGE-Enriched Work Product</h4><p>Public-source material combined with internal analysis, client framing, source data, or field verification. Strict controls apply.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>3. OSINT Tier Classification</h2>
+  <table>
+    <tr><th>Tier</th><th>Definition</th><th>Examples</th><th>AI Use</th></tr>
+    <tr>
+      <td><span class="badge green">Tier 1</span><br>Raw Public OSINT</td>
+      <td>Public-source material used on its own, without ENVISAGE internal or client-sensitive context.</td>
+      <td>News articles; official notices; sanctions pages; public court or law-enforcement releases; public company registry records; public images; public biographies; public social media posts; public reports; public information on groups such as UWSA, MNDAA, NDAA, and similar actors.</td>
+      <td>Permitted for translation, summarization, extraction, formatting, data cleaning, mapping preparation, coding support, neutral profile drafting, and first-pass structuring.</td>
+    </tr>
+    <tr>
+      <td><span class="badge amber">Tier 2</span><br>Internal OSINT Work Product</td>
+      <td>Public-source material with ENVISAGE internal structure, methodology, or non-sensitive analytical framing, but no client-sensitive, source-sensitive, or field-sensitive details.</td>
+      <td>Internal research templates; anonymized methodology notes; sanitized entity tables; sanitized relationship structures; draft analytical frameworks with identifying details removed; schema designs without sensitive data rows.</td>
+      <td>Use only with approved tools. Sanitize where possible. Avoid client names, source identities, field details, and sensitive internal judgments.</td>
+    </tr>
+    <tr>
+      <td><span class="badge red">Tier 3</span><br>Restricted OSINT / Sensitive Intelligence Work Product</td>
+      <td>Public-source material combined with sensitive ENVISAGE, client, source, field, partner, or operational context.</td>
+      <td>Client deliverables; draft deliverables; client-specific framing; named sources or field staff; partner identities in sensitive regions; field verification notes; non-public interviews or field observations; priority target lists; internal risk classifications; person-of-interest databases; sensitive network maps; combined datasets revealing what ENVISAGE is tracking or investigating.</td>
+      <td>Must remain within approved secure workflows. Do not paste into free, public, or non-approved AI tools.</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>4. Permitted AI Uses for Tier 1 Public OSINT</h2>
+  <p>AI tools may be used with Tier 1 public OSINT when the material is genuinely public and no internal or client-sensitive context is added.</p>
+  <p>Permitted tasks include translation, summarization, extraction of names, aliases, dates, roles, organizations and locations, formatting, text cleaning, conversion into tables, preparation of public coordinates or locations for mapping, neutral public-source profile drafting, generic coding support, and first-pass structuring of public-source information.</p>
+</section>
+
+<section>
+  <h2>5. What Makes Public OSINT More Sensitive</h2>
+  <p>Public-source material becomes more sensitive when ENVISAGE adds internal value, operational relevance, or confidential context.</p>
+  <p>Triggers for reclassification include client context, draft deliverable framing, source identities, field verification, partner information, field staff information, confidential project strategy, internal analyst notes, priority targeting, risk classification, non-public relationship assessments, or combined datasets that reveal ENVISAGE research priorities.</p>
+</section>
+
+<section>
+  <h2>6. Tool Routing Guidance</h2>
+  <ul>
+    <li>Free or external tools should be <strong>limited to Tier 1 public-source material only</strong>.</li>
+    <li>Approved internal tools should be used for Tier 2 material, with sanitization wherever practical.</li>
+    <li>Tier 3 material must remain inside approved secure workflows and must not be pasted into free, public, or non-approved AI tools.</li>
+    <li>No AI tool should be connected to ENVISAGE email accounts. Broad Drive access should not be used. Folder or file access should follow the minimum-necessary-access rule.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. Prompting Rules for OSINT</h2>
+  <ul>
+    <li>Researchers should send only the <strong>minimum necessary content</strong> to AI tools.</li>
+    <li>Prompts to non-approved tools must not include client names, source identities, field staff details, confidential project strategy, internal targeting logic, sensitive relationship assessments, or non-public verification notes.</li>
+    <li>When a task can be completed using a public excerpt rather than a full file, use the excerpt.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. Verification Requirement</h2>
+  <div class="callout warn">
+    <p><strong>AI output is not evidence.</strong> Any factual claim, translation, entity match, relationship, location, or analytical conclusion produced by AI must be checked against the original source before being used in an ENVISAGE deliverable. AI may assist with extraction and structuring, but the researcher remains responsible for verification, source preservation, and final judgment.</p>
+  </div>
+</section>
+
+<section>
+  <h2>9. Practical Test Before Using AI</h2>
+  <p>Before sending material to an AI tool, researchers should ask:</p>
+  <div class="callout info">
+    <p><em>"If this exact prompt appeared publicly tomorrow, would it reveal ENVISAGE client work, source information, field activity, partner relationships, internal priorities, or analytical judgments?"</em></p>
+  </div>
+  <ul>
+    <li>If <strong>yes</strong> — do not send it to non-approved tools. Sanitize it or use the approved secure workflow.</li>
+    <li>If <strong>no</strong>, and the material is genuinely public-source OSINT — it may generally be treated as Tier 1.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>10. Safe and Unsafe Prompt Examples</h2>
+  <table>
+    <tr><th>Scenario</th><th>Safer Prompt</th><th>Unsafe Prompt</th></tr>
+    <tr>
+      <td>Public article extraction</td>
+      <td>Translate this public article and extract names, organizations, locations, and dates into a table.</td>
+      <td>Compare this public article with our client investigation notes and identify which people should be prioritized.</td>
+    </tr>
+    <tr>
+      <td>Public biography cleanup</td>
+      <td>Clean this public biography into a neutral profile format and preserve all source-attributed facts.</td>
+      <td>Add our internal risk view and explain why this person matters to the client.</td>
+    </tr>
+    <tr>
+      <td>Mapping preparation</td>
+      <td>Convert these public coordinates and place names into a Google My Maps-ready table.</td>
+      <td>Combine these public locations with our field verification notes and source comments in an external AI tool.</td>
+    </tr>
+    <tr>
+      <td>Coding support</td>
+      <td>Write a generic script to clean a public CSV with columns for name, location, date, and source URL.</td>
+      <td>Write a script using our real client dataset rows and internal identifiers.</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>11. Summary Policy Language</h2>
+  <div class="callout info">
+    <p>Public-source OSINT may be used with AI tools when the material is genuinely public and no ENVISAGE internal, client-sensitive, source-sensitive, or field-sensitive context is added. Raw public OSINT inputs generally remain Tier 1 when used on their own. They should be reclassified as Tier 2 or Tier 3 when combined with ENVISAGE internal analysis, client framing, field verification, source identities, partner information, priority targeting, risk classification, or non-public relationship/network-mapping judgments. AI outputs must be verified against original sources before being used in deliverables.</p>
+  </div>
+</section>
+
+<section>
+  <h2>12. Notes for Review</h2>
+  <ul>
+    <li>This policy is designed to make OSINT usage more open for public-source material while preserving strict controls around sensitive work product.</li>
+    <li>The core distinction is not whether a source names people or organizations, but whether the prompt includes <strong>ENVISAGE-added sensitivity</strong>.</li>
+    <li>This section can be read alongside the main Data Security and Tool Routing pages of this policy.</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="por-case-study.html">← Case Study</a>
+  <a href="index.html">Back to Home →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= THAI ================= -->
+<div class="lang-section" data-lang="th">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">นโยบาย OSINT · บุคลากรทุกคน</div>
+    <h1>ร่างนโยบายการใช้ AI สำหรับงาน OSINT</h1>
+    <p class="lede">AI สามารถใช้สนับสนุน workflow งานวิจัยจากแหล่งเปิดของ ENVISAGE ได้ — แต่สิ่งที่ส่งได้และเครื่องมือที่ใช้ได้ขึ้นอยู่กับว่าข้อมูลนั้นเป็น raw public-source OSINT หรืองานวิเคราะห์ที่ ENVISAGE เพิ่มคุณค่าเข้าไปแล้ว</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>1. วัตถุประสงค์</h2>
+  <p>เครื่องมือ AI สามารถใช้เพื่อสนับสนุน workflow งานวิจัยจากแหล่งเปิดของ ENVISAGE ได้ เช่น การแปล การสรุป การดึงข้อมูลบุคคล/องค์กร/สถานที่ การทำความสะอาดข้อมูล การจัดรูปแบบ การเตรียมข้อมูลสำหรับแผนที่ การช่วยเขียนโค้ด และการจัดโครงสร้างข้อมูลสาธารณะในขั้นแรก</p>
+  <p>หัวข้อนี้มีเป้าหมายเพื่อชี้แจงว่า "ข้อมูล OSINT ดิบจากแหล่งเปิด" และ "งานวิเคราะห์ที่ ENVISAGE สร้างหรือเพิ่มคุณค่าเข้าไป" ไม่ควรถูกจัดการเหมือนกันทั้งหมด นโยบายควรใช้งานได้จริงสำหรับงาน OSINT ปกติ ขณะเดียวกันยังคงปกป้องข้อมูลลูกค้า ตัวตนของแหล่งข่าว เจ้าหน้าที่ภาคสนาม พันธมิตร และการวิเคราะห์ภายในที่อ่อนไหวอย่างเข้มงวด</p>
+</section>
+
+<section>
+  <h2>2. หลักการหลัก</h2>
+  <p>ข้อมูล OSINT ดิบจากแหล่งเปิดควรถูกจัดเป็น Tier 1 เมื่อใช้ตามลำพัง และยังไม่มีการเพิ่มบริบทภายในของ ENVISAGE เข้าไป</p>
+  <p>ข้อมูลจากแหล่งเปิดจะมีความอ่อนไหวมากขึ้นเมื่อ ENVISAGE เพิ่มการวิเคราะห์ภายใน บริบทของลูกค้า การตรวจสอบภาคสนาม ข้อมูลแหล่งข่าว การจัดลำดับความสำคัญของเป้าหมาย การจัดชั้นความเสี่ยง หรือการวิเคราะห์ความสัมพันธ์/เครือข่ายที่ไม่ใช่ข้อมูลสาธารณะ</p>
+  <table>
+    <tr><th>ประเภทข้อมูล</th><th>การจัดชั้นโดยทั่วไป</th></tr>
+    <tr><td>ข้อมูล OSINT ดิบจากแหล่งเปิด</td><td><span class="badge green">Tier 1</span> เมื่อใช้ตามลำพัง</td></tr>
+    <tr><td>งานวิเคราะห์ที่ ENVISAGE เพิ่มคุณค่า/บริบทเข้าไป</td><td><span class="badge amber">Tier 2</span> หรือ <span class="badge red">Tier 3</span> ตามความอ่อนไหวของบริบทที่เพิ่มเข้ามา</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>3. Tier 1 — ข้อมูล OSINT ดิบจากแหล่งเปิด</h2>
+  <p>ข้อมูลต่อไปนี้สามารถจัดเป็น Tier 1 ได้โดยทั่วไป เมื่อใช้ตามลำพังและไม่ได้รวมกับบริบทภายในหรือข้อมูลอ่อนไหวของ ENVISAGE</p>
+  <ul>
+    <li>ข่าว บทความ หรือรายงานที่เผยแพร่สาธารณะ</li>
+    <li>ประกาศ แถลงการณ์ หรือเอกสารทางการที่เปิดเผยต่อสาธารณะ</li>
+    <li>หน้า sanctions หรือรายชื่อคว่ำบาตรที่เผยแพร่โดยหน่วยงานทางการ</li>
+    <li>เอกสารศาลหรือประกาศจากหน่วยงานบังคับใช้กฎหมายที่เปิดเผยต่อสาธารณะ</li>
+    <li>ข้อมูลทะเบียนบริษัทที่เข้าถึงได้จากแหล่งสาธารณะ</li>
+    <li>รูปภาพสาธารณะ</li>
+    <li>ประวัติบุคคลหรือกลุ่มที่เผยแพร่สาธารณะ</li>
+    <li>โพสต์หรือเนื้อหาสาธารณะบน social media</li>
+    <li>รายงานสาธารณะจากองค์กรหรือสื่อที่ตรวจสอบได้</li>
+    <li>ข้อมูลสาธารณะเกี่ยวกับกลุ่มติดอาวุธ กลุ่มการเมือง เครือข่ายธุรกิจ หรือผู้มีบทบาทอื่น ๆ เช่น UWSA, MNDAA, NDAA และกลุ่มที่มีลักษณะคล้ายกัน</li>
+  </ul>
+  <h3>งานที่ AI สามารถช่วยได้กับ Tier 1</h3>
+  <ul>
+    <li>แปลเอกสารหรือบทความสาธารณะ</li>
+    <li>สรุปเนื้อหาจากแหล่งเปิด</li>
+    <li>ดึงชื่อบุคคล นามแฝง วันที่ บทบาท องค์กร และสถานที่</li>
+    <li>ทำความสะอาดข้อความหรือจัดรูปแบบข้อมูลจากแหล่งเปิด</li>
+    <li>แปลงข้อมูลสาธารณะเป็นตาราง</li>
+    <li>เตรียมพิกัดหรือข้อมูลสถานที่สำหรับงานแผนที่</li>
+    <li>ร่าง profile จากข้อมูลสาธารณะในลักษณะเป็นกลาง</li>
+    <li>ช่วยเขียนโค้ดหรือสคริปต์สำหรับข้อมูลสาธารณะหรือข้อมูลตัวอย่าง</li>
+    <li>จัดโครงสร้างข้อมูลสาธารณะในขั้นแรกเพื่อให้ตรวจสอบต่อได้</li>
+  </ul>
+</section>
+
+<section>
+  <h2>4. Tier 2 — งาน OSINT ภายในที่ยังไม่อ่อนไหวสูง</h2>
+  <p>ข้อมูล OSINT จากแหล่งเปิดควรถูกจัดเป็น Tier 2 เมื่อ ENVISAGE เพิ่มโครงสร้าง วิธีการ หรือกรอบการวิเคราะห์ภายในเข้าไป แต่ยังไม่มีข้อมูลลูกค้า แหล่งข่าว เจ้าหน้าที่ภาคสนาม หรือข้อมูลที่อ่อนไหวสูง</p>
+  <p>ตัวอย่าง Tier 2 อาจรวมถึง</p>
+  <ul>
+    <li>template งานวิจัยภายใน</li>
+    <li>methodology notes ที่ถูกทำให้ไม่ระบุตัวตน</li>
+    <li>entity table ที่ถูก sanitize แล้ว</li>
+    <li>relationship structure ที่ถูก sanitize แล้ว</li>
+    <li>draft analytical framework ที่ลบหรือทำให้ข้อมูลระบุตัวตนไม่ชัดเจนแล้ว</li>
+    <li>schema design ที่ไม่มีแถวข้อมูลจริงหรือข้อมูลอ่อนไหว</li>
+  </ul>
+  <p>Tier 2 ควรใช้เฉพาะกับเครื่องมือที่ได้รับอนุมัติ และควร sanitize ข้อมูลก่อนส่งเข้าเครื่องมือ AI เท่าที่ทำได้</p>
+</section>
+
+<section>
+  <h2>5. Tier 3 — OSINT ที่ถูกยกระดับเป็นงานข่าวกรอง/วิเคราะห์อ่อนไหว</h2>
+  <p>ข้อมูลจากแหล่งเปิดควรถูกจัดเป็น Tier 3 เมื่อถูกนำไปรวมกับบริบทที่อ่อนไหวของ ENVISAGE ลูกค้า แหล่งข่าว เจ้าหน้าที่ภาคสนาม พันธมิตร หรือบริบทด้านปฏิบัติการ</p>
+  <p>ตัวอย่าง Tier 3 รวมถึง</p>
+  <ul>
+    <li>deliverable หรือ draft deliverable สำหรับลูกค้า</li>
+    <li>การ framing ที่เกี่ยวข้องกับลูกค้าโดยเฉพาะ</li>
+    <li>ชื่อหรือตัวตนของแหล่งข่าวหรือเจ้าหน้าที่ภาคสนาม</li>
+    <li>ตัวตนของพันธมิตรในพื้นที่อ่อนไหว</li>
+    <li>บันทึกการตรวจสอบภาคสนาม</li>
+    <li>บทสัมภาษณ์หรือข้อสังเกตภาคสนามที่ไม่เปิดเผยสาธารณะ</li>
+    <li>รายชื่อเป้าหมายหรือ priority target list ภายใน</li>
+    <li>risk classification ที่ ENVISAGE จัดทำขึ้นเอง</li>
+    <li>person-of-interest database ที่ ENVISAGE สร้างหรือเพิ่มข้อมูลเข้าไป</li>
+    <li>relationship map หรือ network map ที่เผยให้เห็น judgment ภายในของ ENVISAGE</li>
+    <li>ชุดข้อมูลที่รวมหลายแหล่งจนเผยให้เห็นว่า ENVISAGE กำลังติดตาม ตรวจสอบ หรือเตรียมงานเรื่องใดให้ลูกค้า</li>
+  </ul>
+  <div class="callout warn">
+    <p>Tier 3 ต้องอยู่ภายใน workflow ที่ปลอดภัยและได้รับอนุมัติเท่านั้น และ<strong>ห้ามคัดลอกหรือวางลงใน AI tools แบบสาธารณะ ฟรี หรือไม่ได้รับอนุมัติ</strong></p>
+  </div>
+</section>
+
+<section>
+  <h2>6. แนวทางเลือกใช้เครื่องมือ AI</h2>
+  <ul>
+    <li>Free หรือ external tools ควรจำกัดไว้เฉพาะ <strong>Tier 1 public-source material เท่านั้น</strong></li>
+    <li>Tier 2 ควรใช้เฉพาะกับเครื่องมือหรือ workflow ที่ได้รับอนุมัติ และควร sanitize ข้อมูลก่อนใช้งาน</li>
+    <li>Tier 3 ต้องอยู่ใน secure workflow ที่ได้รับอนุมัติ และไม่ควรถูกนำไปใช้กับ public chatbots หรือเครื่องมือที่ไม่ได้รับอนุมัติ</li>
+    <li>ห้ามเชื่อมต่อ AI tools กับ email หรือ broad Drive access ที่อาจเปิดเผยข้อมูลลูกค้า แหล่งข่าว หรือเอกสารภายในเกินความจำเป็น</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. กฎการเขียน Prompt สำหรับ OSINT</h2>
+  <p>นักวิจัยควรส่งเฉพาะข้อมูลเท่าที่จำเป็นต่อการทำงานของ AI และหลีกเลี่ยงการใส่บริบทภายในที่ไม่จำเป็น</p>
+  <table>
+    <tr><th>ตัวอย่างที่ปลอดภัยกว่า</th><th>ตัวอย่างที่ไม่ควรใช้กับเครื่องมือที่ไม่ได้รับอนุมัติ</th></tr>
+    <tr><td>"แปลบทความสาธารณะนี้ และดึงชื่อองค์กร สถานที่ และวันที่ออกมาเป็นตาราง"</td><td>"เปรียบเทียบบทความนี้กับ notes การสืบสวนของลูกค้า และบอกว่าควร prioritize ใคร"</td></tr>
+    <tr><td>"จัดรูปแบบข้อมูลสาธารณะนี้ให้เป็น CSV สำหรับ mapping"</td><td>"รวมข้อมูลนี้กับ field verification และ internal source notes ของเรา"</td></tr>
+  </table>
+  <p>นักวิจัยต้องไม่ใส่ชื่อลูกค้า ตัวตนของแหล่งข่าว รายละเอียดเจ้าหน้าที่ภาคสนาม กลยุทธ์โครงการที่เป็นความลับ internal targeting logic หรือ non-public relationship assessment ลงใน prompt ที่ส่งให้เครื่องมือซึ่งไม่ได้รับอนุมัติ</p>
+</section>
+
+<section>
+  <h2>8. กฎการตรวจสอบผลลัพธ์</h2>
+  <div class="callout warn">
+    <p><strong>ผลลัพธ์จาก AI ไม่ใช่หลักฐาน</strong> ข้อเท็จจริง การแปล การจับคู่ตัวตน ความสัมพันธ์ พิกัด สถานที่ หรือข้อสรุปเชิงวิเคราะห์ใด ๆ ที่ AI สร้างขึ้น ต้องถูกตรวจสอบกับแหล่งข้อมูลต้นฉบับก่อนนำไปใช้ใน deliverable ของ ENVISAGE AI สามารถช่วย extraction และ structuring ได้ แต่นักวิจัยยังคงเป็นผู้รับผิดชอบการตรวจสอบ การเก็บแหล่งที่มา และ judgment ขั้นสุดท้าย</p>
+  </div>
+</section>
+
+<section>
+  <h2>9. Practical Test ก่อนใช้ AI</h2>
+  <p>ก่อนส่งข้อมูลเข้า AI tool นักวิจัยควรถามตัวเองว่า:</p>
+  <div class="callout info">
+    <p><em>"ถ้า prompt นี้ถูกเผยแพร่ต่อสาธารณะในวันพรุ่งนี้ จะเปิดเผยงานของลูกค้า ข้อมูลแหล่งข่าว กิจกรรมภาคสนาม ความสัมพันธ์กับพันธมิตร ลำดับความสำคัญภายใน หรือ judgment เชิงวิเคราะห์ของ ENVISAGE หรือไม่?"</em></p>
+  </div>
+  <ul>
+    <li>ถ้าคำตอบคือ <strong>"ใช่"</strong> ไม่ควรส่งข้อมูลนั้นเข้าเครื่องมือที่ไม่ได้รับอนุมัติ ควร sanitize ก่อน หรือย้ายไปใช้ secure workflow ที่ได้รับอนุมัติ</li>
+    <li>ถ้าคำตอบคือ <strong>"ไม่ใช่"</strong> และข้อมูลนั้นเป็น public-source OSINT จริง โดยทั่วไปสามารถจัดเป็น Tier 1 ได้</li>
+  </ul>
+</section>
+
+<section>
+  <h2>10. สรุปแนวนโยบาย</h2>
+  <div class="callout info">
+    <p>นโยบาย OSINT ควรเปิดให้ใช้ AI กับข้อมูลสาธารณะได้อย่างเหมาะสม แต่ต้องยังคงควบคุมข้อมูลที่ ENVISAGE เพิ่มคุณค่า วิเคราะห์ เชื่อมโยง หรือผูกกับบริบทของลูกค้า แหล่งข่าว และการทำงานภายใน</p>
+    <p>หลักที่ควรใช้คือ: <strong>เปิดสำหรับ raw public-source OSINT แต่เข้มงวดสำหรับ ENVISAGE-enriched intelligence work product</strong></p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="por-case-study.html">← กรณีศึกษา</a>
+  <a href="index.html">กลับหน้าหลัก →</a>
+</div>
+
+</main>
+</div>
+
+<!-- ================= BURMESE ================= -->
+<div class="lang-section" data-lang="my">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">OSINT နိတိမူ · ဝန်ထမ်းအားလုံး</div>
+    <h1>OSINT သုတေသနတွင် AI အသုံးပြုမှု နိတိမူ</h1>
+    <p class="lede">AI ကိရိယာများသည် ENVISAGE ၏ open-source သုတေသန workflow များကို ထောက်ကူပေးနိုင်သည် — သို့သော် ဘာပို့နိုင်သည်နှင့် ဘယ်ကိရိယာသုံးနိုင်သည်ဆိုသည်မှာ ဒေတာသည် raw public-source OSINT လား သို့မဟုတ် ENVISAGE မှ ထပ်ပေါင်းသုံးသပ်ထားသော analytical work product လားဆိုသည်ပေါ် မူတည်သည်။</p>
+  </div>
+</div>
+
+<main>
+
+<section>
+  <h2>၁။ ရည်ရွယ်ချက်</h2>
+  <p>AI ကိရိယာများကို ENVISAGE ၏ open-source သုတေသန workflow များတွင် ထောက်ကူပေးရန် အသုံးပြုနိုင်သည် — ဘာသာပြန်ခြင်း၊ အကျဉ်းချုပ်ဆွဲခြင်း၊ entity ထုတ်ယူခြင်း (နာမည်၊ နာမည်ကင်းနာ၊ ရက်စွဲ၊ ရာထူး၊ အဖွဲ့အစည်း၊ တည်နေရာ)၊ ဒေတာသန့်ရှင်းစေခြင်း၊ ပုံစံချပေးခြင်း၊ မြေပုံပြင်ဆင်ခြင်း၊ ကုဒ်ရေးကူညီခြင်း နှင့် အများပြည်သူရင်းမြစ်ဒေတာကို ဦးစားပေး ဖွဲ့စည်းပြပေးခြင်း တို့ပါဝင်သည်။</p>
+  <p>ဤအပိုင်းသည် raw public-source OSINT input များနှင့် ENVISAGE ၏ ခွဲခြမ်းစိတ်ဖြာထားသော ရလဒ်များကို တူညီစွာ ကိုင်တွယ်ခြင်း မသင့်ကြောင်း ရှင်းပြသည်။ ပုံမှန် OSINT လုပ်ငန်းများအတွက် လက်တွေ့ကျသော်လည်း ဖောက်သည်အချက်အလက်၊ သတင်းရင်းမြစ်ပုဂ္ဂိုလ်တည်ရာ၊ လယ်ကွင်းဝန်ထမ်းများ၊ မိတ်ဖက်များ နှင့် အတွင်းပိုင်း ခွဲခြမ်းစိတ်ဖြာချက်များကို တင်းကျပ်စွာ ကာကွယ်ထားသည်။</p>
+</section>
+
+<section>
+  <h2>၂။ အခြေခံမူ</h2>
+  <p>Raw public-source OSINT ကို တစ်ကိုယ်တည်းသုံးသောအခါ ယေဘုယျ <strong>Tier 1</strong> ဖြစ်သင့်သည်။ ENVISAGE မှ အတွင်းပိုင်းခွဲခြမ်းမှု၊ ဖောက်သည်ဆက်စပ်မှု၊ လယ်ကွင်းအတည်ပြုချက်၊ ရင်းမြစ်အချက်အလက်၊ ဦးစားပေးပစ်မှတ်ချမှတ်ခြင်း၊ အန္တရာယ်သတ်မှတ်ခြင်း သို့မဟုတ် အများမသိသော ဆက်ဆံရေး/ကွန်ယက် ဆုံးဖြတ်ချက်များ ထပ်ပေါင်းသွင်းမှသာ Tier 2 သို့မဟုတ် Tier 3 ဖြစ်သွားသည်။</p>
+  <div class="grid cols-2">
+    <div class="card"><span class="badge green">Tier 1</span><h4>Raw Public OSINT Input</h4><p>တစ်ကိုယ်တည်းသုံး၊ ENVISAGE context မပေါင်းဘဲ။ AI ကိရိယာများနှင့် ယေဘုယျ ခွင့်ပြုသည်။</p></div>
+    <div class="card"><span class="badge amber">Tier 2 / Tier 3</span><h4>ENVISAGE မှ ထပ်ပေါင်းသုံးသပ်သော Work Product</h4><p>အတွင်းပိုင်းခွဲခြမ်းမှု၊ ဖောက်သည် framing၊ ရင်းမြစ်ဒေတာ သို့မဟုတ် လယ်ကွင်းအတည်ပြုချက်နှင့် ပေါင်းထားသော အများပြည်သူရင်းမြစ်ဒေတာ။ တင်းကျပ်သောထိန်းချုပ်မှုများ သက်ရောက်သည်။</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>၃။ OSINT Tier သတ်မှတ်ချက်</h2>
+  <table>
+    <tr><th>Tier</th><th>အဓိပ္ပာယ်ဖွင့်ဆိုချက်</th><th>ဥပမာများ</th><th>AI အသုံးပြုမှု</th></tr>
+    <tr>
+      <td><span class="badge green">Tier 1</span><br>Raw Public OSINT</td>
+      <td>ENVISAGE အတွင်းပိုင်း သို့မဟုတ် ဖောက်သည်ဆက်စပ် context မပါဘဲ တစ်ကိုယ်တည်းသုံးသော အများပြည်သူရင်းမြစ်ဒေတာ</td>
+      <td>သတင်းဆောင်းပါးများ; တရားဝင်ကြေညာချက်များ; ပိတ်ဆို့မှုစာရင်းများ; ရုံးသို့ဆင်ခြင်ရပ်ဆိုင်ရာ ကြေညာချက်များ; ကုမ္ပဏီမှတ်ပုံတင်မှတ်တမ်း; အများပြည်သူ ကိုယ်ရေးကိုယ်တာ မှတ်တမ်း; social media အများပြည်သူပို့စ်; UWSA, MNDAA, NDAA ကဲ့သို့သော အဖွဲ့များနှင့်ပတ်သက်သော အများပြည်သူ အချက်အလက်</td>
+      <td>ဘာသာပြန်ခြင်း၊ အကျဉ်းချုပ်ဆွဲခြင်း၊ ထုတ်ယူခြင်း၊ ပုံစံချခြင်း၊ ဒေတာသန့်ရှင်းစေခြင်း၊ မြေပုံပြင်ဆင်ခြင်း၊ ကုဒ်ကူညီခြင်း၊ profile မူကြမ်းဆွဲခြင်း နှင့် ဦးစားပေးဖွဲ့စည်းပြခြင်း — ခွင့်ပြုသည်</td>
+    </tr>
+    <tr>
+      <td><span class="badge amber">Tier 2</span><br>Internal OSINT Work Product</td>
+      <td>ENVISAGE ၏ အတွင်းပိုင်းဖွဲ့စည်းမှု၊ နည်းနာ သို့မဟုတ် ဆန်းစစ်ဘောင် ပါဝင်သော်လည်း ဖောက်သည်၊ ရင်းမြစ် သို့မဟုတ် လယ်ကွင်းဆက်စပ်အသေးစိတ် မပါသော အများပြည်သူရင်းမြစ်ဒေတာ</td>
+      <td>အတွင်းပိုင်းသုတေသန template များ; အမည်မဖော်သော နည်းနာမှတ်စုများ; sanitize လုပ်ထားသော entity ဇယားများ; ဖော်ထုတ်ရေးအသေးစိတ် ဖယ်ရှားထားသော draft analytical framework များ; အချက်အလက်ဇယားနေရာ မပါသော schema ဒီဇိုင်းများ</td>
+      <td>ခွင့်ပြုထားသော ကိရိယာများနှင့်သာ သုံးပါ။ Sanitize လုပ်ပါ။ ဖောက်သည်နာမည်၊ ရင်းမြစ်ပုဂ္ဂိုလ်တည်ရာ နှင့် အတွင်းပိုင်း ဆုံးဖြတ်ချက်များ ရှောင်ပါ</td>
+    </tr>
+    <tr>
+      <td><span class="badge red">Tier 3</span><br>Restricted OSINT / Sensitive Intelligence Work Product</td>
+      <td>ဖောက်သည်၊ ရင်းမြစ်၊ လယ်ကွင်း၊ မိတ်ဖက် သို့မဟုတ် စစ်ဆင်ရေးဆက်စပ် context နှင့် ပေါင်းစပ်ထားသော အများပြည်သူရင်းမြစ်ဒေတာ</td>
+      <td>ဖောက်သည်ပေးအပ်စာတမ်းများ; draft deliverable များ; အမည်ဖော်ထားသော ရင်းမြစ်များ သို့မဟုတ် လယ်ကွင်းဝန်ထမ်းများ; လယ်ကွင်းအတည်ပြုမှတ်စုများ; ဦးစားပေးပစ်မှတ်စာရင်းများ; person-of-interest database များ; ENVISAGE မှ ဘာစစ်ဆေးနေသည်ကို ဖော်ပြသော ပေါင်းစပ်ဒေတာစုများ</td>
+      <td>ခွင့်ပြုထားသော လုံခြုံ workflow ထဲတွင်သာ ထိန်းသိမ်းရမည်။ အများပြည်သူ၊ အခမဲ့ သို့မဟုတ် ခွင့်မပြုထားသော AI ကိရိယာများထဲ ကူးထည့်ခြင်း မပြုရ</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>၄။ Tier 1 Public OSINT အတွက် ခွင့်ပြုသော AI အသုံးပြုမှုများ</h2>
+  <p>ဒေတာသည် တကယ်ပင် အများပြည်သူနေပြီး အတွင်းပိုင်း သို့မဟုတ် ဖောက်သည်ဆက်စပ် context မထည့်မှီ Tier 1 public OSINT နှင့် AI ကိရိယာများ အသုံးပြုနိုင်သည်။</p>
+  <p>ခွင့်ပြုသော လုပ်ငန်းများ — ဘာသာပြန်ခြင်း၊ အကျဉ်းချုပ်ဆွဲခြင်း၊ နာမည်/နာမည်ကင်းနာ/ရက်စွဲ/ရာထူး/အဖွဲ့အစည်း/တည်နေရာ ထုတ်ယူခြင်း၊ ပုံစံချပေးခြင်း၊ စာသားသန့်ရှင်းစေခြင်း၊ ဇယားပြောင်းလဲပေးခြင်း၊ မြေပုံအတွက် အများပြည်သူ ကိုဩဒိနိတ် ပြင်ဆင်ပေးခြင်း၊ profile မူကြမ်းနိဒ္ဒါနဆွဲခြင်း၊ generic ကုဒ် ထောက်ပံ့ကူညီခြင်း နှင့် အများပြည်သူရင်းမြစ် ဒေတာကို ဦးစားပေးဖွဲ့စည်းပြခြင်း</p>
+</section>
+
+<section>
+  <h2>၅။ Public OSINT ကို ပိုမိုအရေးကြီးစေသည့် အချက်များ</h2>
+  <p>ENVISAGE မှ အတွင်းပိုင်းတန်ဖိုး၊ စစ်ဆင်ရေးဆက်ဆံမှု သို့မဟုတ် လျှို့ဝှက်ထိန်းသိမ်း context ထပ်ပေါင်းလိုက်သောအခါ အများပြည်သူရင်းမြစ်ဒေတာသည် ပိုမိုအရေးကြီးလာသည်။</p>
+  <p>Tier ပြောင်းလဲမှု ဖြစ်စေသော ကိစ္စများ — ဖောက်သည်ဆက်စပ်မှု၊ draft deliverable framing၊ ရင်းမြစ်ပုဂ္ဂိုလ်တည်ရာ၊ လယ်ကွင်းအတည်ပြုချက်၊ မိတ်ဖက်အချက်အလက်၊ လယ်ကွင်းဝန်ထမ်းအချက်အလက်၊ လျှို့ဝှက်ထိန်းသိမ်းသော ပရောဂျက်မဟာဗျူဟာ၊ အတွင်းပိုင်းသုံးသပ်သူ မှတ်ချက်များ၊ ဦးစားပေးပစ်မှတ်ချမှတ်ခြင်း၊ အန္တရာယ်သတ်မှတ်ခြင်း၊ အများမသိသော ဆက်ဆံရေးအကဲဖြတ်ချက်များ သို့မဟုတ် ENVISAGE ၏ သုတေသနဦးစားပေးများ ဖော်ပြနိုင်သော ပေါင်းစပ်ဒေတာစုများ</p>
+</section>
+
+<section>
+  <h2>၆။ ကိရိယာ ရွေးချယ်မှု လမ်းညွှန်</h2>
+  <ul>
+    <li>အခမဲ့ သို့မဟုတ် ပြင်ပ ကိရိယာများကို <strong>Tier 1 public-source ဒေတာနှင့်သာ</strong> ကန့်သတ်သင့်သည်</li>
+    <li>ခွင့်ပြုထားသော အတွင်းပိုင်းကိရိယာများကို Tier 2 ဒေတာအတွက် သုံးပြီး ဖြစ်နိုင်သည့်ဆဲ sanitize လုပ်ပါ</li>
+    <li>Tier 3 ဒေတာသည် ခွင့်ပြုထားသော လုံခြုံ workflow ထဲတွင်သာ ကျန်ရှိရမည် — အများပြည်သူ၊ အခမဲ့ သို့မဟုတ် ခွင့်မပြုထားသော AI ကိရိယာများထဲ ကူးထည့်ခြင်း မပြုရ</li>
+    <li>AI ကိရိယာတစ်ခုမျှ ENVISAGE email account များနှင့် ချိတ်ဆက်ခြင်း မပြုရ။ Drive access ကျယ်ကျယ်ပြန့်ပြန့် မသုံးရ။ Folder သို့မဟုတ် file access သည် minimum-necessary-access စည်းမျဉ်းကို လိုက်နာရမည်</li>
+  </ul>
+</section>
+
+<section>
+  <h2>၇။ OSINT အတွက် Prompt စည်းမျဉ်းများ</h2>
+  <ul>
+    <li>သုတေသီများသည် AI ကိရိယာများသို့ <strong>လိုအပ်သည့် ဒေတာအနည်းဆုံးသာ</strong> ပို့သင့်သည်</li>
+    <li>ခွင့်မပြုထားသော ကိရိယာများသို့ prompt များတွင် ဖောက်သည်နာမည်များ၊ ရင်းမြစ်ပုဂ္ဂိုလ်တည်ရာ၊ လယ်ကွင်းဝန်ထမ်းအသေးစိတ်၊ လျှို့ဝှက်ပရောဂျက်မဟာဗျူဟာ၊ အတွင်းပိုင်း targeting logic၊ အရေးကြီးသော ဆက်ဆံရေးအကဲဖြတ်ချက်များ သို့မဟုတ် အများမသိသော အတည်ပြုမှတ်စုများ ထည့်ခြင်း မပြုရ</li>
+    <li>တစ်ဖိုင်လုံးထက် excerpt တစ်ပိုင်းနှင့် အလုပ်တစ်ခုပြီးမြောက်နိုင်လျှင် excerpt ကိုသာ သုံးပါ</li>
+  </ul>
+</section>
+
+<section>
+  <h2>၈။ စစ်ဆေးရေး လိုအပ်ချက်</h2>
+  <div class="callout warn">
+    <p><strong>AI ရလဒ်သည် သက်သေမဟုတ်ပါ။</strong> AI မှ ထုတ်လုပ်သော အချက်အလက်ဆိုင်ရာ တောင်းဆိုချက်၊ ဘာသာပြန်ချက်၊ entity တူညီချက်၊ ဆက်ဆံရေး၊ တည်နေရာ သို့မဟုတ် ခွဲခြမ်းစိတ်ဖြာချက် မည်သည်မဆိုကို ENVISAGE deliverable တွင် မသုံးမီ မူရင်းရင်းမြစ်နှင့် စစ်ဆေးရမည်။ AI ကို extraction နှင့် structuring တွင် ကူညီပေးနိုင်သော်လည်း စစ်ဆေးရေး၊ ရင်းမြစ်ထိန်းသိမ်းရေး နှင့် နောက်ဆုံးဆုံးဖြတ်ချက်ရေး တာဝန်သည် သုတေသီ၏ တာဝန်ပင်ဖြစ်သည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>၉။ AI မသုံးမီ လက်တွေ့ စစ်ဆေးမှု</h2>
+  <p>AI ကိရိယာသို့ ဒေတာပို့မဦးမီ သုတေသီများသည် မေးသင့်သည် —</p>
+  <div class="callout info">
+    <p><em>"ဤ prompt မနက်ဖြန် အများသိသောနေရာတွင် ပေါ်လာခဲ့လျှင် ENVISAGE ဖောက်သည်အလုပ်၊ ရင်းမြစ်အချက်အလက်၊ လယ်ကွင်းလှုပ်ရှားမှု၊ မိတ်ဖက်ဆက်ဆံရေး၊ အတွင်းပိုင်းဦးစားပေး သို့မဟုတ် ခွဲခြမ်းစိတ်ဖြာဆုံးဖြတ်ချက်များ ထုတ်ဖော်မည်လား?"</em></p>
+  </div>
+  <ul>
+    <li><strong>ဟုတ်သည်</strong> ဆိုလျှင် — ခွင့်မပြုထားသော ကိရိယာများသို့ မပို့ပါနှင့်။ Sanitize လုပ်ပါ သို့မဟုတ် ခွင့်ပြုထားသော လုံခြုံ workflow ကိုသုံးပါ</li>
+    <li><strong>မဟုတ်</strong> ဆိုလျှင် — ဒေတာသည် တကယ် public-source OSINT ဖြစ်ပြီး ယေဘုယျ Tier 1 အဖြစ် ကိုင်တွယ်နိုင်သည်</li>
+  </ul>
+</section>
+
+<section>
+  <h2>၁၀။ လုံခြုံသော နှင့် မလုံခြုံသော Prompt ဥပမာများ</h2>
+  <table>
+    <tr><th>အခြေအနေ</th><th>ပိုလုံခြုံသော Prompt</th><th>မသုံးသင့်သော Prompt</th></tr>
+    <tr>
+      <td>အများပြည်သူ ဆောင်းပါးမှ ထုတ်ယူခြင်း</td>
+      <td>ဤအများပြည်သူ ဆောင်းပါးကို ဘာသာပြန်ပြီး နာမည်၊ အဖွဲ့အစည်း၊ တည်နေရာ နှင့် ရက်စွဲများကို ဇယားတွင် ထုတ်ဖော်ပါ</td>
+      <td>ဤဆောင်းပါးကို ဖောက်သည်၏ စုံစမ်းမှု မှတ်စုနှင့် နှိုင်းယှဉ်ပြီး ဦးစားပေးသင့်သူကို ဖော်ပြပါ</td>
+    </tr>
+    <tr>
+      <td>အများပြည်သူ ကိုယ်ရေးဖော်ပြချက် သန့်ရှင်းစေခြင်း</td>
+      <td>ဤအများပြည်သူ ကိုယ်ရေးဖော်ပြချက်ကို ကြားနေ profile ပုံစံသို့ သန့်ရှင်းစေပြီး ရင်းမြစ်ဆိုင်ရာ အချက်အလက်များကို ထိန်းသိမ်းပါ</td>
+      <td>ကျွန်ုပ်တို့၏ အတွင်းပိုင်း အန္တရာယ်ဆုံးဖြတ်ချက်ကို ထည့်ပြီး ဤပုဂ္ဂိုလ်သည် ဖောက်သည်အတွက် ဘာကြောင့် အရေးပါကြောင်း ရှင်းပြပါ</td>
+    </tr>
+    <tr>
+      <td>မြေပုံပြင်ဆင်ခြင်း</td>
+      <td>ဤအများပြည်သူ ကိုဩဒိနိတ်နှင့် နေရာအမည်များကို Google My Maps အသင့် ဇယားသို့ ပြောင်းလဲပါ</td>
+      <td>ဤအများပြည်သူ တည်နေရာများကို ပြင်ပ AI ကိရိယာတွင် လယ်ကွင်းအတည်ပြုမှတ်စု နှင့် ရင်းမြစ်မှတ်ချက်များနှင့် ပေါင်းစပ်ပါ</td>
+    </tr>
+    <tr>
+      <td>ကုဒ်ရေးကူညီခြင်း</td>
+      <td>နာမည်၊ တည်နေရာ၊ ရက်စွဲ နှင့် source URL ကော်လံများပါသော အများပြည်သူ CSV ကို သန့်ရှင်းစေမည့် generic script ရေးပါ</td>
+      <td>ကျွန်ုပ်တို့၏ တကယ့် ဖောက်သည်ဒေတာ rows နှင့် အတွင်းပိုင်း identifier များကိုသုံးပြီး script ရေးပါ</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>၁၁။ နိတိမူ အကျဉ်းချုပ်</h2>
+  <div class="callout info">
+    <p>ENVISAGE အတွင်းပိုင်း၊ ဖောက်သည်ဆက်စပ်၊ ရင်းမြစ်ဆက်စပ် သို့မဟုတ် လယ်ကွင်းဆက်စပ် context မပေါင်းဘဲ ဒေတာသည် တကယ် အများပြည်သူနေပါက public-source OSINT ကို AI ကိရိယာများနှင့် သုံးနိုင်သည်။ Raw public OSINT input များသည် တစ်ကိုယ်တည်းသုံးသောအခါ ယေဘုယျ Tier 1 ဖြစ်သည်။ ENVISAGE ၏ အတွင်းပိုင်းခွဲခြမ်းမှု၊ ဖောက်သည် framing၊ လယ်ကွင်းအတည်ပြုချက်၊ ရင်းမြစ်ပုဂ္ဂိုလ်တည်ရာ၊ မိတ်ဖက်အချက်အလက်၊ ဦးစားပေးပစ်မှတ်ချမှတ်ခြင်း၊ အန္တရာယ်သတ်မှတ်ခြင်း သို့မဟုတ် အများမသိသော ဆက်ဆံရေး/ကွန်ယက် ဆုံးဖြတ်ချက်များနှင့် ပေါင်းစပ်သောအခါ Tier 2 သို့မဟုတ် Tier 3 ဖြစ်သင့်သည်။ AI ရလဒ်များကို deliverable တွင် မသုံးမီ မူရင်းရင်းမြစ်များနှင့် စစ်ဆေးရမည်။</p>
+  </div>
+</section>
+
+<section>
+  <h2>၁၂။ သုံးသပ်မှုအတွက် မှတ်ချက်များ</h2>
+  <ul>
+    <li>ဤနိတိမူသည် အများပြည်သူရင်းမြစ်ဒေတာအတွက် OSINT အသုံးပြုမှုကို ပိုဖွင့်ပေးရင်း အရေးကြီးသော work product အတွက် တင်းကျပ်သောထိန်းချုပ်မှုများ ထိန်းသိမ်းရန် ဒီဇိုင်းဆွဲထားသည်</li>
+    <li>အဓိကကွာဟချက်မှာ ရင်းမြစ်တစ်ခုတွင် ပုဂ္ဂိုလ်များ သို့မဟုတ် အဖွဲ့အစည်းများ အမည်ဖော်ထားလား မဖော်ထားဘူးလားမဟုတ်ဘဲ — prompt တွင် <strong>ENVISAGE မှ ထပ်ပေါင်းသောစိတ်ဆင်းမှု</strong> ပါ/မပါ ဆိုသည်ဖြစ်သည်</li>
+    <li>ဤအပိုင်းကို ဤနိတိမူ၏ ဒေတာလုံခြုံရေး နှင့် ကိရိယာ ရွေးချယ်မှု စာမျက်နှာများနှင့် တွဲဖတ်နိုင်သည်</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="por-case-study.html">← ဖြစ်ရပ်လေ့လာမှု</a>
+  <a href="index.html">ပင်မစာမျက်နှာသို့ →</a>
+</div>
+
+</main>
+</div>
+
+</body>
+</html>
